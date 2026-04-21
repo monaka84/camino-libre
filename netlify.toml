@@ -1,0 +1,7 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/articles/:slug"
+  to   = "/articles/:slug.html"
+  status = 200

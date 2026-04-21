@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PuraVida — ラテンアメリカとバイクと旅の記録</title>
+  <title>Camino Libre ／ 中南米の路地からバイク旅まで</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -14,11 +14,12 @@
 
 <header>
   <div class="header-inner">
-    <a href="index.html" class="logo">Pura<span>Vida</span></a>
+    <a href="index.html" class="logo">Camino<span>Libre</span></a>
     <nav>
       <a href="index.html">ホーム</a>
       <a href="#costa-rica">コスタリカ</a>
       <a href="#nicaragua">ニカラグア</a>
+      <a href="#mexico">メキシコ</a>
       <a href="#camp">キャンプ</a>
       <a href="#bike">バイク旅</a>
       <a href="#about">プロフィール</a>
@@ -27,46 +28,26 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <a href="articles/hokkaido-touring.html" class="hero-main">
-    <div class="hero-bg" style="background-image: url('images/hokkaido/エサヌカ線.jpg');"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-tag">北海道ツーリング</div>
-    <h1 class="hero-title">SR400で北海道ひとり旅<br>エサヌカ線で、泣きそうになった。</h1>
-    <div class="hero-meta">
-      <span>Monaka</span>
-      <span class="dot">·</span>
-      <span>6分で読める</span>
-    </div>
-  </a>
-
-  <div class="hero-sidebar">
-    <a href="articles/taiwan.html" class="hero-sub">
-      <div class="hero-sub-img" style="background-image: url('images/taiwan/z50_0939_dxo.jpg'); background-size: cover; background-position: center;"></div>
-      <div class="hero-sub-body">
-        <div class="hero-sub-tag">台湾</div>
-        <div class="hero-sub-title">台湾旅行記 — 基隆の夕暮れと、平渓で天に灯籠を放った夜</div>
-      </div>
-    </a>
-    <a href="articles/camp-mori-makiba.html" class="hero-sub">
-      <div class="hero-sub-img" style="background-image: url('https://static.wixstatic.com/media/949ec9_be02da1f1cce47dfa15fb7184f2e8dd6~mv2_d_4032_3024_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-      <div class="hero-sub-body">
-        <div class="hero-sub-tag">キャンプ</div>
-        <div class="hero-sub-title">森のまきばオートキャンプ場 — 千葉でソロキャンプ</div>
-      </div>
-    </a>
-  </div>
-</section>
+<section class="hero" id="hero-section"></section>
 
 <!-- ARTICLES -->
-<div class="section-divider" id="costa-rica">
-  <span class="section-label">最新記事</span>
+<div class="section-divider">
+  <span class="section-label">記事一覧</span>
   <div class="divider-line"></div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">すべて</button>
+  <button class="filter-btn" data-filter="costa-rica">コスタリカ</button>
+  <button class="filter-btn" data-filter="nicaragua">ニカラグア</button>
+  <button class="filter-btn" data-filter="mexico">メキシコ</button>
+  <button class="filter-btn" data-filter="camp">キャンプ</button>
+  <button class="filter-btn" data-filter="bike">バイク旅</button>
 </div>
 
 <section class="articles">
 
-  <a href="articles/hokkaido-touring.html" class="card">
+  <a href="articles/hokkaido-touring.html" class="card" data-category="bike">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/hokkaido/エサヌカ線.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -78,21 +59,26 @@
     </div>
   </a>
 
-  <a href="articles/taiwan.html" class="card">
+  <a href="articles/taiwan.html" class="card" data-category="other">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/taiwan/z50_0939_dxo.jpg'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="card-tag">台湾</div>
-    <h2 class="card-title">台湾旅行記——基隆の夕暮れと、平渓で天に灯籠を放った夜</h2>
+    <h2 class="card-title">台湾旅行記——基隆の夕暮れと、十份で天に灯籠を放った夜</h2>
     <p class="card-excerpt">台湾に行ったことがない人に聞きたいんだけど、なんで行ってないの？ってくらい良かった。近い、安い、飯がうまい、写真映えする場所だらけ。嬉しい意味で期待を大きく超えてきた。</p>
     <div class="card-meta">
       <span>台湾</span><span class="dot">·</span><span>5分で読める</span>
     </div>
   </a>
 
-  <a href="articles/costa-rica-intro.html" class="card">
+  <div class="articles-section-header" id="costa-rica">
+    <span class="section-label">コスタリカ</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <a href="articles/costa-rica-intro.html" class="card" data-category="costa-rica">
     <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_e9e04325983c400ca6676465635be028~mv2_d_2880_1728_s_2.png'); background-size: cover; background-position: center;"></div>
+      <div class="card-img-inner" style="background-image: url('images/costa-rica-map.jpg'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="card-tag">コスタリカ</div>
     <h2 class="card-title">コスタリカに住んでた時の話① コスタリカってどんな国？</h2>
@@ -102,7 +88,7 @@
     </div>
   </a>
 
-  <a href="articles/costa-rica-christmas.html" class="card">
+  <a href="articles/costa-rica-christmas.html" class="card" data-category="costa-rica">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_bd4831b3aa4f4502a43029245d5fddc4~mv2_d_2800_2800_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -114,7 +100,7 @@
     </div>
   </a>
 
-  <a href="articles/costa-rica-color-run.html" class="card">
+  <a href="articles/costa-rica-color-run.html" class="card" data-category="costa-rica">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_6a5dbafe9b2a402589c1c87b64e296ba~mv2.png'); background-size: cover; background-position: center;"></div>
     </div>
@@ -126,7 +112,7 @@
     </div>
   </a>
 
-  <a href="articles/costa-rica-semana-santa.html" class="card">
+  <a href="articles/costa-rica-semana-santa.html" class="card" data-category="costa-rica">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/costa-rica/manuel-antonio-animals.avif'); background-size: cover; background-position: center;"></div>
     </div>
@@ -138,9 +124,9 @@
     </div>
   </a>
 
-  <a href="articles/costa-rica-food.html" class="card">
+  <a href="articles/costa-rica-food.html" class="card" data-category="costa-rica">
     <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80&fit=crop&auto=format'); background-size: cover; background-position: center;"></div>
+      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_ba55d298fd444594b32692749af90ed2~mv2.png'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="card-tag">コスタリカ</div>
     <h2 class="card-title">コスタリカに住んでた時の話⑤ 中米料理</h2>
@@ -150,31 +136,25 @@
     </div>
   </a>
 
-  <a href="articles/costa-rica-history.html" class="card">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=1200&q=80&fit=crop&auto=format'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカに住んでた時の話⑥ コスタリカの歴史</h2>
-    <p class="card-excerpt">1519年のスペイン征服から現代まで。「豊かな海岸」と名付けられたこの国の歴史を、人種差別の問題とともに紐解く。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年2月19日</span>
-    </div>
-  </a>
 
-  <a href="articles/costa-rica-work.html" class="card">
+  <a href="articles/costa-rica-work.html" class="card" data-category="costa-rica">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_3ddc83f695764babb8d3abf036ffa77e~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカでの仕事——簡易装具で歩けるようになった患者の話</h2>
+    <h2 class="card-title">コスタリカに住んでた時の話⑥ コスタリカでの仕事——簡易装具で歩けるようになった患者の話</h2>
     <p class="card-excerpt">装具が届くまで8ヶ月かかる国で、サンダルと野球用プロテクターで作った簡易装具。それで歩けるようになった患者がいる。</p>
     <div class="card-meta">
       <span>コスタリカ</span><span class="dot">·</span><span>2018年8月9日</span>
     </div>
   </a>
 
-  <a href="articles/nicaragua-ometepe-1.html" class="card" id="nicaragua">
+  <div class="articles-section-header" id="nicaragua">
+    <span class="section-label">ニカラグア</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <a href="articles/nicaragua-ometepe-1.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_019bd4603cf949559dd74edbb0af66f0~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -186,7 +166,7 @@
     </div>
   </a>
 
-  <a href="articles/nicaragua-ometepe-2.html" class="card">
+  <a href="articles/nicaragua-ometepe-2.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_ef3f551a51dd4c5aa071e586251d053c~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -198,7 +178,7 @@
     </div>
   </a>
 
-  <a href="articles/nicaragua-granada.html" class="card">
+  <a href="articles/nicaragua-granada.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_fb403e7af29a471c8b1254216f87e047~mv2_d_2048_1366_s_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -210,7 +190,7 @@
     </div>
   </a>
 
-  <a href="articles/nicaragua-managua.html" class="card">
+  <a href="articles/nicaragua-managua.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -222,7 +202,7 @@
     </div>
   </a>
 
-  <a href="articles/nicaragua-leon.html" class="card">
+  <a href="articles/nicaragua-leon.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -234,19 +214,77 @@
     </div>
   </a>
 
-  <a href="articles/nicaragua-flor-de-cana.html" class="card">
+  <a href="articles/nicaragua-flor-de-cana.html" class="card" data-category="nicaragua">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
     <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">ニカラグアのラム酒——Flor de Caña 工場見学記</h2>
-    <p class="card-excerpt">レオン近郊チチガルパにある1890年創業のラム酒工場へ。20年物の一口で、ラム酒嫌いだった自分が変わった。</p>
+    <h2 class="card-title">ニカラグアに行った時の話⑥ Flor de Caña 工場見学記</h2>
+    <p class="card-excerpt">レオン近郊チチガルパにある1890年創業のラム酒工場へ。20年物の一口で、ラム酒の奥深さを知った。</p>
     <div class="card-meta">
       <span>ニカラグア</span><span class="dot">·</span><span>2016年9月7日</span>
     </div>
   </a>
 
-  <a href="articles/touring-camp-gear.html" class="card" id="camp">
+  <div class="articles-section-header" id="mexico">
+    <span class="section-label">メキシコ</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <a href="articles/mexico-zocalo.html" class="card" data-category="mexico">
+    <div class="card-img">
+      <div class="card-img-inner" style="background-image: url('images/mexico/zocalo-catedral.jpg'); background-size: cover; background-position: center top;"></div>
+    </div>
+    <div class="card-tag">メキシコ</div>
+    <h2 class="card-title">メキシコシティに行った時の話① ソカロとテンプロ・マヨール</h2>
+    <p class="card-excerpt">アステカ帝国の中枢神殿がラテンアメリカ最大のカトリック聖堂の隣に眠る。重層的な歴史の断面図、メキシコシティ歴史地区へ。</p>
+    <div class="card-meta">
+      <span>メキシコ</span><span class="dot">·</span><span>2026年2月22日</span>
+    </div>
+  </a>
+
+  <a href="articles/mexico-guadalupe.html" class="card" data-category="mexico">
+    <div class="card-img">
+      <div class="card-img-inner" style="background-image: url('images/mexico/guadalupe-aerial.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    <div class="card-tag">メキシコ</div>
+    <h2 class="card-title">メキシコシティに行った時の話② グアダルーペ大聖堂</h2>
+    <p class="card-excerpt">年間2,000万人が訪れるラテンアメリカ最大の聖地。旧バシリカ、テペヤックの丘、動く歩道の先に飾られた1531年の奇跡のマント。</p>
+    <div class="card-meta">
+      <span>メキシコ</span><span class="dot">·</span><span>2026年2月21日</span>
+    </div>
+  </a>
+
+  <a href="articles/mexico-walk.html" class="card" data-category="mexico">
+    <div class="card-img">
+      <div class="card-img-inner" style="background-image: url('images/mexico/revolucion-monument.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    <div class="card-tag">メキシコ</div>
+    <h2 class="card-title">メキシコシティに行った時の話③ 革命記念塔と街歩き</h2>
+    <p class="card-excerpt">メキシコの朝食「ウエボス・コン・チョリソ」から始まる一日。革命記念塔、グラフィティ、スケールの違いに圧倒される街。</p>
+    <div class="card-meta">
+      <span>メキシコ</span><span class="dot">·</span><span>2026年2月21日</span>
+    </div>
+  </a>
+
+  <a href="articles/mexico-walmart.html" class="card" data-category="mexico">
+    <div class="card-img">
+      <div class="card-img-inner" style="background-image: url('images/mexico/walmart-salsa.jpg'); background-size: cover; background-position: center;"></div>
+    </div>
+    <div class="card-tag">メキシコ</div>
+    <h2 class="card-title">メキシコシティに行った時の話④ ウォールマートはお土産の穴場</h2>
+    <p class="card-excerpt">観光土産店より安くて種類豊富。サルサ、コーヒー、チョコレート——ウォールマートで買えるメキシコならではのお土産ガイド。</p>
+    <div class="card-meta">
+      <span>メキシコ</span><span class="dot">·</span><span>2026年2月22日</span>
+    </div>
+  </a>
+
+  <div class="articles-section-header" id="camp">
+    <span class="section-label">キャンプ</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <a href="articles/touring-camp-gear.html" class="card" data-category="camp">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_afd223212bc6483f830f93812da66369~mv2_d_3024_4032_s_4_2.jpg'); background-size: cover; background-position: top;"></div>
     </div>
@@ -258,7 +296,7 @@
     </div>
   </a>
 
-  <a href="articles/camp-mori-makiba.html" class="card">
+  <a href="articles/camp-mori-makiba.html" class="card" data-category="camp">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_be02da1f1cce47dfa15fb7184f2e8dd6~mv2_d_4032_3024_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -270,7 +308,7 @@
     </div>
   </a>
 
-  <a href="articles/atsukan.html" class="card">
+  <a href="articles/atsukan.html" class="card" data-category="other">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_69fcb4358adc4328a919ec0cfc491f98~mv2_d_2987_3938_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -282,7 +320,12 @@
     </div>
   </a>
 
-  <a href="articles/power-beam.html" class="card" id="bike">
+  <div class="articles-section-header" id="bike">
+    <span class="section-label">バイク旅</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <a href="articles/power-beam.html" class="card" data-category="bike">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_c07a3465b14f4301835b4585c13ca9b3~mv2_d_4032_3024_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -294,7 +337,7 @@
     </div>
   </a>
 
-  <a href="articles/spanish-dictionary.html" class="card">
+  <a href="articles/spanish-dictionary.html" class="card" data-category="other">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_316ae78b6611491fad1cb3d780461968~mv2.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -307,7 +350,7 @@
   </a>
 
 
-  <a href="articles/bandai-azuma.html" class="card">
+  <a href="articles/bandai-azuma.html" class="card" data-category="bike">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/bandai/IMG_3857.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -319,7 +362,7 @@
     </div>
   </a>
 
-  <a href="articles/five-color-lake.html" class="card">
+  <a href="articles/five-color-lake.html" class="card" data-category="bike">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/five-color-lake/IMG_8015.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -331,7 +374,7 @@
     </div>
   </a>
 
-  <a href="articles/hokkaido-car.html" class="card">
+  <a href="articles/hokkaido-car.html" class="card" data-category="bike">
     <div class="card-img">
       <div class="card-img-inner" style="background-image: url('images/hokkaido-car/神威岬.jpg'); background-size: cover; background-position: center;"></div>
     </div>
@@ -343,13 +386,13 @@
     </div>
   </a>
 
-  <a href="articles/touring-chiba-xsr900.html" class="card">
+  <a href="articles/touring-chiba-xsr900.html" class="card" data-category="bike">
     <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/touring-chiba/Z50_1284_DxO.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="card-img-inner" style="background-image: url('images/touring-chiba2/IMG_2388.jpg'); background-size: cover; background-position: center 40%;"></div>
     </div>
     <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">千葉県ソロツーリング XSR900——房総の道を走る</h2>
-    <p class="card-excerpt">SR400から乗り換えたXSR900で地元千葉を走る。知っている道でも、バイクが変わると感触が変わる。</p>
+    <h2 class="card-title">千葉県ソロツーリング XSR900——笠森観音を訪ねて</h2>
+    <p class="card-excerpt">XSR900で房総の山道を走り、岩の上に建つ日本唯一の建築・笠森観音へ。地元千葉にもまだ知らない場所がある。</p>
     <div class="card-meta">
       <span>千葉</span><span class="dot">·</span><span>2分で読める</span>
     </div>
@@ -362,21 +405,26 @@
   <div class="featured-strip-inner">
     <div class="featured-strip-label">連載シリーズ</div>
     <div class="featured-strip-grid">
-      <div class="strip-card">
+      <a class="strip-card" href="articles/costa-rica-intro.html">
         <div class="strip-card-num">01</div>
         <div class="strip-card-tag">コスタリカ滞在記</div>
-        <div class="strip-card-title">Pura Vida な日々——コスタリカで暮らした時間の全記録（全6話）</div>
-      </div>
-      <div class="strip-card">
+        <div class="strip-card-title">コスタリカで暮らした時間の全記録（全6話）</div>
+      </a>
+      <a class="strip-card" href="articles/nicaragua-ometepe-1.html">
         <div class="strip-card-num">02</div>
         <div class="strip-card-tag">ニカラグア旅行記</div>
         <div class="strip-card-title">火山と革命の国へ——グラナダからレオンまで（全5話）</div>
-      </div>
-      <div class="strip-card">
+      </a>
+      <a class="strip-card" href="articles/mexico-zocalo.html">
         <div class="strip-card-num">03</div>
+        <div class="strip-card-tag">メキシコ旅行記</div>
+        <div class="strip-card-title">アステカの都へ——メキシコシティを歩く（全4話）</div>
+      </a>
+      <a class="strip-card" href="articles/camp-mori-makiba.html">
+        <div class="strip-card-num">04</div>
         <div class="strip-card-tag">ソロキャンプ記録</div>
         <div class="strip-card-title">バイクで行くソロキャンプ——道志、袖ヶ浦、そしてその先へ</div>
-      </div>
+      </a>
     </div>
   </div>
 </div>
@@ -384,9 +432,10 @@
 <!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="about-text">
-    <h2>ラテンアメリカが教えてくれた<br><em>"Pura Vida"</em> という生き方</h2>
-    <p>コスタリカに住んでいた頃、現地の人たちは何でも「Pura Vida（ピュアな人生）」と言った。挨拶でも、感謝でも、「最高だね」という意味でも。最初は意味がわからなかったが、次第にその感覚が体に染み込んできた。</p>
-    <p>このブログは、そのPura Vidaな感覚を忘れないための記録だ。バイクで山を走ること、テントを張って星を見ること、知らない国の路地を歩くこと。それが今の自分の「Pura Vida」だ。</p>
+    <h2>知らない場所へ行って、<br>青い景色を探す旅の記録。</h2>
+    <p>中南米に数年いて、バイクで国内を走って、気づいたら旅の記録がたまっていた。オフロードは走らないし、観光地にもちゃんと行く。ただ、地図に載ってない道や、まだ名前を知らない場所に惹かれる。</p>
+    <p>海でも空でも湖でも、青い景色の前に立つと、なぜかそこが旅のハイライトになる。</p>
+    <p>「Camino Libre」はスペイン語で「自由な道」。決めすぎない旅が、だいたい一番おもしろい。</p>
   </div>
   <div class="about-profile">
     <div class="about-avatar">🏍️</div>
@@ -396,7 +445,7 @@
       <span class="tag-pill">コスタリカ</span>
       <span class="tag-pill">バイク</span>
       <span class="tag-pill">ソロキャンプ</span>
-      <span class="tag-pill">中米</span>
+      <span class="tag-pill">中南米</span>
       <span class="tag-pill">スペイン語</span>
     </div>
   </div>
@@ -404,23 +453,100 @@
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">Pura<span>Vida</span></div>
+    <div class="footer-logo">Camino<span>Libre</span></div>
     <div class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="#costa-rica">コスタリカ</a>
       <a href="#nicaragua">ニカラグア</a>
+      <a href="#mexico">メキシコ</a>
       <a href="#camp">キャンプ</a>
     </div>
-    <div class="footer-copy">© 2024 Puravida. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
   </div>
 </footer>
 
+<script src="js/article.js"></script>
+<script>
+(function () {
+  var hero = document.getElementById('hero-section');
+  if (!hero || typeof ARTICLES === 'undefined') return;
+
+  var sorted = ARTICLES.slice().sort(function (a, b) {
+    return (b.date || '').localeCompare(a.date || '');
+  });
+
+  var main = sorted[0];
+  var subs = [];
+  var usedCats = [main.category];
+  for (var i = 1; i < sorted.length && subs.length < 2; i++) {
+    if (usedCats.indexOf(sorted[i].category) === -1) {
+      subs.push(sorted[i]);
+      usedCats.push(sorted[i].category);
+    }
+  }
+  if (subs.length < 2) {
+    for (var j = 1; j < sorted.length && subs.length < 2; j++) {
+      if (subs.indexOf(sorted[j]) === -1 && sorted[j] !== main) subs.push(sorted[j]);
+    }
+  }
+
+  var imgPath = main.img.replace('../', '');
+  hero.innerHTML =
+    '<a href="articles/' + main.file + '" class="hero-main">' +
+      '<div class="hero-bg" style="background-image:url(\'' + imgPath + '\');"></div>' +
+      '<div class="hero-overlay"></div>' +
+      '<div class="hero-tag">' + main.tag + '</div>' +
+      '<h1 class="hero-title">' + main.title.replace(/——/, '<br>') + '</h1>' +
+      '<div class="hero-meta"><span>Monaka</span></div>' +
+    '</a>' +
+    '<div class="hero-sidebar">' +
+      subs.map(function (a) {
+        var sp = a.img.replace('../', '');
+        return '<a href="articles/' + a.file + '" class="hero-sub">' +
+          '<div class="hero-sub-img" style="background-image:url(\'' + sp + '\');background-size:cover;background-position:center;"></div>' +
+          '<div class="hero-sub-body">' +
+            '<div class="hero-sub-tag">' + a.tag + '</div>' +
+            '<div class="hero-sub-title">' + a.title + '</div>' +
+          '</div>' +
+        '</a>';
+      }).join('') +
+    '</div>';
+})();
+</script>
 <script>
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     const max = document.body.scrollHeight - window.innerHeight;
     document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
   });
+</script>
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.articles .card');
+  var headers = document.querySelectorAll('.articles-section-header');
+
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var cat = btn.getAttribute('data-filter');
+
+      headers.forEach(function (h) {
+        h.classList.toggle('articles-section-header--hidden', cat !== 'all');
+      });
+
+      cards.forEach(function (card) {
+        if (cat === 'all') {
+          card.classList.remove('card--hidden');
+        } else {
+          card.classList.toggle('card--hidden', card.getAttribute('data-category') !== cat);
+        }
+      });
+    });
+  });
+})();
 </script>
 </body>
 </html>
