@@ -457,6 +457,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 .filter-bar {
   max-width: 1200px; margin: 0 auto 1.5rem;
   padding: 0 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+  scroll-margin-top: 72px;
 }
 .filter-btn {
   background: none; border: 1px solid var(--border);
