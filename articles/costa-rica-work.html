@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="../style.css">
   <style>
     .photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
-    .photo-row img { width: 100%; height: 280px; object-fit: cover; border-radius: 6px; }
-    @media (max-width: 600px) { .photo-row { grid-template-columns: 1fr; } .photo-row img { height: 220px; } }
+    .photo-row img { width: 100%; height: auto; border-radius: 6px; }
+    @media (max-width: 600px) { .photo-row { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -101,19 +101,14 @@
     <div class="related-label">関連記事</div>
     <div class="related-grid">
       <a href="costa-rica-history.html" class="related-card">
-        <div class="related-img bg-costa-rica"></div>
+        <div class="related-img" style="background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800&q=80&fit=crop&auto=format'); background-size: cover; background-position: center;"></div>
         <div class="related-tag">コスタリカ</div>
         <div class="related-title">コスタリカに住んでた時の話⑥ コスタリカの歴史</div>
       </a>
       <a href="costa-rica-food.html" class="related-card">
-        <div class="related-img bg-food"></div>
+        <div class="related-img" style="background-image: url('https://static.wixstatic.com/media/949ec9_ba55d298fd444594b32692749af90ed2~mv2.png'); background-size: cover; background-position: center;"></div>
         <div class="related-tag">コスタリカ</div>
         <div class="related-title">コスタリカに住んでた時の話⑤ 中米料理</div>
-      </a>
-      <a href="shikaku.html" class="related-card">
-        <div class="related-img bg-think"></div>
-        <div class="related-tag">考えごと</div>
-        <div class="related-title">資格が自分のやりたいことを邪魔する</div>
       </a>
     </div>
   </div>
