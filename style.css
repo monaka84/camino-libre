@@ -568,7 +568,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 
 /* ===== SHOW MORE ===== */
 .card--collapsed { display:none !important; }
-.show-more-btn { display:block; margin:4px auto 20px; padding:9px 28px; background:transparent; border:1.5px solid var(--border); color:var(--gray); border-radius:3px; cursor:pointer; font-size:0.8rem; font-family:inherit; letter-spacing:0.06em; transition:all 0.2s; }
+.show-more-btn { display:block; grid-column:1/-1; margin:0 auto 8px; padding:8px 32px; background:transparent; border:1px solid var(--border); color:var(--gray); border-radius:3px; cursor:pointer; font-size:0.75rem; font-family:inherit; letter-spacing:0.08em; transition:all 0.2s; }
 .show-more-btn:hover { border-color:var(--accent); color:var(--accent); }
 .show-more-btn--hidden { display:none !important; }
 

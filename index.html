@@ -17,14 +17,7 @@
     <a href="index.html" class="logo">Camino<span>Libre</span></a>
     <nav>
       <a href="index.html">ホーム</a>
-      <a href="#costa-rica">コスタリカ</a>
-      <a href="#nicaragua">ニカラグア</a>
-      <a href="#mexico">メキシコ</a>
-      <a href="#chile">チリ</a>
-      <a href="#belize">ベリーズ</a>
-      <a href="#taiwan">台湾</a>
-      <a href="#camp">キャンプ</a>
-      <a href="#bike">バイク旅</a>
+      <a href="#articles">記事一覧</a>
       <a href="#about">プロフィール</a>
     </nav>
   </div>
@@ -48,11 +41,11 @@
   <button class="filter-btn" data-filter="belize">ベリーズ</button>
   <button class="filter-btn" data-filter="taiwan">台湾</button>
   <button class="filter-btn" data-filter="camp">キャンプ</button>
-  <button class="filter-btn" data-filter="bike">バイク旅</button>
+  <button class="filter-btn" data-filter="bike">ツーリング</button>
   <button class="filter-btn" data-filter="hokkaido">北海道</button>
 </div>
 
-<section class="articles">
+<section class="articles" id="articles">
 
   <div class="articles-section-header" id="costa-rica">
     <span class="section-label">コスタリカ</span>
@@ -403,7 +396,7 @@
   </a>
 
   <div class="articles-section-header" id="bike">
-    <span class="section-label">バイク旅</span>
+    <span class="section-label">ツーリング</span>
     <div class="divider-line"></div>
   </div>
 
@@ -690,13 +683,8 @@
     <div class="footer-logo">Camino<span>Libre</span></div>
     <div class="footer-nav">
       <a href="index.html">ホーム</a>
-      <a href="#costa-rica">コスタリカ</a>
-      <a href="#nicaragua">ニカラグア</a>
-      <a href="#mexico">メキシコ</a>
-      <a href="#chile">チリ</a>
-      <a href="#belize">ベリーズ</a>
-      <a href="#taiwan">台湾</a>
-      <a href="#camp">キャンプ</a>
+      <a href="#articles">記事一覧</a>
+      <a href="#about">プロフィール</a>
     </div>
     <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
   </div>
@@ -787,8 +775,10 @@
       btn.textContent = state.expanded ? '折りたたむ' : 'もっと見る（全' + total + '話）';
     });
 
-    // 最新カードの直前にボタンを挿入
-    cards[cards.length - LIMIT].parentNode.insertBefore(btn, cards[cards.length - LIMIT]);
+    // 最後のカードの後ろにボタンを挿入
+    var lastCard = cards[cards.length - 1];
+    var nextSib = lastCard.nextElementSibling;
+    if (nextSib) { lastCard.parentNode.insertBefore(btn, nextSib); } else { lastCard.parentNode.appendChild(btn); }
     sectionStates.push({ oldCards: oldCards, btn: btn, state: state });
   });
 
