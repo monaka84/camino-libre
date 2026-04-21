@@ -36,12 +36,12 @@
     { file: 'five-color-lake.html',       title: '五色沼——福島・裏磐梯の神秘的な湖沼群',                                         category: 'bike',       tag: '旅',               img: '../images/five-color-lake/IMG_8015.jpg',                                                                                 date: '2018-10-02' },
     { file: 'hokkaido-car.html',          title: '北海道ソロドライブ——神威岬・黄金岬・函館',                                     category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/神威岬.jpg',                                                                                      date: '2025-11-01' },
     { file: 'touring-chiba-xsr900.html',  title: '千葉県ソロツーリング XSR900——笠森観音を訪ねて',                               category: 'bike',       tag: 'ツーリング',       img: '../images/touring-chiba2/IMG_2388.jpg',                                                                                  date: '2026-04-01' },
-    { file: 'chile-1.html',               title: 'チリ① サンティアゴ市内散策、最高裁と美術館',                                 category: 'other',      tag: 'チリ',             img: '../images/chile/20251012_143804099_iOS.jpg',                                                                              date: '2025-10-12' },
-    { file: 'chile-2.html',               title: 'チリ② ロス・ドミニコス工芸市場と白い教会',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251014_205137977_iOS.jpg',                                                                              date: '2025-10-14' },
-    { file: 'chile-3.html',               title: 'チリ③ パルタ・レイナとサンティアゴ最終日',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251016_170946020_iOS.jpg',                                                                              date: '2025-10-16' },
-    { file: 'belize-1.html',              title: 'ベリーズ① ベリーズシティ到着、夜明けの海とアジア系スーパー',                 category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251018_213429265_iOS.jpg',                                                                             date: '2025-10-18' },
-    { file: 'belize-2.html',              title: 'ベリーズ② アンバーグリス・ケイとグレート・ブルーホール遊覧飛行',             category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251019_213939041_iOS.jpg',                                                                             date: '2025-10-19' },
-    { file: 'belize-3.html',              title: 'ベリーズ③ スウィング・ブリッジとベリーズシティ最終日',                       category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251020_144751630_iOS.jpg',                                                                             date: '2025-10-20' },
+    { file: 'chile-1.html',               title: 'チリに行った時の話① サンティアゴ市内散策、最高裁と美術館',                                 category: 'other',      tag: 'チリ',             img: '../images/chile/20251012_143804099_iOS.jpg',                                                                              date: '2025-10-12' },
+    { file: 'chile-2.html',               title: 'チリに行った時の話② ロス・ドミニコス工芸市場と白い教会',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251014_205137977_iOS.jpg',                                                                              date: '2025-10-14' },
+    { file: 'chile-3.html',               title: 'チリに行った時の話③ パルタ・レイナとサンティアゴ最終日',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251016_170946020_iOS.jpg',                                                                              date: '2025-10-16' },
+    { file: 'belize-1.html',              title: 'ベリーズに行った時の話① ベリーズシティ到着、夜明けの海とアジア系スーパー',                 category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251018_213429265_iOS.jpg',                                                                             date: '2025-10-18' },
+    { file: 'belize-2.html',              title: 'ベリーズに行った時の話② キーカーカー島とグレート・ブルーホール遊覧飛行',             category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251019_213939041_iOS.jpg',                                                                             date: '2025-10-19' },
+    { file: 'belize-3.html',              title: 'ベリーズに行った時の話③ スウィング・ブリッジとベリーズシティ最終日',                       category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251020_144751630_iOS.jpg',                                                                             date: '2025-10-20' },
     { file: 'zao-ginzan.html',            title: '蔵王と銀山温泉 — 御釜の緑と温泉街の夜景',                                     category: 'other',      tag: '東北',             img: '../images/zao-ginzan/20250628_133653099_iOS.jpg',                                                                         date: '2025-06-28' },
     { file: 'himawari-tsunan.html',       title: '津南ひまわり広場 — 新潟の山あいに広がる黄色の絨毯',                           category: 'other',      tag: '新潟',             img: '../images/himawari/20250802_011958175_iOS_1.jpg',                                                                         date: '2025-08-02' },
     { file: 'hokkaido-xsr900-day1.html',  title: 'XSR900で北海道へ① — 大洗からさんふらわあで苫小牧へ',                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250819_070951847_iOS.jpg',                                                                    date: '2025-08-19' },
@@ -68,7 +68,69 @@
     injectRelated();
     injectMapLinks();
     injectCopyCredit();
+    injectSearch();
   });
+
+  // ── Search ─────────────────────────────────────────────────────
+  function injectSearch() {
+    var headerInner = document.querySelector('.header-inner');
+    if (!headerInner) return;
+
+    var btn = document.createElement('button');
+    btn.className = 'search-trigger';
+    btn.setAttribute('aria-label', '検索');
+    btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>';
+    headerInner.appendChild(btn);
+
+    var overlay = document.createElement('div');
+    overlay.className = 'search-overlay';
+    overlay.innerHTML =
+      '<button class="search-close">&#215;</button>' +
+      '<div class="search-input-wrap">' +
+        '<input type="text" class="search-input" placeholder="記事を検索...（タイトル・カテゴリ）" autocomplete="off" spellcheck="false"/>' +
+      '</div>' +
+      '<div class="search-results"></div>' +
+      '<p class="search-hint">Esc で閉じる &nbsp;/&nbsp; ⌘K で開く</p>';
+    document.body.appendChild(overlay);
+
+    var input = overlay.querySelector('.search-input');
+    var results = overlay.querySelector('.search-results');
+
+    function openSearch() { overlay.classList.add('active'); setTimeout(function() { input.focus(); }, 50); }
+    function closeSearch() { overlay.classList.remove('active'); input.value = ''; results.innerHTML = ''; }
+
+    btn.addEventListener('click', openSearch);
+    overlay.querySelector('.search-close').addEventListener('click', closeSearch);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeSearch(); });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeSearch();
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+    });
+
+    input.addEventListener('input', function() {
+      var q = this.value.trim();
+      if (!q) { results.innerHTML = ''; return; }
+      var ql = q.toLowerCase();
+      var all = window.ARTICLES || [];
+      var matches = all.filter(function(a) {
+        return a.title.toLowerCase().indexOf(ql) !== -1 || a.tag.toLowerCase().indexOf(ql) !== -1;
+      });
+      if (!matches.length) {
+        results.innerHTML = '<p class="search-empty">「' + q + '」に一致する記事が見つかりませんでした</p>';
+        return;
+      }
+      var isArticlePage = location.pathname.indexOf('/articles/') !== -1;
+      var base = isArticlePage ? '../' : '';
+      results.innerHTML = matches.slice(0, 10).map(function(a) {
+        var imgSrc = a.img.indexOf('http') === 0 ? a.img : (isArticlePage ? a.img : a.img.replace('../', ''));
+        return '<a class="search-result-item" href="' + base + 'articles/' + a.file + '">' +
+          '<div class="search-result-img" style="background-image:url(\'' + imgSrc + '\')"></div>' +
+          '<div><div class="search-result-tag">' + a.tag + '</div>' +
+          '<div class="search-result-title">' + a.title + '</div></div>' +
+          '</a>';
+      }).join('');
+    });
+  }
 
   // ── Scroll Line ────────────────────────────────────────────────
   function injectScrollLine() {
@@ -318,7 +380,7 @@
     ],
     [
       { file: 'belize-1.html', title: '① ベリーズシティ到着、夜明けの海とアジア系スーパー' },
-      { file: 'belize-2.html', title: '② アンバーグリス・ケイとグレート・ブルーホール遊覧飛行' },
+      { file: 'belize-2.html', title: '② キーカーカー島とグレート・ブルーホール遊覧飛行' },
       { file: 'belize-3.html', title: '③ スウィング・ブリッジとベリーズシティ最終日' }
     ]
   ];
