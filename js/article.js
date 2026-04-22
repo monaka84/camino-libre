@@ -60,6 +60,7 @@
     injectScrollLine();
     injectBackToTop();
     injectDarkModeToggle();
+    injectMobileNav();
     injectLightbox();
     injectLazyLoading();
     injectTOC();
@@ -70,6 +71,43 @@
     injectCopyCredit();
     injectSearch();
   });
+
+  // ── Mobile Nav ─────────────────────────────────────────────────
+  function injectMobileNav() {
+    var headerInner = document.querySelector('.header-inner');
+    var header = document.querySelector('header');
+    if (!headerInner || !header) return;
+
+    var btn = document.createElement('button');
+    btn.className = 'menu-btn';
+    btn.setAttribute('aria-label', 'メニュー');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    headerInner.appendChild(btn);
+
+    var base = location.pathname.indexOf('/articles/') !== -1 ? '../' : '';
+    var panel = document.createElement('div');
+    panel.className = 'mobile-nav';
+    panel.innerHTML =
+      '<a href="' + base + 'index.html">ホーム</a>' +
+      '<a href="' + base + 'index.html#articles">記事一覧</a>' +
+      '<a href="' + base + 'index.html#about">プロフィール</a>';
+    header.insertAdjacentElement('afterend', panel);
+
+    btn.addEventListener('click', function () {
+      var open = panel.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!btn.contains(e.target) && !panel.contains(e.target)) {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
   // ── Search ─────────────────────────────────────────────────────
   function injectSearch() {
