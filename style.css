@@ -74,6 +74,9 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 .footer-nav { display: flex; gap: 2rem; font-size: 0.78rem; letter-spacing: 0.1em; }
 .footer-nav a:hover { color: var(--accent); }
 .footer-copy { font-size: 0.75rem; }
+.footer-contact { font-size: 0.75rem; }
+.footer-contact a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-contact a:hover { color: var(--accent); }
 
 /* ===== HOMEPAGE ===== */
 .hero {
