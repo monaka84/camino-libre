@@ -20,16 +20,8 @@
       <a href="#articles">記事一覧</a>
       <a href="#about">プロフィール</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="メニュー" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
-<div class="mobile-nav" id="mobileNav">
-  <a href="index.html">ホーム</a>
-  <a href="#articles">記事一覧</a>
-  <a href="#about">プロフィール</a>
-</div>
 
 <!-- HERO -->
 <section class="hero" id="hero-section"></section>
@@ -814,32 +806,6 @@
     if (nextSib) { lastCard.parentNode.insertBefore(btn, nextSib); } else { lastCard.parentNode.appendChild(btn); }
     sectionStates.push({ oldCards: oldCards, btn: btn, state: state });
   });
-
-  // ── モバイルナビ ───────────────────────────────────────────────────────
-  (function () {
-    var menuBtn = document.getElementById('menuBtn');
-    var mobileNav = document.getElementById('mobileNav');
-    if (!menuBtn || !mobileNav) return;
-    menuBtn.addEventListener('click', function () {
-      var open = mobileNav.classList.toggle('open');
-      menuBtn.classList.toggle('open', open);
-      menuBtn.setAttribute('aria-expanded', String(open));
-    });
-    document.addEventListener('click', function (e) {
-      if (!menuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
-        mobileNav.classList.remove('open');
-        menuBtn.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-    mobileNav.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      a.addEventListener('click', function () {
-        mobileNav.classList.remove('open');
-        menuBtn.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
 
   // ── フィルター ─────────────────────────────────────────────────────────
   var filterBtns = document.querySelectorAll('.filter-btn');

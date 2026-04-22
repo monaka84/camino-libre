@@ -107,6 +107,14 @@
         btn.setAttribute('aria-expanded', 'false');
       }
     });
+
+    panel.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        panel.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   // ── Search ─────────────────────────────────────────────────────
