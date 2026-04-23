@@ -23,10 +23,12 @@
     { file: 'nicaragua-managua.html',     title: 'ニカラグアに行った時の話④ マナグアと友人との再会',                               category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg',                                    date: '2018-06-13' },
     { file: 'nicaragua-leon.html',        title: 'ニカラグアに行った時の話⑤ 革命の街レオン',                                       category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg',                                    date: '2018-06-17' },
     { file: 'nicaragua-flor-de-cana.html', title: 'ニカラグアに行った時の話⑥ Flor de Caña 工場見学記',                            category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg',                  date: '2016-09-07' },
-    { file: 'mexico-zocalo.html',         title: 'メキシコシティに行った時の話① ソカロとテンプロ・マヨール',                       category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/zocalo-catedral.jpg',                                                                                   date: '2026-02-22' },
-    { file: 'mexico-guadalupe.html',      title: 'メキシコシティに行った時の話② グアダルーペ大聖堂',                               category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/guadalupe-aerial.jpg',                                                                                  date: '2026-02-21' },
-    { file: 'mexico-walk.html',           title: 'メキシコシティに行った時の話③ 革命記念塔と街歩き',                               category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/revolucion-monument.jpg',                                                                               date: '2026-02-21' },
-    { file: 'mexico-walmart.html',        title: 'メキシコシティに行った時の話④ ウォールマートはお土産の穴場',                     category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/walmart-salsa.jpg',                                                                                     date: '2026-02-22' },
+    { file: 'el-salvador-ruins.html',     title: 'エルサルバドルに行った時の話① ホヤ・デ・セレンとタスマル',                     category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-ruins/ruins-1.jpg',                                                                                date: '2014-08-31' },
+    { file: 'el-salvador-volcan.html',    title: 'エルサルバドルに行った時の話② 警察官エスコートつきでサンタ・アナ火山へ',           category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-volcan/volcan-1.jpg',                                                                              date: '2014-09-02' },
+    { file: 'mexico-zocalo.html',         title: 'メキシコに行った時の話① ソカロとテンプロ・マヨール',                             category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/zocalo-catedral.jpg',                                                                                   date: '2026-02-22' },
+    { file: 'mexico-guadalupe.html',      title: 'メキシコに行った時の話② グアダルーペ大聖堂',                                     category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/guadalupe-aerial.jpg',                                                                                  date: '2026-02-21' },
+    { file: 'mexico-walk.html',           title: 'メキシコに行った時の話③ 革命記念塔と街歩き',                                     category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/revolucion-monument.jpg',                                                                               date: '2026-02-21' },
+    { file: 'mexico-walmart.html',        title: 'メキシコに行った時の話④ ウォールマートはお土産の穴場',                           category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/walmart-salsa.jpg',                                                                                     date: '2026-02-22' },
     { file: 'touring-camp-gear.html',     title: 'ソロツーリング キャンプ道具編① テント・シュラフ・マット',                       category: 'camp',       tag: 'キャンプ・ギア',   img: 'https://static.wixstatic.com/media/949ec9_afd223212bc6483f830f93812da66369~mv2_d_3024_4032_s_4_2.jpg',                  date: '2017-11-12' },
     { file: 'camp-mori-makiba.html',      title: '森のまきばオートキャンプ場 — 師走のソロキャンプ',                               category: 'camp',       tag: 'キャンプ',         img: 'https://static.wixstatic.com/media/949ec9_be02da1f1cce47dfa15fb7184f2e8dd6~mv2_d_4032_3024_s_4_2.jpg',                  date: '2018-12-15' },
     { file: 'atsukan.html',               title: '家でも熱燗が飲みたい！日本酒2本レビュー',                                       category: 'other',      tag: '酒・グルメ',       img: 'https://static.wixstatic.com/media/949ec9_69fcb4358adc4328a919ec0cfc491f98~mv2_d_2987_3938_s_4_2.jpg',                  date: '2017-01-10' },
@@ -431,6 +433,10 @@
       { file: 'belize-1.html', title: '① ベリーズシティ到着、夜明けの海とアジア系スーパー' },
       { file: 'belize-2.html', title: '② キーカーカー島とグレート・ブルーホール遊覧飛行' },
       { file: 'belize-3.html', title: '③ スウィング・ブリッジとベリーズシティ最終日' }
+    ],
+    [
+      { file: 'el-salvador-ruins.html',  title: '① ホヤ・デ・セレンとタスマル' },
+      { file: 'el-salvador-volcan.html', title: '② 警察官エスコートつきでサンタ・アナ火山へ' }
     ]
   ];
 
