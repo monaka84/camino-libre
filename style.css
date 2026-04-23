@@ -60,17 +60,17 @@ nav a:hover { color: var(--accent); }
 }
 .nav-cta:hover { background: var(--accent) !important; }
 
-/* ── Google Translate widget (fixed bottom-right) ── */
-.translate-widget {
-  position: fixed; bottom: 5rem; right: 1.2rem; z-index: 500;
-  display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem;
-  background: var(--white); border: 1px solid var(--border);
-  border-radius: 8px; padding: 0.6rem 0.8rem;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+/* ── Language switcher ── */
+.lang-switcher { display: flex; align-items: center; gap: 0.2rem; margin-right: 0.4rem; }
+.lang-btn {
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em;
+  padding: 0.2rem 0.45rem; border-radius: 3px; text-decoration: none;
+  color: var(--text-light); border: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
 }
-.translate-label {
-  font-size: 0.68rem; color: var(--text-light); white-space: nowrap; letter-spacing: 0.04em;
-}
+.lang-btn:hover { color: var(--accent); border-color: var(--accent); }
+.lang-btn--active { color: var(--accent); border-color: var(--accent); }
+@media (max-width: 600px) { .lang-switcher { display: none; } }
 
 /* ===== FOOTER ===== */
 footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2rem; }

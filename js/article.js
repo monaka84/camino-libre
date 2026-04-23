@@ -91,31 +91,28 @@
 
   // ── Google Translate ────────────────────────────────────────────
   function injectGoogleTranslate() {
-    if (document.getElementById('translate-widget-cl')) return;
+    if (document.getElementById('lang-switcher-cl')) return;
+
+    var headerInner = document.querySelector('.header-inner');
+    if (!headerInner) return;
 
     var pageUrl = encodeURIComponent(window.location.href);
     var base = 'https://translate.google.com/translate?sl=ja&u=' + pageUrl + '&tl=';
 
     var wrap = document.createElement('div');
-    wrap.id = 'translate-widget-cl';
-    wrap.setAttribute('style',
-      'position:fixed;bottom:5.5rem;right:1rem;z-index:9999;' +
-      'background:#fff;border:1px solid #ddd;border-radius:8px;' +
-      'padding:0.45rem 0.65rem;box-shadow:0 2px 12px rgba(0,0,0,0.15);' +
-      'display:flex;flex-direction:column;align-items:center;gap:0.35rem;'
-    );
+    wrap.id = 'lang-switcher-cl';
+    wrap.className = 'lang-switcher';
+    wrap.innerHTML =
+      '<a href="' + base + 'en" target="_blank" rel="noopener" class="lang-btn">EN</a>' +
+      '<a href="' + base + 'es" target="_blank" rel="noopener" class="lang-btn">ES</a>' +
+      '<a href="' + window.location.href + '" class="lang-btn lang-btn--active">JP</a>';
 
-    var label = '<span style="font-size:0.63rem;color:#999;white-space:nowrap;letter-spacing:0.03em;">🌐 Google翻訳</span>';
-    var btnStyle = 'font-size:0.75rem;font-weight:600;padding:0.2rem 0.55rem;' +
-      'border:1px solid #ccc;border-radius:4px;text-decoration:none;' +
-      'color:#333;background:#f5f5f5;cursor:pointer;';
-    var btns = '<div style="display:flex;gap:0.4rem;">' +
-      '<a href="' + base + 'en" target="_blank" rel="noopener" style="' + btnStyle + '">EN</a>' +
-      '<a href="' + base + 'es" target="_blank" rel="noopener" style="' + btnStyle + '">ES</a>' +
-      '</div>';
-
-    wrap.innerHTML = label + btns;
-    document.body.appendChild(wrap);
+    var darkToggle = headerInner.querySelector('.dark-toggle');
+    if (darkToggle) {
+      headerInner.insertBefore(wrap, darkToggle);
+    } else {
+      headerInner.appendChild(wrap);
+    }
   }
 
   // ── Mobile Nav ─────────────────────────────────────────────────
