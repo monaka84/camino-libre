@@ -94,8 +94,15 @@
     if (document.getElementById('google_translate_element')) return;
 
     var wrap = document.createElement('div');
-    wrap.className = 'translate-widget';
-    wrap.innerHTML = '<span class="translate-label">🌐 Google翻訳</span><div id="google_translate_element"></div>';
+    wrap.setAttribute('style',
+      'position:fixed;bottom:5rem;right:1.2rem;z-index:9999;' +
+      'background:#fff;border:1px solid #ddd;border-radius:8px;' +
+      'padding:0.6rem 0.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.15);' +
+      'display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem;'
+    );
+    wrap.innerHTML =
+      '<span style="font-size:0.68rem;color:#888;white-space:nowrap;">🌐 Google翻訳</span>' +
+      '<div id="google_translate_element"></div>';
     document.body.appendChild(wrap);
 
     window.googleTranslateElementInit = function () {
@@ -108,7 +115,7 @@
     };
 
     var s = document.createElement('script');
-    s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.head.appendChild(s);
   }
 
