@@ -96,7 +96,8 @@
     var headerInner = document.querySelector('.header-inner');
     if (!headerInner) return;
 
-    var pageUrl = encodeURIComponent(window.location.href);
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    var pageUrl = encodeURIComponent(ogUrl ? ogUrl.content : window.location.href);
     var base = 'https://translate.google.com/translate?sl=ja&u=' + pageUrl + '&tl=';
 
     // ヘッダー（デスクトップ）
@@ -106,7 +107,7 @@
     wrap.innerHTML =
       '<a href="' + base + 'en" target="_blank" rel="noopener" class="lang-btn">EN</a>' +
       '<a href="' + base + 'es" target="_blank" rel="noopener" class="lang-btn">ES</a>' +
-      '<a href="' + window.location.href + '" class="lang-btn lang-btn--active">JP</a>';
+      '<a href="' + (ogUrl ? ogUrl.content : window.location.href) + '" class="lang-btn lang-btn--active">JP</a>';
 
     var darkToggle = headerInner.querySelector('.dark-toggle');
     if (darkToggle) {
@@ -124,7 +125,7 @@
         '<span class="mobile-lang-label">Google翻訳</span>' +
         '<a href="' + base + 'en" target="_blank" rel="noopener" class="lang-btn">EN</a>' +
         '<a href="' + base + 'es" target="_blank" rel="noopener" class="lang-btn">ES</a>' +
-        '<a href="' + window.location.href + '" class="lang-btn lang-btn--active">JP</a>';
+        '<a href="' + (ogUrl ? ogUrl.content : window.location.href) + '" class="lang-btn lang-btn--active">JP</a>';
       mobileNav.appendChild(mobileRow);
     }
   }
