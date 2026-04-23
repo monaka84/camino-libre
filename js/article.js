@@ -91,13 +91,12 @@
 
   // ── Google Translate ────────────────────────────────────────────
   function injectGoogleTranslate() {
-    var nav = document.querySelector('.header-inner nav');
-    if (!nav || document.getElementById('google_translate_element')) return;
+    if (document.getElementById('google_translate_element')) return;
 
     var wrap = document.createElement('div');
     wrap.className = 'translate-widget';
-    wrap.innerHTML = '<span class="translate-label">Google翻訳</span><div id="google_translate_element"></div>';
-    nav.appendChild(wrap);
+    wrap.innerHTML = '<span class="translate-label">🌐 Google翻訳</span><div id="google_translate_element"></div>';
+    document.body.appendChild(wrap);
 
     window.googleTranslateElementInit = function () {
       new google.translate.TranslateElement({
