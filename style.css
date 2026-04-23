@@ -60,6 +60,25 @@ nav a:hover { color: var(--accent); }
 }
 .nav-cta:hover { background: var(--accent) !important; }
 
+/* ── Google Translate widget ── */
+.translate-widget {
+  display: flex; align-items: center; gap: 0.4rem;
+  border-left: 1px solid var(--border); padding-left: 1.2rem; margin-left: 0.4rem;
+}
+.translate-label {
+  font-size: 0.7rem; color: var(--text-light); white-space: nowrap; letter-spacing: 0.04em;
+}
+/* suppress Google's top bar and attribution clutter */
+.goog-te-banner-frame, .goog-te-balloon-frame { display: none !important; }
+body { top: 0 !important; }
+.goog-te-gadget { font-size: 0 !important; }
+.goog-te-gadget select {
+  font-size: 0.72rem !important; border: 1px solid var(--border) !important;
+  border-radius: 3px !important; padding: 0.2rem 0.3rem !important;
+  background: transparent !important; color: var(--text) !important;
+  cursor: pointer;
+}
+
 /* ===== FOOTER ===== */
 footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2rem; }
 .footer-inner {

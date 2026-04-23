@@ -86,7 +86,32 @@
     injectMapLinks();
     injectCopyCredit();
     injectSearch();
+    injectGoogleTranslate();
   });
+
+  // ── Google Translate ────────────────────────────────────────────
+  function injectGoogleTranslate() {
+    var nav = document.querySelector('.header-inner nav');
+    if (!nav || document.getElementById('google_translate_element')) return;
+
+    var wrap = document.createElement('div');
+    wrap.className = 'translate-widget';
+    wrap.innerHTML = '<span class="translate-label">Google翻訳</span><div id="google_translate_element"></div>';
+    nav.appendChild(wrap);
+
+    window.googleTranslateElementInit = function () {
+      new google.translate.TranslateElement({
+        pageLanguage: 'ja',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    };
+
+    var s = document.createElement('script');
+    s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.head.appendChild(s);
+  }
 
   // ── Mobile Nav ─────────────────────────────────────────────────
   function injectMobileNav() {
