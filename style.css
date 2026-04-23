@@ -74,13 +74,13 @@ nav a:hover { color: var(--accent); }
 /* suppress Google's top bar */
 .goog-te-banner-frame, .goog-te-balloon-frame { display: none !important; }
 body { top: 0 !important; }
-.goog-te-gadget { font-size: 0 !important; }
 .goog-te-gadget select {
   font-size: 0.78rem !important; border: 1px solid var(--border) !important;
   border-radius: 4px !important; padding: 0.25rem 0.4rem !important;
   background: var(--white) !important; color: var(--text) !important;
-  cursor: pointer; max-width: 120px;
+  cursor: pointer; max-width: 130px;
 }
+.goog-te-gadget > span { display: none !important; }
 
 /* ===== FOOTER ===== */
 footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2rem; }
