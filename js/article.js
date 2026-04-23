@@ -91,32 +91,31 @@
 
   // ── Google Translate ────────────────────────────────────────────
   function injectGoogleTranslate() {
-    if (document.getElementById('google_translate_element')) return;
+    if (document.getElementById('translate-widget-cl')) return;
+
+    var pageUrl = encodeURIComponent(window.location.href);
+    var base = 'https://translate.google.com/translate?sl=ja&u=' + pageUrl + '&tl=';
 
     var wrap = document.createElement('div');
+    wrap.id = 'translate-widget-cl';
     wrap.setAttribute('style',
-      'position:fixed;bottom:5rem;right:1.2rem;z-index:9999;' +
+      'position:fixed;bottom:5.5rem;right:1rem;z-index:9999;' +
       'background:#fff;border:1px solid #ddd;border-radius:8px;' +
-      'padding:0.6rem 0.8rem;box-shadow:0 2px 12px rgba(0,0,0,0.15);' +
-      'display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem;'
+      'padding:0.45rem 0.65rem;box-shadow:0 2px 12px rgba(0,0,0,0.15);' +
+      'display:flex;flex-direction:column;align-items:center;gap:0.35rem;'
     );
-    wrap.innerHTML =
-      '<span style="font-size:0.68rem;color:#888;white-space:nowrap;">🌐 Google翻訳</span>' +
-      '<div id="google_translate_element"></div>';
+
+    var label = '<span style="font-size:0.63rem;color:#999;white-space:nowrap;letter-spacing:0.03em;">🌐 Google翻訳</span>';
+    var btnStyle = 'font-size:0.75rem;font-weight:600;padding:0.2rem 0.55rem;' +
+      'border:1px solid #ccc;border-radius:4px;text-decoration:none;' +
+      'color:#333;background:#f5f5f5;cursor:pointer;';
+    var btns = '<div style="display:flex;gap:0.4rem;">' +
+      '<a href="' + base + 'en" target="_blank" rel="noopener" style="' + btnStyle + '">EN</a>' +
+      '<a href="' + base + 'es" target="_blank" rel="noopener" style="' + btnStyle + '">ES</a>' +
+      '</div>';
+
+    wrap.innerHTML = label + btns;
     document.body.appendChild(wrap);
-
-    window.googleTranslateElementInit = function () {
-      new google.translate.TranslateElement({
-        pageLanguage: 'ja',
-        includedLanguages: 'en,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-      }, 'google_translate_element');
-    };
-
-    var s = document.createElement('script');
-    s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-    document.head.appendChild(s);
   }
 
   // ── Mobile Nav ─────────────────────────────────────────────────
