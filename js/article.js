@@ -99,6 +99,7 @@
     var pageUrl = encodeURIComponent(window.location.href);
     var base = 'https://translate.google.com/translate?sl=ja&u=' + pageUrl + '&tl=';
 
+    // ヘッダー（デスクトップ）
     var wrap = document.createElement('div');
     wrap.id = 'lang-switcher-cl';
     wrap.className = 'lang-switcher';
@@ -112,6 +113,19 @@
       headerInner.insertBefore(wrap, darkToggle);
     } else {
       headerInner.appendChild(wrap);
+    }
+
+    // モバイルメニュー内
+    var mobileNav = document.querySelector('.mobile-nav');
+    if (mobileNav) {
+      var mobileRow = document.createElement('div');
+      mobileRow.className = 'mobile-lang-row';
+      mobileRow.innerHTML =
+        '<span class="mobile-lang-label">Google翻訳</span>' +
+        '<a href="' + base + 'en" target="_blank" rel="noopener" class="lang-btn">EN</a>' +
+        '<a href="' + base + 'es" target="_blank" rel="noopener" class="lang-btn">ES</a>' +
+        '<a href="' + window.location.href + '" class="lang-btn lang-btn--active">JP</a>';
+      mobileNav.appendChild(mobileRow);
     }
   }
 

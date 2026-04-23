@@ -526,6 +526,11 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 }
 .mobile-nav a:last-child { border-bottom: none; }
 .mobile-nav a:hover { color: var(--accent); }
+.mobile-lang-row {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 0;
+}
+.mobile-lang-label { font-size: 0.72rem; color: var(--text-light); margin-right: 0.3rem; }
 [data-theme="dark"] .mobile-nav { background: var(--white); }
 @media (max-width: 600px) { .menu-btn { display: flex; } }
 
