@@ -49,7 +49,7 @@
     { file: 'hokkaido-xsr900-day3.html',  title: 'XSR900で北海道へ③ — 厚岸蒸留所と根室の海鮮',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_010411011_iOS.jpg',                                                                    date: '2025-08-21' },
     { file: 'hokkaido-xsr900-day4.html',  title: 'XSR900で北海道へ④ — 納沙布岬と知床五湖',                                    category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_072833977_iOS.jpg',                                                                    date: '2025-08-21' },
     { file: 'hokkaido-xsr900-day5.html',  title: 'XSR900で北海道へ⑤ — 神の子池・網走監獄・美幌峠',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
-    { file: 'hokkaido-xsr900-day6.html',  title: 'XSR900で北海道へ⑥ — 枝幸で財布を落とした話',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_044833421_iOS.jpg',                                                                    date: '2025-08-24' },
+    { file: 'hokkaido-xsr900-day6.html',  title: 'XSR900で北海道へ⑥ — 枝幸で財布を落とした話',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_040949567_iOS.jpg',                                                                    date: '2025-08-24' },
     { file: 'hokkaido-xsr900-day7.html',  title: 'XSR900で北海道へ⑦ — オロロンラインをひた走る',                               category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250825_110201838_iOS.jpg',                                                                    date: '2025-08-25' },
     { file: 'hokkaido-xsr900-day8.html',  title: 'XSR900で北海道へ⑧ — 青い池と白ひげの滝、そして帰路',                        category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250826_002032526_iOS.jpg',                                                                    date: '2025-08-26' }
   ];
@@ -389,11 +389,14 @@
   var SERIES = [
     [
       { file: 'costa-rica-intro.html',        title: '① コスタリカってどんな国？' },
-      { file: 'costa-rica-christmas.html',    title: '② クリスマスと新年の過ごし方' },
-      { file: 'costa-rica-color-run.html',    title: '③ 日本人学校とThe Color Run' },
-      { file: 'costa-rica-semana-santa.html', title: '④ Semana Santa とマニエル・アントニオ' },
-      { file: 'costa-rica-food.html',         title: '⑤ 中米料理' },
-      { file: 'costa-rica-work.html',         title: '⑥ コスタリカでの仕事' }
+      { file: 'costa-rica-irazu.html',        title: '② イラスー火山と語学研修の日々' },
+      { file: 'costa-rica-christmas.html',    title: '③ クリスマスと新年の過ごし方' },
+      { file: 'costa-rica-color-run.html',    title: '④ 日本人学校とThe Color Run' },
+      { file: 'costa-rica-semana-santa.html', title: '⑤ Semana Santa とマニエル・アントニオ' },
+      { file: 'costa-rica-food.html',         title: '⑥ 中米料理' },
+      { file: 'costa-rica-work.html',         title: '⑦ コスタリカでの仕事' },
+      { file: 'costa-rica-cano-negro.html',   title: '⑧ カニョ・ネグロ野生生物保護区' },
+      { file: 'costa-rica-aribada.html',      title: '⑨ アリバダ——ウミガメの大産卵' }
     ],
     [
       { file: 'nicaragua-ometepe-1.html',    title: '① 国境を越えて、オメテペ島へ' },
