@@ -645,18 +645,21 @@
   function fitHeroTitle() {
     var el = document.querySelector('.article-hero-title');
     if (!el) return;
-    var lh = parseFloat(getComputedStyle(el).lineHeight);
     var fs = parseFloat(getComputedStyle(el).fontSize);
-    while (el.scrollHeight > lh * 3 + 4 && fs > 14) {
+    var lh = fs * 1.3;
+    while (el.offsetHeight > Math.ceil(lh * 3) + 2 && fs > 14) {
       fs -= 1;
       el.style.fontSize = fs + 'px';
-      lh = parseFloat(getComputedStyle(el).lineHeight);
+      lh = fs * 1.3;
     }
   }
+  function runFitAfterLayout() {
+    requestAnimationFrame(function () { requestAnimationFrame(fitHeroTitle); });
+  }
   if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(fitHeroTitle);
+    document.fonts.ready.then(runFitAfterLayout);
   } else {
-    window.addEventListener('load', fitHeroTitle);
+    window.addEventListener('load', runFitAfterLayout);
   }
 
 })();
