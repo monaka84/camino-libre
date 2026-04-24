@@ -107,7 +107,7 @@
     panel.innerHTML =
       '<a href="' + base + 'index.html">ホーム</a>' +
       '<a href="' + base + 'index.html#articles">記事一覧</a>' +
-      '<a href="' + base + 'index.html#about">プロフィール</a>';
+      '<a href="' + base + 'about.html">プロフィール</a>';
     header.insertAdjacentElement('afterend', panel);
 
     btn.addEventListener('click', function () {
