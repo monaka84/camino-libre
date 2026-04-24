@@ -57,9 +57,9 @@
     { file: 'hokkaido-xsr900-day6.html',  title: '枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_040949567_iOS.jpg',                                                                    date: '2025-08-24' },
     { file: 'hokkaido-xsr900-day7.html',  title: 'オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦',                               category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250825_110201838_iOS.jpg',                                                                    date: '2025-08-25' },
     { file: 'hokkaido-xsr900-day8.html',  title: '美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧',                        category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250826_002032526_iOS.jpg',                                                                    date: '2025-08-26' },
-    { file: 'panama-1.html',              title: 'パナマに行った時の話① — パナマ・ビエホ、500年前の廃墟',                         category: 'other',      tag: 'パナマ',           img: '../images/panama/pv-1.jpg',                                                                                               date: '2025-01-10' },
-    { file: 'panama.html',                title: 'パナマに行った時の話② — カスコビエホを歩いて、マリスコス市場で魚を見た',           category: 'other',      tag: 'パナマ',           img: '../images/panama/panama-1.jpg',                                                                                          date: '2025-01-11' },
-    { file: 'panama-3.html',              title: 'パナマに行った時の話③ — ミラフローレス閘門、船が通る瞬間に立ち会った',             category: 'other',      tag: 'パナマ',           img: '../images/panama/canal-1.jpg',                                                                                           date: '2025-01-12' },
+    { file: 'panama-1.html',              title: 'パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】',                         category: 'other',      tag: 'パナマ',           img: '../images/panama/pv-1.jpg',                                                                                               date: '2025-01-10' },
+    { file: 'panama.html',                title: 'カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】',           category: 'other',      tag: 'パナマ',           img: '../images/panama/panama-1.jpg',                                                                                          date: '2025-01-11' },
+    { file: 'panama-3.html',              title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】',             category: 'other',      tag: 'パナマ',           img: '../images/panama/canal-1.jpg',                                                                                           date: '2025-01-12' },
     { file: 'costa-rica-2025.html',       title: 'コスタリカ10年ぶり再訪 — 街は変わっていた、ピルセンは変わらなかった',             category: 'costa-rica', tag: 'コスタリカ',       img: '../images/costa-rica-2025/cr-5.jpg',                                                                                     date: '2025-01-15' },
     { file: 'noto-touring.html',          title: '能登半島ツーリング — 金箔がかかった刺身を食べた',                               category: 'bike',       tag: 'ツーリング',       img: '../images/noto/noto-1.jpg',                                                                                              date: '2022-08-01' },
     { file: 'nagano-touring.html',        title: '毛無峠・ビーナスライン・上田城 — 夏の群馬・長野ツーリング',                       category: 'bike',       tag: 'ツーリング',       img: '',                                                                                                                       date: '2023-07-01' },
@@ -495,9 +495,9 @@
       { file: 'el-salvador-volcan.html', title: 'サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】' }
     ],
     [
-      { file: 'panama-1.html', title: 'パナマに行った時の話① — パナマ・ビエホ、500年前の廃墟' },
-      { file: 'panama.html',   title: 'パナマに行った時の話② — カスコビエホを歩いて、マリスコス市場で魚を見た' },
-      { file: 'panama-3.html', title: 'パナマに行った時の話③ — ミラフローレス閘門、船が通る瞬間に立ち会った' }
+      { file: 'panama-1.html', title: 'パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】' },
+      { file: 'panama.html',   title: 'カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】' },
+      { file: 'panama-3.html', title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】' }
     ]
   ];
 
