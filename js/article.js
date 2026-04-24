@@ -645,6 +645,7 @@
   function fitHeroTitle() {
     var el = document.querySelector('.article-hero-title');
     if (!el) return;
+    el.style.fontSize = '';
     var fs = parseFloat(getComputedStyle(el).fontSize);
     var lh = fs * 1.3;
     while (el.offsetHeight > Math.ceil(lh * 3) + 2 && fs > 14) {
@@ -661,5 +662,10 @@
   } else {
     window.addEventListener('load', runFitAfterLayout);
   }
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(fitHeroTitle, 150);
+  });
 
 })();
