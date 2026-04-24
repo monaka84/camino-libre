@@ -20,12 +20,12 @@
     { file: 'costa-rica-work.html',        title: 'コスタリカで理学療法士として働いた話｜簡易装具で歩けるようになった患者【コスタリカ滞在記⑦】', category: 'costa-rica', tag: 'コスタリカ',       img: 'https://static.wixstatic.com/media/949ec9_3ddc83f695764babb8d3abf036ffa77e~mv2.jpg',                                    date: '2018-08-09' },
     { file: 'costa-rica-cano-negro.html',  title: 'カニョネグロとモンテベルデ旅行記｜野生動物を探す年末年始【コスタリカ滞在記⑧】',     category: 'costa-rica', tag: 'コスタリカ',       img: '../images/costa-rica-cano-negro/monteverde-motmot.jpg',                                                                   date: '2014-12-25' },
     { file: 'costa-rica-aribada.html',     title: 'アリバダを見にオスティオナルへ｜ヒメウミガメ集団産卵に間に合わなかった話【コスタリカ滞在記⑨】',                 category: 'costa-rica', tag: 'コスタリカ',       img: '../images/costa-rica-aribada/aribada-beach.jpg',                                                                         date: '2015-09-01' },
-    { file: 'nicaragua-ometepe-1.html',   title: 'ニカラグアに行った時の話① 国境越えとオメテペ島へ',                           category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_019bd4603cf949559dd74edbb0af66f0~mv2.jpg',                                    date: '2016-11-06' },
-    { file: 'nicaragua-ometepe-2.html',   title: 'ニカラグアに行った時の話② オメテペ島を一日で巡る',                               category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_ef3f551a51dd4c5aa071e586251d053c~mv2.jpg',                                    date: '2016-11-08' },
-    { file: 'nicaragua-granada.html',     title: 'ニカラグアに行った時の話③ グラナダ——植民地の街と革製品の宝庫',                   category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_fb403e7af29a471c8b1254216f87e047~mv2_d_2048_1366_s_2.jpg',                  date: '2016-11-16' },
-    { file: 'nicaragua-managua.html',     title: 'ニカラグアに行った時の話④ マナグア',                               category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg',                                    date: '2018-06-13' },
-    { file: 'nicaragua-leon.html',        title: 'ニカラグアに行った時の話⑤ レオン',                                       category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg',                                    date: '2018-06-17' },
-    { file: 'nicaragua-flor-de-cana.html', title: 'ニカラグアに行った時の話⑥ Flor de Caña工場見学',                            category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg',                  date: '2016-09-07' },
+    { file: 'nicaragua-ometepe-1.html',   title: 'コスタリカからニカラグアへ国境越え｜TICA BUSでオメテペ島へ【ニカラグア旅行記①】',  category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_019bd4603cf949559dd74edbb0af66f0~mv2.jpg',                                    date: '2016-11-06' },
+    { file: 'nicaragua-ometepe-2.html',   title: 'オメテペ島観光を1日で巡る｜オホ・デ・アグアと火山島の見どころ【ニカラグア旅行記②】',   category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_ef3f551a51dd4c5aa071e586251d053c~mv2.jpg',                                    date: '2016-11-08' },
+    { file: 'nicaragua-granada.html',     title: 'グラナダ観光と革製品探し｜ニカラグアの植民地都市を歩く【ニカラグア旅行記③】',         category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_fb403e7af29a471c8b1254216f87e047~mv2_d_2048_1366_s_2.jpg',                  date: '2016-11-16' },
+    { file: 'nicaragua-managua.html',     title: 'マナグア観光と友人との再会｜ニカラグアの首都で過ごした一日【ニカラグア旅行記④】',       category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg',                                    date: '2018-06-13' },
+    { file: 'nicaragua-leon.html',        title: 'レオン観光｜革命の記憶とルベン・ダリオの街を歩く【ニカラグア旅行記⑤】',               category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg',                                    date: '2018-06-17' },
+    { file: 'nicaragua-flor-de-cana.html', title: 'フロール・デ・カーニャ工場見学｜ニカラグアのラム酒を味わう【ニカラグア旅行記⑥】',     category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg',                  date: '2016-09-07' },
     { file: 'el-salvador-ruins.html',     title: 'ホヤ・デ・セレンとタスマル遺跡へ｜エルサルバドルの世界遺産とマヤ遺跡【エルサルバドル旅行記①】',                     category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-ruins/ruins-1.jpg',                                                                                date: '2014-08-31' },
     { file: 'el-salvador-volcan.html',    title: 'サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】',           category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-volcan/volcan-1.jpg',                                                                              date: '2014-09-02' },
     { file: 'mexico-zocalo.html',         title: 'メキシコシティ歴史地区観光｜ソカロ・テンプロマヨール・大聖堂を歩く【メキシコ旅行記①】',                             category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/zocalo-catedral.jpg',                                                                                   date: '2026-02-22' },
@@ -415,12 +415,12 @@
       { file: 'costa-rica-aribada.html',      title: 'アリバダを見にオスティオナルへ｜ヒメウミガメ集団産卵に間に合わなかった話【コスタリカ滞在記⑨】' }
     ],
     [
-      { file: 'nicaragua-ometepe-1.html',    title: 'ニカラグアに行った時の話① 国境越えとオメテペ島へ' },
-      { file: 'nicaragua-ometepe-2.html',    title: 'ニカラグアに行った時の話② オメテペ島を一日で巡る' },
-      { file: 'nicaragua-granada.html',      title: 'ニカラグアに行った時の話③ グラナダ——植民地の街と革製品の宝庫' },
-      { file: 'nicaragua-managua.html',      title: 'ニカラグアに行った時の話④ マナグア' },
-      { file: 'nicaragua-leon.html',         title: 'ニカラグアに行った時の話⑤ レオン' },
-      { file: 'nicaragua-flor-de-cana.html', title: 'ニカラグアに行った時の話⑥ Flor de Caña工場見学' }
+      { file: 'nicaragua-ometepe-1.html',    title: 'コスタリカからニカラグアへ国境越え｜TICA BUSでオメテペ島へ【ニカラグア旅行記①】' },
+      { file: 'nicaragua-ometepe-2.html',    title: 'オメテペ島観光を1日で巡る｜オホ・デ・アグアと火山島の見どころ【ニカラグア旅行記②】' },
+      { file: 'nicaragua-granada.html',      title: 'グラナダ観光と革製品探し｜ニカラグアの植民地都市を歩く【ニカラグア旅行記③】' },
+      { file: 'nicaragua-managua.html',      title: 'マナグア観光と友人との再会｜ニカラグアの首都で過ごした一日【ニカラグア旅行記④】' },
+      { file: 'nicaragua-leon.html',         title: 'レオン観光｜革命の記憶とルベン・ダリオの街を歩く【ニカラグア旅行記⑤】' },
+      { file: 'nicaragua-flor-de-cana.html', title: 'フロール・デ・カーニャ工場見学｜ニカラグアのラム酒を味わう【ニカラグア旅行記⑥】' }
     ],
     [
       { file: 'mexico-zocalo.html',    title: 'メキシコシティ歴史地区観光｜ソカロ・テンプロマヨール・大聖堂を歩く【メキシコ旅行記①】' },
