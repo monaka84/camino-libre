@@ -254,7 +254,7 @@
   </div>
 </footer>
 
-<script src="js/article.js?v=20260426"></script>
+<script src="js/article.js?v=20260427"></script>
 <script>
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
@@ -372,6 +372,17 @@
       });
     });
   });
+
+  // URLパラメータ ?cat= でフィルターを初期化
+  var initCat = new URLSearchParams(location.search).get('cat');
+  if (initCat) {
+    var initBtn = document.querySelector('.filter-btn[data-cat="' + initCat + '"]');
+    if (initBtn) {
+      initBtn.click();
+      var articlesSection = document.getElementById('articles');
+      if (articlesSection) articlesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 })();
 </script>

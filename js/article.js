@@ -409,7 +409,7 @@
 
   // ── Series Navigation ──────────────────────────────────────────
   var SERIES = [
-    [
+    { name: 'コスタリカ滞在記', catKey: 'costa-rica', articles: [
       { file: 'costa-rica-intro.html',        title: 'コスタリカとはどんな国？｜自然・治安・暮らしを元在住者が紹介【コスタリカ滞在記①】' },
       { file: 'costa-rica-irazu.html',        title: 'イラス火山の行き方と見どころ｜火口湖が見えなかった日【コスタリカ滞在記②】' },
       { file: 'costa-rica-christmas.html',    title: 'コスタリカのクリスマスと年越し｜タマル・爆竹・光の祭典【コスタリカ滞在記③】' },
@@ -419,22 +419,22 @@
       { file: 'costa-rica-work.html',         title: 'コスタリカで理学療法士として働いた話｜簡易装具で歩けるようになった患者【コスタリカ滞在記⑦】' },
       { file: 'costa-rica-cano-negro.html',   title: 'カニョネグロとモンテベルデ旅行記｜野生動物を探す年末年始【コスタリカ滞在記⑧】' },
       { file: 'costa-rica-aribada.html',      title: 'アリバダを見にオスティオナルへ｜ヒメウミガメ集団産卵に間に合わなかった話【コスタリカ滞在記⑨】' }
-    ],
-    [
+    ]},
+    { name: 'ニカラグア旅行記', catKey: 'nicaragua', articles: [
       { file: 'nicaragua-ometepe-1.html',    title: 'コスタリカからニカラグアへ国境越え｜TICA BUSでオメテペ島へ【ニカラグア旅行記①】' },
       { file: 'nicaragua-ometepe-2.html',    title: 'オメテペ島観光を1日で巡る｜オホ・デ・アグアと火山島の見どころ【ニカラグア旅行記②】' },
       { file: 'nicaragua-granada.html',      title: 'グラナダ観光と革製品探し｜ニカラグアの植民地都市を歩く【ニカラグア旅行記③】' },
       { file: 'nicaragua-managua.html',      title: 'マナグア観光と友人との再会｜ニカラグアの首都で過ごした一日【ニカラグア旅行記④】' },
       { file: 'nicaragua-leon.html',         title: 'レオン観光｜革命の記憶とルベン・ダリオの街を歩く【ニカラグア旅行記⑤】' },
       { file: 'nicaragua-flor-de-cana.html', title: 'フロール・デ・カーニャ工場見学｜ニカラグアのラム酒を味わう【ニカラグア旅行記⑥】' }
-    ],
-    [
+    ]},
+    { name: 'メキシコ旅行記', catKey: 'mexico', articles: [
       { file: 'mexico-zocalo.html',    title: 'メキシコシティ歴史地区観光｜ソカロ・テンプロマヨール・大聖堂を歩く【メキシコ旅行記①】' },
       { file: 'mexico-guadalupe.html', title: 'グアダルーペ大聖堂の見どころ｜テペヤックの丘と奇跡のマント【メキシコ旅行記②】' },
       { file: 'mexico-walk.html',      title: 'メキシコシティ街歩き｜革命記念塔・朝食・ストリートアートを巡る【メキシコ旅行記③】' },
       { file: 'mexico-walmart.html',   title: 'メキシコ土産はウォルマートが穴場｜サルサ・コーヒー・チョコレート購入記【メキシコ旅行記④】' }
-    ],
-    [
+    ]},
+    { name: 'XSR900北海道ツーリング記録', catKey: 'hokkaido', articles: [
       { file: 'hokkaido-xsr900-day1.html', title: '大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①' },
       { file: 'hokkaido-xsr900-day2.html', title: 'ウポポイと帯広の豚丼を巡る上陸初日｜XSR900北海道ツーリング記録②' },
       { file: 'hokkaido-xsr900-day3.html', title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③' },
@@ -443,35 +443,35 @@
       { file: 'hokkaido-xsr900-day6.html', title: '枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥' },
       { file: 'hokkaido-xsr900-day7.html', title: 'オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦' },
       { file: 'hokkaido-xsr900-day8.html', title: '美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧' }
-    ],
-    [
+    ]},
+    { name: 'チリ旅行記', catKey: 'chile', articles: [
       { file: 'chile-1.html', title: 'サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】' },
       { file: 'chile-2.html', title: 'ロス・ドミニコス工芸市場へ｜サンティアゴで民芸品と白い教会を巡る【チリ旅行記②】' },
       { file: 'chile-3.html', title: 'サンティアゴ最終日｜パルタ・レイナとクリスマス前の街歩き【チリ旅行記③】' }
-    ],
-    [
+    ]},
+    { name: 'ベリーズ旅行記', catKey: 'belize', articles: [
       { file: 'belize-1.html', title: 'ベリーズシティ到着｜夜明けのカリブ海とアジア系スーパー散策【ベリーズ旅行記①】' },
       { file: 'belize-2.html', title: 'キーカーカー島とグレート・ブルーホール遊覧飛行｜ベリーズのカリブ海を空から見る【ベリーズ旅行記②】' },
       { file: 'belize-3.html', title: 'ベリーズシティ街歩き｜スウィング・ブリッジと最終日の過ごし方【ベリーズ旅行記③】' }
-    ],
-    [
+    ]},
+    { name: 'エルサルバドル旅行記', catKey: 'el-salvador', articles: [
       { file: 'el-salvador-ruins.html',  title: 'ホヤ・デ・セレンとタスマル遺跡へ｜エルサルバドルの世界遺産とマヤ遺跡【エルサルバドル旅行記①】' },
       { file: 'el-salvador-volcan.html', title: 'サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】' }
-    ],
-    [
+    ]},
+    { name: 'パナマ旅行記', catKey: 'panama', articles: [
       { file: 'panama-1.html', title: 'パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】' },
       { file: 'panama.html',   title: 'カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】' },
       { file: 'panama-3.html', title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】' }
-    ]
+    ]}
   ];
 
   function injectSeriesNav() {
     var current = location.pathname.split('/').pop();
     if (current && !current.endsWith('.html')) current += '.html';
-    var prev = null, next = null;
+    var prev = null, next = null, seriesName = null, seriesCat = null;
 
     for (var g = 0; g < SERIES.length; g++) {
-      var group = SERIES[g];
+      var group = SERIES[g].articles;
       var idx = -1;
       for (var i = 0; i < group.length; i++) {
         if (group[i].file === current) { idx = i; break; }
@@ -479,6 +479,8 @@
       if (idx === -1) continue;
       prev = idx > 0 ? group[idx - 1] : null;
       next = idx < group.length - 1 ? group[idx + 1] : null;
+      seriesName = SERIES[g].name;
+      seriesCat = SERIES[g].catKey;
       break;
     }
 
@@ -503,6 +505,14 @@
       nextLink.href = next.file;
       nextLink.innerHTML = '<span class="series-nav-label">次の記事 →</span><span class="series-nav-title">' + next.title + '</span>';
       nav.appendChild(nextLink);
+    }
+
+    if (seriesName && seriesCat) {
+      var listLink = document.createElement('a');
+      listLink.className = 'series-nav-list';
+      listLink.href = '../index.html?cat=' + seriesCat + '#articles';
+      listLink.textContent = seriesName + ' 一覧を見る';
+      nav.appendChild(listLink);
     }
 
     var articleBody = document.querySelector('.article-body');

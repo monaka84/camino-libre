@@ -459,6 +459,13 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 }
 .series-nav-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
 .series-nav-next { text-align: right; margin-left: auto; }
+.series-nav-list {
+  display: block; width: 100%; text-align: center;
+  font-size: 0.82rem; color: var(--accent); text-decoration: none;
+  letter-spacing: 0.05em; padding-top: 1rem;
+  border-top: 1px solid var(--border); margin-top: 0.5rem;
+}
+.series-nav-list:hover { text-decoration: underline; }
 
 /* ===== FILTER BAR ===== */
 .filter-bar {
