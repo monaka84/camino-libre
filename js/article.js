@@ -318,6 +318,13 @@
       var a = document.createElement('a');
       a.href = '#' + h.id;
       a.textContent = h.textContent;
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var headerH = (document.querySelector('header') || {}).offsetHeight || 64;
+        var top = h.getBoundingClientRect().top + window.pageYOffset - headerH - 24;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        history.pushState(null, '', '#' + h.id);
+      });
       tocLinks.push(a);
       li.appendChild(a);
       ol.appendChild(li);
