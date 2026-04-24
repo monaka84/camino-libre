@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プロフィール | Camino Libre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+    .about-page-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .about-page-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 1.5rem;
+      background: linear-gradient(135deg, #2d4a3e, #c8a96e);
+    }
+    .about-page-avatar img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .about-page-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+    .about-page-role {
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    .about-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 3rem auto;
+    }
+
+    .about-body {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 2;
+    }
+    .about-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-facts {
+      margin: 3.5rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .about-fact-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .about-fact-label {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      letter-spacing: 0.05em;
+    }
+
+    .about-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 2.5rem;
+    }
+
+    .about-back {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .about-back a {
+      font-size: 0.88rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.65rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+    }
+    .about-back a:hover { background: var(--accent); color: #fff; }
+
+    @media (max-width: 600px) {
+      .about-facts { grid-template-columns: 1fr 1fr; }
+      .about-fact-num { font-size: 1.6rem; }
+    }
+
+    /* ── ヒーロー ── */
+    .about-hero {
+      position: relative;
+      width: 100%;
+      height: 360px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+    .about-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%);
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .about-hero-avatar {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.6);
+    }
+    .about-hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .about-hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+    }
+    .about-hero-role {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.1em;
+    }
+    @media (max-width: 600px) {
+      .about-hero { height: 280px; }
+      .about-hero-name { font-size: 1.6rem; }
+    }
+
+    /* ── 引用テキスト ── */
+    .about-pullquote {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .about-pullquote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      color: var(--black);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Camino<span>Libre</span></a>
+    <nav>
+      <a href="index.html">ホーム</a>
+      <a href="index.html#articles">記事一覧</a>
+      <a href="about.html" class="active">プロフィール</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ヒーロー：ページ読み込みごとにランダムで青い画像 -->
+<div class="about-hero" id="aboutHero">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <div class="about-hero-avatar">
+      <img src="images/profile.jpg" alt="">
+    </div>
+    <div class="about-hero-name">Monaka</div>
+    <div class="about-hero-role">旅人 · バイク乗り · 元コスタリカ在住</div>
+  </div>
+</div>
+
+<div class="about-page">
+
+  <div class="about-body">
+    <p>コスタリカで暮らした経験をきっかけに、中南米の旅や暮らしに関心を持つようになった。日本では、バイクで各地を走る旅を続けている。</p>
+
+    <p>「Camino Libre」は、スペイン語で「自由な道」という意味。コスタリカをはじめとする中南米の旅と暮らし、スペイン語、バイク旅の記録をここに残している。</p>
+
+    <p>中南米では、観光地をまわりながら、街の路地や食堂、現地の人とのやり取りなど、日常の中にある景色に惹かれてきた。日本ではバイクで走っている。海沿いの道、峠道、どこまでも続くまっすぐな道。走ってみないと分からない景色がある。</p>
+
+  </div>
+
+  <div class="about-pullquote">
+    <div class="about-pullquote-text">知らない場所へ行って、<br>青い景色を探す旅の記録。</div>
+  </div>
+
+  <div class="about-tags-wrap">
+    <span class="tag-pill">コスタリカ</span>
+    <span class="tag-pill">ニカラグア</span>
+    <span class="tag-pill">メキシコ</span>
+    <span class="tag-pill">チリ</span>
+    <span class="tag-pill">ベリーズ</span>
+    <span class="tag-pill">パナマ</span>
+    <span class="tag-pill">エルサルバドル</span>
+    <span class="tag-pill">台湾</span>
+    <span class="tag-pill">北海道</span>
+    <span class="tag-pill">バイク</span>
+    <span class="tag-pill">キャンプ</span>
+    <span class="tag-pill">スペイン語</span>
+  </div>
+
+  <div class="about-back">
+    <a href="index.html">← 記事一覧へ</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Camino<span>Libre</span></div>
+    <div class="footer-nav">
+      <a href="index.html">ホーム</a>
+      <a href="index.html#articles">記事一覧</a>
+      <a href="about.html">プロフィール</a>
+    </div>
+    <div class="footer-contact"><a href="mailto:info@camino-libre.jp">お問い合わせ: info@camino-libre.jp</a></div>
+    <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const max = document.body.scrollHeight - window.innerHeight;
+    document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
+  });
+
+  // ランダム青画像ヒーロー
+  // 新しい画像を追加するときはこの配列に1行足すだけ
+  var BLUE_IMAGES = [
+    'images/hokkaido-car/神威岬.jpg',
+    'images/hokkaido-car/神威岬のコピー.jpg',
+    'images/belize/20251019_213939041_iOS.jpg',
+    'images/belize/20251018_213429265_iOS.jpg',
+    'images/five-color-lake/IMG_8015.jpg',
+    'images/five-color-lake/IMG_8035.jpg',
+    'images/izu-touring/sea.jpg',
+    'images/taiwan/z50_0939_dxo.jpg',
+    'images/costa-rica-irazu/irazu-crater-view.jpg',
+  ];
+  var img = BLUE_IMAGES[Math.floor(Math.random() * BLUE_IMAGES.length)];
+  document.getElementById('aboutHero').style.backgroundImage = 'url("' + img + '")';
+</script>
+
+</body>
+</html>

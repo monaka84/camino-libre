@@ -7,6 +7,125 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── キャッチコピー ── */
+    .top-catch {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .top-catch-sub {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .top-catch-main {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--black);
+    }
+
+    /* ── ミニプロフィール ── */
+    .top-profile {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .top-profile-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .top-profile-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .top-profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .top-profile-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 0.2rem;
+    }
+    .top-profile-role {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    .top-profile-bio {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+    @media (max-width: 600px) {
+      .top-profile-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    }
+
+    /* ── 連載シリーズ上書き ── */
+    .featured-strip { background: #f5f0e6; }
+    .featured-strip-label { color: var(--accent); font-size: 1rem; letter-spacing: 0.15em; }
+    .strip-card { border-top-color: rgba(0,0,0,0.12); }
+    .strip-card:hover { border-top-color: var(--accent); }
+    .strip-card-num { color: rgba(180,140,80,0.45); }
+    .strip-card-tag { color: var(--accent); font-size: 0.82rem; letter-spacing: 0.06em; }
+    .strip-card-title { font-size: 1rem; color: var(--black); }
+
+    /* ── カテゴリ別記事カード ── */
+    .recent-card {
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+    .recent-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .recent-card-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+    .recent-card-body { padding: 1rem; }
+    .recent-card-tag {
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+    }
+    .recent-card-series {
+      font-size: 0.7rem;
+      color: var(--gray);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    .recent-card-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.55;
+      color: var(--black);
+    }
+    @media (max-width: 768px) {
+      .cat-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      .cat-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,806 +137,32 @@
     <nav>
       <a href="index.html">ホーム</a>
       <a href="#articles">記事一覧</a>
-      <a href="#about">プロフィール</a>
+      <a href="about.html">プロフィール</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="hero-section"></section>
-
-<!-- ARTICLES -->
-<div class="section-divider" id="articles">
-  <span class="section-label">記事一覧</span>
-  <div class="divider-line"></div>
+<!-- キャッチコピー -->
+<div class="top-catch">
+  <div class="top-catch-sub">中南米の路地からバイク旅まで</div>
+  <h1 class="top-catch-main">知らない場所へ行って、<br>青い景色を探す旅の記録。</h1>
 </div>
 
-<div class="filter-bar">
-  <button class="filter-btn active" data-filter="all">すべて</button>
-  <button class="filter-btn" data-filter="costa-rica">コスタリカ</button>
-  <button class="filter-btn" data-filter="nicaragua">ニカラグア</button>
-  <button class="filter-btn" data-filter="mexico">メキシコ</button>
-  <button class="filter-btn" data-filter="chile">チリ</button>
-  <button class="filter-btn" data-filter="belize">ベリーズ</button>
-  <button class="filter-btn" data-filter="taiwan">台湾</button>
-  <button class="filter-btn" data-filter="camp">キャンプ</button>
-  <button class="filter-btn" data-filter="el-salvador">エルサルバドル</button>
-  <button class="filter-btn" data-filter="panama">パナマ</button>
-  <button class="filter-btn" data-filter="bike">ツーリング</button>
-  <button class="filter-btn" data-filter="hokkaido">北海道</button>
+<!-- ミニプロフィール -->
+<div class="top-profile">
+  <div class="top-profile-inner">
+    <div class="top-profile-avatar">
+      <img src="images/profile.jpg" alt="">
+    </div>
+    <div>
+      <div class="top-profile-name">Monaka</div>
+      <div class="top-profile-role">旅人 · バイク乗り · 元コスタリカ在住</div>
+      <div class="top-profile-bio">中南米に数年いて、バイクで国内を走って、気づいたら旅の記録がたまっていた。<br>決めすぎない旅が、だいたい一番おもしろい。</div>
+    </div>
+  </div>
 </div>
 
-<section class="articles">
-
-  <div class="articles-section-header" id="costa-rica">
-    <span class="section-label">コスタリカ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/costa-rica-intro.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica-map.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカとはどんな国？｜自然・治安・暮らしを元在住者が紹介【コスタリカ滞在記①】</h2>
-    <p class="card-excerpt">九州と四国を合わせた面積に世界の生物種の5%が生息。「チーノ！」と呼ばれ、先住民の村の診療所で働いた日々。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2018年1月30日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-irazu.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica-irazu/irazu-crater-view.jpg'); background-size: cover; background-position: center 60%;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">イラス火山の行き方と見どころ｜火口湖が見えなかった日【コスタリカ滞在記②】</h2>
-    <p class="card-excerpt">コスタリカの紋章に描かれた標高3,432mの活火山へ。エメラルドグリーンの火口湖を目当てにバスで2時間——なにもありませんでした。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年3月5日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-christmas.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_bd4831b3aa4f4502a43029245d5fddc4~mv2_d_2800_2800_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカのクリスマスと年越し｜タマル・爆竹・光の祭典【コスタリカ滞在記③】</h2>
-    <p class="card-excerpt">光の祭典パレード、バナナの葉で包んだタマル、爆竹が鳴り響く年越し——日本とは真逆のにぎやかな年末年始。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2018年2月2日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-color-run.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_6a5dbafe9b2a402589c1c87b64e296ba~mv2.png'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカ日本人学校とThe Color Run｜サンホセで見た子どもたちと祭り【コスタリカ滞在記④】</h2>
-    <p class="card-excerpt">言葉も文化も違う国で輝く子どもたちの運動会と、カラーパウダーまみれで走るサンホセのThe Color Run。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年2月12日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-semana-santa.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica/manuel-antonio-animals.avif'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">マヌエル・アントニオ国立公園へ｜セマナ・サンタのコスタリカ旅行【コスタリカ滞在記⑤】</h2>
-    <p class="card-excerpt">イースター前の聖週間を使って、ナマケモノとワニが共存するマニエル・アントニオ国立公園へ。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年2月5日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-food.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_ba55d298fd444594b32692749af90ed2~mv2.png'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカ・中米料理まとめ｜ガジョピント、セビーチェ、ライス＆ビーンズ【コスタリカ滞在記⑥】</h2>
-    <p class="card-excerpt">日本人が想像する以上に、主食を米とする国は多い。セビーチェ、ガジョピント、ライス&ビーンズ——中米の食卓を彩る料理たちを紹介する。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年2月12日</span>
-    </div>
-  </a>
-
-
-  <a href="articles/costa-rica-work.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_3ddc83f695764babb8d3abf036ffa77e~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカで理学療法士として働いた話｜簡易装具で歩けるようになった患者【コスタリカ滞在記⑦】</h2>
-    <p class="card-excerpt">装具が届くまで8ヶ月かかる国で、サンダルと野球用プロテクターで作った簡易装具。それで歩けるようになった患者がいる。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2018年8月9日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-cano-negro.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica-cano-negro/monteverde-motmot.jpg'); background-size: cover; background-position: center 40%;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">カニョネグロとモンテベルデ旅行記｜野生動物を探す年末年始【コスタリカ滞在記⑧】</h2>
-    <p class="card-excerpt">2014年末、カニョネグロでボートツアー、モンテベルデでナマケモノとアオマユハチクイモドキ。コスタリカの野生動物を一気に詰め込んだ年末年始の旅。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2014年12月〜2015年1月</span>
-    </div>
-  </a>
-
-
-  <a href="articles/costa-rica-aribada.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica-aribada/aribada-beach.jpg'); background-size: cover; background-position: center 40%;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">アリバダを見にオスティオナルへ｜ヒメウミガメ集団産卵に間に合わなかった話【コスタリカ滞在記⑨】</h2>
-    <p class="card-excerpt">ヒメウミガメの集団産卵「アリバダ」を見に、14時間以上かけてバスで現地へ。砂浜には卵の殻しか残っていなかった。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2019年3月12日</span>
-    </div>
-  </a>
-
-  <a href="articles/costa-rica-2025.html" class="card" data-category="costa-rica">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/costa-rica-2025/cr-5.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">コスタリカ</div>
-    <h2 class="card-title">コスタリカ10年ぶり再訪｜変わったサンホセと変わらないピルセンの味</h2>
-    <p class="card-excerpt">2025年1月、10年ぶりのコスタリカ。サンホセに高層ビルが増え、街が変わっていた。ピルセン・インペリアルの味だけは、変わっていなかった。</p>
-    <div class="card-meta">
-      <span>コスタリカ</span><span class="dot">·</span><span>2025年1月</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="nicaragua">
-    <span class="section-label">ニカラグア</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/nicaragua-ometepe-1.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_019bd4603cf949559dd74edbb0af66f0~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">コスタリカからニカラグアへ国境越え｜TICA BUSでオメテペ島へ【ニカラグア旅行記①】</h2>
-    <p class="card-excerpt">コスタリカからTICA BUSで国境越え。淡水サメが棲む湖に浮かぶ火山の島、オメテペへ向かう。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2016年11月6日</span>
-    </div>
-  </a>
-
-  <a href="articles/nicaragua-ometepe-2.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_ef3f551a51dd4c5aa071e586251d053c~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">オメテペ島観光を1日で巡る｜オホ・デ・アグアと火山島の見どころ【ニカラグア旅行記②】</h2>
-    <p class="card-excerpt">バスのない日曜日、ガイドを雇って島を一周。Ojo de agua、先住民遺跡、1ドルのランチ——のどかな火山島の一日。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2016年11月8日</span>
-    </div>
-  </a>
-
-  <a href="articles/nicaragua-granada.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_fb403e7af29a471c8b1254216f87e047~mv2_d_2048_1366_s_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">グラナダ観光と革製品探し｜ニカラグアの植民地都市を歩く【ニカラグア旅行記③】</h2>
-    <p class="card-excerpt">朝6時のフェリーで島を出て、植民地建築が残るグラナダへ。「Soy Nica」の革製品、このためだけに来る価値がある。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2016年11月16日</span>
-    </div>
-  </a>
-
-  <a href="articles/nicaragua-managua.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">マナグア観光と友人との再会｜ニカラグアの首都で過ごした一日【ニカラグア旅行記④】</h2>
-    <p class="card-excerpt">グラナダを後にしてマサヤへ、そして首都マナグアへ。「水の多いところ」を意味するこの街で、懐かしい友人と日本食を囲んだ。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2018年6月13日</span>
-    </div>
-  </a>
-
-  <a href="articles/nicaragua-leon.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">レオン観光｜革命の記憶とルベン・ダリオの街を歩く【ニカラグア旅行記⑤】</h2>
-    <p class="card-excerpt">サンディニスタの本拠地として知られるレオン。ライオン像が鎮座する大聖堂、詩人ルベン・ダリオの住居跡、そして内戦の記憶を訪ねる。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2018年6月17日</span>
-    </div>
-  </a>
-
-  <a href="articles/nicaragua-flor-de-cana.html" class="card" data-category="nicaragua">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ニカラグア</div>
-    <h2 class="card-title">フロール・デ・カーニャ工場見学｜ニカラグアのラム酒を味わう【ニカラグア旅行記⑥】</h2>
-    <p class="card-excerpt">レオン近郊チチガルパにある1890年創業のラム酒工場へ。20年物の一口で、ラム酒の奥深さを知った。</p>
-    <div class="card-meta">
-      <span>ニカラグア</span><span class="dot">·</span><span>2016年9月7日</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="el-salvador">
-    <span class="section-label">エルサルバドル</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/el-salvador-ruins.html" class="card" data-category="el-salvador">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/el-salvador-ruins/ruins-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">エルサルバドル</div>
-    <h2 class="card-title">ホヤ・デ・セレンとタスマル遺跡へ｜エルサルバドルの世界遺産とマヤ遺跡【エルサルバドル旅行記①】</h2>
-    <p class="card-excerpt">2014年8月、エルサルバドルへ。ユネスコ世界遺産のホヤ・デ・セレン、マヤの神殿タスマル——雨の中、傘ひとつで遺跡を巡った。</p>
-    <div class="card-meta">
-      <span>エルサルバドル</span><span class="dot">·</span><span>2014年8月</span>
-    </div>
-  </a>
-
-  <a href="articles/el-salvador-volcan.html" class="card" data-category="el-salvador">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/el-salvador-volcan/volcan-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">エルサルバドル</div>
-    <h2 class="card-title">サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】</h2>
-    <p class="card-excerpt">2014年9月、標高2,381mのサンタ・アナ火山へ。「星の王子さまの山」イサルコ、コバルトブルーの火口湖、そして警察エスコートの理由。</p>
-    <div class="card-meta">
-      <span>エルサルバドル</span><span class="dot">·</span><span>2014年9月</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="panama">
-    <span class="section-label">パナマ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/panama-1.html" class="card" data-category="panama">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/panama/pv-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">パナマ</div>
-    <h2 class="card-title">パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】</h2>
-    <p class="card-excerpt">1519年建設、海賊モーガンに焼かれた廃墟が現代のビル群と隣り合う。スペイン植民地時代の宗教アートと「略奪の考古学」展示。</p>
-    <div class="card-meta">
-      <span>パナマ</span><span class="dot">·</span><span>2025年1月</span>
-    </div>
-  </a>
-
-  <a href="articles/panama.html" class="card" data-category="panama">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/panama/panama-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">パナマ</div>
-    <h2 class="card-title">カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】</h2>
-    <p class="card-excerpt">ユネスコ世界遺産のカスコビエホ、日の丸が描かれたマリスコス市場、運河博物館——石畳とビル群が混在するパナマシティの街歩き。</p>
-    <div class="card-meta">
-      <span>パナマ</span><span class="dot">·</span><span>2025年1月</span>
-    </div>
-  </a>
-
-  <a href="articles/panama-3.html" class="card" data-category="panama">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/panama/canal-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">パナマ</div>
-    <h2 class="card-title">ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】</h2>
-    <p class="card-excerpt">空の閘門を眺めていると、自動車運搬船「JIUYANG BLOSSOM」が現れた。閘門の幅ぎりぎりを埋めてゆっくりと進む巨大な船。</p>
-    <div class="card-meta">
-      <span>パナマ</span><span class="dot">·</span><span>2025年1月</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="mexico">
-    <span class="section-label">メキシコ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/mexico-zocalo.html" class="card" data-category="mexico">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/mexico/zocalo-catedral.jpg'); background-size: cover; background-position: center top;"></div>
-    </div>
-    <div class="card-tag">メキシコ</div>
-    <h2 class="card-title">メキシコシティ歴史地区観光｜ソカロ・テンプロマヨール・大聖堂を歩く【メキシコ旅行記①】</h2>
-    <p class="card-excerpt">アステカ帝国の中枢神殿がラテンアメリカ最大のカトリック聖堂の隣に眠る。重層的な歴史の断面図、メキシコシティ歴史地区へ。</p>
-    <div class="card-meta">
-      <span>メキシコ</span><span class="dot">·</span><span>2026年2月22日</span>
-    </div>
-  </a>
-
-  <a href="articles/mexico-guadalupe.html" class="card" data-category="mexico">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/mexico/guadalupe-aerial.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">メキシコ</div>
-    <h2 class="card-title">グアダルーペ大聖堂の見どころ｜テペヤックの丘と奇跡のマント【メキシコ旅行記②】</h2>
-    <p class="card-excerpt">年間2,000万人が訪れるラテンアメリカ最大の聖地。旧バシリカ、テペヤックの丘、動く歩道の先に飾られた1531年の奇跡のマント。</p>
-    <div class="card-meta">
-      <span>メキシコ</span><span class="dot">·</span><span>2026年2月21日</span>
-    </div>
-  </a>
-
-  <a href="articles/mexico-walk.html" class="card" data-category="mexico">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/mexico/revolucion-monument.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">メキシコ</div>
-    <h2 class="card-title">メキシコシティ街歩き｜革命記念塔・朝食・ストリートアートを巡る【メキシコ旅行記③】</h2>
-    <p class="card-excerpt">メキシコの朝食「ウエボス・コン・チョリソ」から始まる一日。革命記念塔、グラフィティ、スケールの違いに圧倒される街。</p>
-    <div class="card-meta">
-      <span>メキシコ</span><span class="dot">·</span><span>2026年2月21日</span>
-    </div>
-  </a>
-
-  <a href="articles/mexico-walmart.html" class="card" data-category="mexico">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/mexico/walmart-salsa.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">メキシコ</div>
-    <h2 class="card-title">メキシコ土産はウォルマートが穴場｜サルサ・コーヒー・チョコレート購入記【メキシコ旅行記④】</h2>
-    <p class="card-excerpt">観光土産店より安くて種類豊富。サルサ、コーヒー、チョコレート——ウォールマートで買えるメキシコならではのお土産ガイド。</p>
-    <div class="card-meta">
-      <span>メキシコ</span><span class="dot">·</span><span>2026年2月22日</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="chile">
-    <span class="section-label">チリ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/chile-1.html" class="card" data-category="chile">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/chile/20251012_143804099_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">チリ</div>
-    <h2 class="card-title">サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】</h2>
-    <p class="card-excerpt">チリの首都サンティアゴへ。快晴の青空のもと、歴史的な建物が立ち並ぶ市内中心部を歩いた。</p>
-    <div class="card-meta">
-      <span>チリ</span><span class="dot">·</span><span>2025年10月12日</span>
-    </div>
-  </a>
-
-  <a href="articles/chile-2.html" class="card" data-category="chile">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/chile/20251014_205137977_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">チリ</div>
-    <h2 class="card-title">ロス・ドミニコス工芸市場へ｜サンティアゴで民芸品と白い教会を巡る【チリ旅行記②】</h2>
-    <p class="card-excerpt">サンティアゴのラス・コンデス地区にあるロス・ドミニコス工芸市場へ。職人の作品と、隣に建つ白い植民地教会が美しかった。</p>
-    <div class="card-meta">
-      <span>チリ</span><span class="dot">·</span><span>2025年10月14日</span>
-    </div>
-  </a>
-
-  <a href="articles/chile-3.html" class="card" data-category="chile">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/chile/20251016_170946020_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">チリ</div>
-    <h2 class="card-title">サンティアゴ最終日｜パルタ・レイナとクリスマス前の街歩き【チリ旅行記③】</h2>
-    <p class="card-excerpt">チリ滞在最終日。アボカドとチキンのランチ「パルタ・レイナ」を食べ、クリスマス装飾が始まったモールを歩いた。</p>
-    <div class="card-meta">
-      <span>チリ</span><span class="dot">·</span><span>2025年10月16日</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="belize">
-    <span class="section-label">ベリーズ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/belize-1.html" class="card" data-category="belize">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/belize/20251018_213429265_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ベリーズ</div>
-    <h2 class="card-title">ベリーズシティ到着｜夜明けのカリブ海とアジア系スーパー散策【ベリーズ旅行記①】</h2>
-    <p class="card-excerpt">中米最小の英語圏の国、ベリーズへ。夜明けのカリブ海、ガリフナ料理の朝食、中国系スーパーで日本食材を発見。</p>
-    <div class="card-meta">
-      <span>ベリーズ</span><span class="dot">·</span><span>2025年10月18日</span>
-    </div>
-  </a>
-
-  <a href="articles/belize-2.html" class="card" data-category="belize">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/belize/20251019_213939041_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ベリーズ</div>
-    <h2 class="card-title">キーカーカー島とグレート・ブルーホール遊覧飛行｜ベリーズのカリブ海を空から見る【ベリーズ旅行記②】</h2>
-    <p class="card-excerpt">カリブの小島、キーカーカー島へ。そして小型機でグレート・ブルーホールを空から見た。</p>
-    <div class="card-meta">
-      <span>ベリーズ</span><span class="dot">·</span><span>2025年10月19日</span>
-    </div>
-  </a>
-
-  <a href="articles/belize-3.html" class="card" data-category="belize">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/belize/20251020_144751630_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ベリーズ</div>
-    <h2 class="card-title">ベリーズシティ街歩き｜スウィング・ブリッジと最終日の過ごし方【ベリーズ旅行記③】</h2>
-    <p class="card-excerpt">ベリーズ滞在最終日。街のシンボル「スウィング・ブリッジ」を渡り、ベリーズシティの日常を歩く。</p>
-    <div class="card-meta">
-      <span>ベリーズ</span><span class="dot">·</span><span>2025年10月20日</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="taiwan">
-    <span class="section-label">台湾</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/taiwan.html" class="card" data-category="taiwan">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/taiwan/z50_0939_dxo.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">台湾</div>
-    <h2 class="card-title">台湾旅行記｜基隆の夕暮れと十分のランタン上げが想像以上によかった</h2>
-    <p class="card-excerpt">台湾に行ったことがない人に聞きたいんだけど、なんで行ってないの？ってくらい良かった。近い、安い、飯がうまい、写真映えする場所だらけ。嬉しい意味で期待を大きく超えてきた。</p>
-    <div class="card-meta">
-      <span>台湾</span><span class="dot">·</span><span>5分で読める</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="camp">
-    <span class="section-label">キャンプ</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/touring-camp-gear.html" class="card" data-category="camp">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_afd223212bc6483f830f93812da66369~mv2_d_3024_4032_s_4_2.jpg'); background-size: cover; background-position: top;"></div>
-    </div>
-    <div class="card-tag">キャンプ・ギア</div>
-    <h2 class="card-title">バイクソロキャンプ道具まとめ｜テント・シュラフ・マット選び【キャンプ道具編①】</h2>
-    <p class="card-excerpt">バイクキャンプを始めるために揃えた4点セット。テント選びの基準、シュラフの温度帯、グランドシートのサイズの罠。</p>
-    <div class="card-meta">
-      <span>キャンプ</span><span class="dot">·</span><span>2017年11月12日</span>
-    </div>
-  </a>
-
-  <a href="articles/camp-mori-makiba.html" class="card" data-category="camp">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_be02da1f1cce47dfa15fb7184f2e8dd6~mv2_d_4032_3024_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">キャンプ</div>
-    <h2 class="card-title">森のまきばオートキャンプ場レビュー｜冬のソロキャンプと料金・雰囲気</h2>
-    <p class="card-excerpt">12月中旬、千葉県袖ヶ浦市の元牧場をキャンプ場にした「森のまきば」へ。二輪1,600円で泊まれる穴場を、ソロキャンパー目線でレビュー。</p>
-    <div class="card-meta">
-      <span>キャンプ</span><span class="dot">·</span><span>2018年12月15日</span>
-    </div>
-  </a>
-
-  <a href="articles/atsukan.html" class="card" data-category="other">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_69fcb4358adc4328a919ec0cfc491f98~mv2_d_2987_3938_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">酒・グルメ</div>
-    <h2 class="card-title">家で熱燗を楽しむ日本酒レビュー｜萬寿鏡F60と八海山雪室貯蔵三年</h2>
-    <p class="card-excerpt">寒波の夜に燗をつけた。萬寿鏡F60と八海山 雪室貯蔵三年——温度一つで変わる燗酒の世界。</p>
-    <div class="card-meta">
-      <span>日本酒</span><span class="dot">·</span><span>2017年1月10日</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="bike">
-    <span class="section-label">ツーリング</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/power-beam.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_c07a3465b14f4301835b4585c13ca9b3~mv2_d_4032_3024_s_4_2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">バイク・ギア</div>
-    <h2 class="card-title">SR400の振動対策にパワービームを装着｜長距離ツーリングでの変化をレビュー</h2>
-    <p class="card-excerpt">SR400乗りの悩み、長距離の振動。y'sギアのパワービームを試してみたら、「バシッと走れる感覚」になった話。</p>
-    <div class="card-meta">
-      <span>バイク</span><span class="dot">·</span><span>2018年9月19日</span>
-    </div>
-  </a>
-
-  <a href="articles/spanish-dictionary.html" class="card" data-category="other">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('https://static.wixstatic.com/media/949ec9_316ae78b6611491fad1cb3d780461968~mv2.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">スペイン語</div>
-    <h2 class="card-title">スペイン語辞書おすすめ比較｜紙辞書・電子辞書・アプリを中米経験者が選ぶ</h2>
-    <p class="card-excerpt">中米で実際に使った経験から言う。電子辞書は街で出せない。小学館の紙辞書＋スマホアプリが現地最強の組み合わせだ。</p>
-    <div class="card-meta">
-      <span>スペイン語</span><span class="dot">·</span><span>2016年10月12日</span>
-    </div>
-  </a>
-
-
-  <a href="articles/bandai-azuma.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/bandai/IMG_3857.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">磐梯吾妻スカイラインツーリング｜火山地帯を走る福島の絶景ルート</h2>
-    <p class="card-excerpt">標高1,600m超の稜線を走るルート。荒涼とした火山地帯と紅葉が重なる景色は、他の峠道とは質的に違う体験だった。</p>
-    <div class="card-meta">
-      <span>福島</span><span class="dot">·</span><span>3分で読める</span>
-    </div>
-  </a>
-
-  <a href="articles/five-color-lake.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/five-color-lake/IMG_8015.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">旅</div>
-    <h2 class="card-title">五色沼観光｜福島・裏磐梯でエメラルドグリーンの湖沼群を歩く</h2>
-    <p class="card-excerpt">磐梯山噴火が作り出した複数の沼が、それぞれ異なる色を帯びる。エメラルドグリーン、コバルトブルー——自然が生んだ奇跡の色彩。</p>
-    <div class="card-meta">
-      <span>福島</span><span class="dot">·</span><span>2分で読める</span>
-    </div>
-  </a>
-
-  <a href="articles/touring-chiba-xsr900.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/touring-chiba2/IMG_2388.jpg'); background-size: cover; background-position: center 40%;"></div>
-    </div>
-    <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">XSR900千葉ソロツーリング｜笠森観音と房総の山道を走る</h2>
-    <p class="card-excerpt">XSR900で房総の山道を走り、岩の上に建つ日本唯一の建築・笠森観音へ。地元千葉にもまだ知らない場所がある。</p>
-    <div class="card-meta">
-      <span>千葉</span><span class="dot">·</span><span>2分で読める</span>
-    </div>
-  </a>
-
-  <a href="articles/zao-ginzan.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/zao-ginzan/20250628_133653099_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">東北</div>
-    <h2 class="card-title">蔵王と銀山温泉1泊2日｜御釜・大露天風呂・大正ロマンの夜景</h2>
-    <p class="card-excerpt">山形2日間の旅。蔵王の大露天風呂と神秘的な御釜、そして大正ロマンが薫る銀山温泉の夜景。</p>
-    <div class="card-meta">
-      <span>山形</span><span class="dot">·</span><span>2025年6月28日</span>
-    </div>
-  </a>
-
-  <a href="articles/himawari-tsunan.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/himawari/20250802_011958175_iOS_1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">新潟</div>
-    <h2 class="card-title">新潟夏旅2日間｜津南ひまわり畑と長岡花火大会を巡る</h2>
-    <p class="card-excerpt">1日目は津南のひまわり畑へ、2日目は長岡花火大会へ。新潟の夏を2日間で詰め込んだ旅。</p>
-    <div class="card-meta">
-      <span>新潟</span><span class="dot">·</span><span>2025年8月2〜3日</span>
-    </div>
-  </a>
-
-  <a href="articles/irako.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/irako/lighthouse.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">愛知</div>
-    <h2 class="card-title">伊良湖岬ひとり旅｜年末の海辺と強風の愛知散歩</h2>
-    <p class="card-excerpt">年末、愛知県の伊良湖岬へ。強風の中をフラフラと歩き、ばか貝に後ろ髪を引かれながら帰った話。</p>
-    <div class="card-meta">
-      <span>愛知</span><span class="dot">·</span><span>2025年12月28日</span>
-    </div>
-  </a>
-
-  <a href="articles/motorcycle-show-2026.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/motorcycle-show/cbr400r.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">バイク</div>
-    <h2 class="card-title">東京モーターサイクルショー2026感想｜気になったバイクとサイドバッグ</h2>
-    <p class="card-excerpt">バイクショーで最初に足が止まったのはバッグだった。AMBOOTのサイドバッグ、CBR400R FOUR、CT125カスタム。</p>
-    <div class="card-meta">
-      <span>バイク</span><span class="dot">·</span><span>2026年3月29日</span>
-    </div>
-  </a>
-
-  <a href="articles/noto-touring.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/noto/noto-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">能登半島ツーリング記録｜総持寺祖院と金箔刺身の宿ごはん</h2>
-    <p class="card-excerpt">2022年8月、能登半島へ。総持寺祖院の山門に圧倒され、宿で出てきた刺身に金箔がかかっていて驚いた。能登は食べ物が全体的においしかった。</p>
-    <div class="card-meta">
-      <span>石川</span><span class="dot">·</span><span>2022年8月</span>
-    </div>
-  </a>
-
-  <a href="articles/nagano-touring.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background: linear-gradient(135deg, #2a3a4a 0%, #1a2530 100%);"></div>
-    </div>
-    <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">毛無峠・ビーナスライン・上田城ツーリング｜群馬・長野1泊2日ルート</h2>
-    <p class="card-excerpt">2023年7月、群馬と長野を1泊2日で走った。凸凹道の毛無峠、信号なしのビーナスライン、真田氏の上田城まで。</p>
-    <div class="card-meta">
-      <span>群馬・長野</span><span class="dot">·</span><span>2023年7月</span>
-    </div>
-  </a>
-
-  <a href="articles/izu-touring.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/izu-touring/sea.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">ツーリング</div>
-    <h2 class="card-title">伊豆半島1泊2日ツーリング｜芦ノ湖スカイラインと西伊豆ルート</h2>
-    <p class="card-excerpt">2023年6月、伊豆半島へ。箱根から入り、芦ノ湖スカイラインを走って、西伊豆に泊まった。</p>
-    <div class="card-meta">
-      <span>静岡</span><span class="dot">·</span><span>2023年6月</span>
-    </div>
-  </a>
-
-  <a href="articles/toro-daishi.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/toro-daishi/toro-1.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">千葉</div>
-    <h2 class="card-title">燈籠坂大師の切通しトンネルへ｜千葉の写真映えスポットをXSR900で再訪</h2>
-    <p class="card-excerpt">2023年4月、千葉・燈籠坂大師へ。岩を削って作った切通しトンネルが有名な場所に、XSR900で3年ぶりに訪れた。</p>
-    <div class="card-meta">
-      <span>千葉</span><span class="dot">·</span><span>2023年4月</span>
-    </div>
-  </a>
-
-  <a href="articles/chiba-chibanians.html" class="card" data-category="bike">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image:url('images/chiba-chibanians/chiba-cliff.jpg');background-size:cover;background-position:center 50%;"></div>
-    </div>
-    <div class="card-tag">千葉</div>
-    <h2 class="card-title">チバニアン観光と千葉ツーリング｜地層見学・猪遭遇・バイクトラブル</h2>
-    <p class="card-excerpt">2023年11月、千葉のチバニアンへ。地層見学の帰り道で猪に遭遇し、帰りにバイクのトラブルも起きた。</p>
-    <div class="card-meta">
-      <span>千葉</span><span class="dot">·</span><span>2023年11月</span>
-    </div>
-  </a>
-
-  <div class="articles-section-header" id="hokkaido">
-    <span class="section-label">北海道ツーリング</span>
-    <div class="divider-line"></div>
-  </div>
-
-  <a href="articles/hokkaido-touring.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido/エサヌカ線.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道ツーリング</div>
-    <h2 class="card-title">SR400北海道ひとり旅｜エサヌカ線で泣きそうになったツーリング記録</h2>
-    <p class="card-excerpt">地平線まで続く一本道の前に立って、しばらく何も言えなかった。写真で何度も見ていたけど、実際は全然違う。バイク乗りなら一度は行ってほしい場所。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>6分で読める</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-car.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-car/神威岬.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">北海道ソロドライブ｜神威岬・黄金岬・函館夜景を巡る一人旅</h2>
-    <p class="card-excerpt">バイクとは別に、車で一人北海道へ。積丹ブルーが広がる神威岬、夕日が黄金色に染まる黄金岬、そして函館の夜景。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>3分で読める</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day1.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250819_070951847_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①</h2>
-    <p class="card-excerpt">XSR900で北海道へ。大洗港からさんふらわあに乗り込み、苫小牧を目指す。出航の瞬間、旅が始まった。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月19日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day2.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250820_054937983_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">ウポポイと帯広の豚丼を巡る上陸初日｜XSR900北海道ツーリング記録②</h2>
-    <p class="card-excerpt">苫小牧に上陸。ウポポイでアイヌ文化に触れ、カレーパンを食べ、帯広で十勝豚丼を食らう。北海道2日目。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月20日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day3.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250821_010411011_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③</h2>
-    <p class="card-excerpt">帯広を出て釧路へ。偶然立ち寄った厚岸町でウイスキー蒸留所と生牡蠣に出会い、根室では海鮮と蟹を堪能した。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月21日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day4.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250821_072833977_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">納沙布岬から知床五湖へ走る道東ツーリング｜XSR900北海道ツーリング記録④</h2>
-    <p class="card-excerpt">日本最東端・納沙布岬で北方領土を望む。返還運動に署名し、知床国立公園へ。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月21日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day5.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250823_022248708_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">神の子池・網走監獄・美幌峠を巡る｜XSR900北海道ツーリング記録⑤</h2>
-    <p class="card-excerpt">林道入口でヒグマの気配にビビり、網走監獄で北海道開拓の歴史を知り、霧の美幌峠を越えた5日目。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月23日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day6.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250824_040949567_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥</h2>
-    <p class="card-excerpt">枝幸でサイドケースの財布を落とした。30分探しても見つからず。そのとき、AirTagから通知が来た。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月24日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day7.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250825_110201838_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦</h2>
-    <p class="card-excerpt">稚内から旭川へ、オロロンラインを南下する日。ひたすら走り、夜は旭川の居酒屋「小五郎」へ。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月25日</span>
-    </div>
-  </a>
-
-  <a href="articles/hokkaido-xsr900-day8.html" class="card" data-category="hokkaido">
-    <div class="card-img">
-      <div class="card-img-inner" style="background-image: url('images/hokkaido-xsr900/20250826_002032526_iOS.jpg'); background-size: cover; background-position: center;"></div>
-    </div>
-    <div class="card-tag">北海道</div>
-    <h2 class="card-title">美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧</h2>
-    <p class="card-excerpt">最終日は美瑛の青い池と白ひげの滝へ。ホクレンフラッグを集めながら苫小牧へ。総走行距離2400km、北海道ツーリング完結。</p>
-    <div class="card-meta">
-      <span>北海道</span><span class="dot">·</span><span>2025年8月26日</span>
-    </div>
-  </a>
-
-</section>
-
-<!-- SERIES STRIP -->
+<!-- 連載シリーズ -->
 <div class="featured-strip">
   <div class="featured-strip-inner">
     <div class="featured-strip-label">連載シリーズ</div>
@@ -871,27 +216,28 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-text">
-    <h2>知らない場所へ行って、<br>青い景色を探す旅の記録。</h2>
-    <p>中南米に数年いて、バイクで国内を走って、気づいたら旅の記録がたまっていた。オフロードは走らないし、観光地にもちゃんと行く。ただ、地図に載ってない道や、まだ名前を知らない場所に惹かれる。</p>
-    <p>海でも空でも湖でも、青い景色の前に立つと、なぜかそこが旅のハイライトになる。</p>
-    <p>「Camino Libre」はスペイン語で「自由な道」。決めすぎない旅が、だいたい一番おもしろい。</p>
-  </div>
-  <div class="about-profile">
-    <div class="about-avatar"><img src="images/profile.jpg" alt="Monaka"></div>
-    <div class="about-name">Monaka</div>
-    <div class="about-role">旅人 · バイク乗り · 元コスタリカ在住</div>
-    <div class="about-tags">
-      <span class="tag-pill">コスタリカ</span>
-      <span class="tag-pill">バイク</span>
-      <span class="tag-pill">ソロキャンプ</span>
-      <span class="tag-pill">中南米</span>
-      <span class="tag-pill">スペイン語</span>
-    </div>
-  </div>
-</section>
+<!-- 記事一覧 -->
+<div class="section-divider" id="articles">
+  <span class="section-label">記事一覧</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-cat="all">すべて</button>
+  <button class="filter-btn" data-cat="costa-rica">コスタリカ</button>
+  <button class="filter-btn" data-cat="nicaragua">ニカラグア</button>
+  <button class="filter-btn" data-cat="mexico">メキシコ</button>
+  <button class="filter-btn" data-cat="chile">チリ</button>
+  <button class="filter-btn" data-cat="belize">ベリーズ</button>
+  <button class="filter-btn" data-cat="panama">パナマ</button>
+  <button class="filter-btn" data-cat="el-salvador">エルサルバドル</button>
+  <button class="filter-btn" data-cat="taiwan">台湾</button>
+  <button class="filter-btn" data-cat="bike">ツーリング</button>
+  <button class="filter-btn" data-cat="hokkaido">北海道</button>
+  <button class="filter-btn" data-cat="camp">キャンプ</button>
+</div>
+
+<div id="category-sections" style="max-width:1200px;margin:0 auto;padding:2rem 2rem 4rem;"></div>
 
 <footer>
   <div class="footer-inner">
@@ -899,7 +245,7 @@
     <div class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="#articles">記事一覧</a>
-      <a href="#about">プロフィール</a>
+      <a href="about.html">プロフィール</a>
     </div>
     <div class="footer-contact"><a href="mailto:info@camino-libre.jp">お問い合わせ: info@camino-libre.jp</a></div>
     <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
@@ -907,53 +253,6 @@
 </footer>
 
 <script src="js/article.js?v=20260424"></script>
-<script>
-(function () {
-  var hero = document.getElementById('hero-section');
-  if (!hero || typeof ARTICLES === 'undefined') return;
-
-  var sorted = ARTICLES.slice().sort(function (a, b) {
-    return (b.date || '').localeCompare(a.date || '');
-  });
-
-  var main = sorted[0];
-  var subs = [];
-  var usedCats = [main.category];
-  for (var i = 1; i < sorted.length && subs.length < 2; i++) {
-    if (usedCats.indexOf(sorted[i].category) === -1) {
-      subs.push(sorted[i]);
-      usedCats.push(sorted[i].category);
-    }
-  }
-  if (subs.length < 2) {
-    for (var j = 1; j < sorted.length && subs.length < 2; j++) {
-      if (subs.indexOf(sorted[j]) === -1 && sorted[j] !== main) subs.push(sorted[j]);
-    }
-  }
-
-  var imgPath = main.img.replace('../', '');
-  hero.innerHTML =
-    '<a href="articles/' + main.file + '" class="hero-main">' +
-      '<div class="hero-bg" style="background-image:url(\'' + imgPath + '\');"></div>' +
-      '<div class="hero-overlay"></div>' +
-      '<div class="hero-tag">' + main.tag + '</div>' +
-      '<h1 class="hero-title">' + main.title.replace(/——/, '<br>') + '</h1>' +
-      '<div class="hero-meta"><span>Monaka</span></div>' +
-    '</a>' +
-    '<div class="hero-sidebar">' +
-      subs.map(function (a) {
-        var sp = a.img.replace('../', '');
-        return '<a href="articles/' + a.file + '" class="hero-sub">' +
-          '<div class="hero-sub-img" style="background-image:url(\'' + sp + '\');background-size:cover;background-position:center;"></div>' +
-          '<div class="hero-sub-body">' +
-            '<div class="hero-sub-tag">' + a.tag + '</div>' +
-            '<div class="hero-sub-title">' + a.title + '</div>' +
-          '</div>' +
-        '</a>';
-      }).join('') +
-    '</div>';
-})();
-</script>
 <script>
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
@@ -963,76 +262,115 @@
 </script>
 <script>
 (function () {
-  var LIMIT = 3;
+  if (typeof ARTICLES === 'undefined') return;
 
-  // ── Show-more setup: 最新LIMIT件を表示、古い記事を折りたたむ ──────────
-  var sectionStates = []; // { oldCards, btn, state }
+  var CATEGORIES = [
+    { key: 'costa-rica',  label: 'コスタリカ',    match: function(a){ return a.category === 'costa-rica'; } },
+    { key: 'nicaragua',   label: 'ニカラグア',    match: function(a){ return a.category === 'nicaragua'; } },
+    { key: 'mexico',      label: 'メキシコ',      match: function(a){ return a.category === 'mexico'; } },
+    { key: 'chile',       label: 'チリ',          match: function(a){ return a.tag === 'チリ'; } },
+    { key: 'belize',      label: 'ベリーズ',      match: function(a){ return a.tag === 'ベリーズ'; } },
+    { key: 'panama',      label: 'パナマ',        match: function(a){ return a.tag === 'パナマ'; } },
+    { key: 'el-salvador', label: 'エルサルバドル', match: function(a){ return a.tag === 'エルサルバドル'; } },
+    { key: 'taiwan',      label: '台湾',          match: function(a){ return a.tag === '台湾'; } },
+    { key: 'bike',        label: 'ツーリング',    match: function(a){ return (a.category === 'bike' && !['北海道','北海道ツーリング'].includes(a.tag)) || (a.category === 'other' && ['東北','新潟'].includes(a.tag)); } },
+    { key: 'hokkaido',    label: '北海道',        match: function(a){ return a.category === 'bike' && ['北海道','北海道ツーリング'].includes(a.tag); } },
+    { key: 'camp',        label: 'キャンプ',      match: function(a){ return a.category === 'camp'; } }
+  ];
 
-  document.querySelectorAll('.articles-section-header').forEach(function (header) {
-    var cards = [];
-    var el = header.nextElementSibling;
-    while (el && el.classList.contains('card')) { cards.push(el); el = el.nextElementSibling; }
-    if (cards.length <= LIMIT) return;
+  function makeCard(a) {
+    var img = a.img.replace('../', '');
+    var seriesMatch = a.title.match(/【(.*?)】/);
+    var series = seriesMatch ? seriesMatch[1] : '';
+    var title = a.title.replace(/｜/g, ' · ').replace(/【.*?】/g, '').trim();
+    var card = document.createElement('a');
+    card.className = 'recent-card';
+    card.href = 'articles/' + a.file;
+    card.innerHTML =
+      '<div class="recent-card-img" style="background-image:url(\'' + img + '\')"></div>' +
+      '<div class="recent-card-body">' +
+        '<div class="recent-card-tag">' + a.tag + '</div>' +
+        (series ? '<div class="recent-card-series">' + series + '</div>' : '') +
+        '<div class="recent-card-title">' + title + '</div>' +
+      '</div>';
+    return card;
+  }
 
-    var oldCards = cards.slice(0, cards.length - LIMIT); // 古い記事を隠す
-    oldCards.forEach(function (c) {
-      c.classList.add('card--collapsed');
-      c.dataset.smCollapsed = 'true';
+  var wrap = document.getElementById('category-sections');
+  var sections = {};
+  if (wrap) {
+    CATEGORIES.forEach(function (cat) {
+      var all = ARTICLES.filter(function (a) { return cat.match(a); })
+        .sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+      if (all.length === 0) return;
+
+      var sec = document.createElement('div');
+      sec.dataset.cat = cat.key;
+      sec.style.cssText = 'margin-bottom:3rem;';
+
+      var heading = document.createElement('div');
+      heading.style.cssText = 'display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;';
+      heading.innerHTML =
+        '<span style="font-family:\'Playfair Display\',serif;font-size:1.3rem;font-weight:700;color:var(--black);">' + cat.label + '</span>' +
+        '<div style="flex:1;height:1px;background:var(--border);"></div>';
+
+      var grid = document.createElement('div');
+      grid.className = 'cat-grid';
+      grid.style.cssText = 'display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:1rem;';
+      all.slice(0, 3).forEach(function (a) { grid.appendChild(makeCard(a)); });
+
+      var more = document.createElement('div');
+      more.className = 'cat-grid';
+      more.style.cssText = 'display:none;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:1rem;';
+      all.slice(3).forEach(function (a) { more.appendChild(makeCard(a)); });
+
+      var btnWrap = document.createElement('div');
+      btnWrap.style.cssText = 'text-align:right;';
+      if (all.length > 3) {
+        var btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.textContent = 'もっと見る (' + (all.length - 3) + '件)';
+        btn.style.cssText = 'font-size:0.8rem;padding:0.4rem 1rem;cursor:pointer;';
+        btn.addEventListener('click', function () {
+          more.style.display = 'grid';
+          btnWrap.style.display = 'none';
+        });
+        btnWrap.appendChild(btn);
+      }
+
+      sec.appendChild(heading);
+      sec.appendChild(grid);
+      sec.appendChild(more);
+      sec.appendChild(btnWrap);
+      wrap.appendChild(sec);
+      sections[cat.key] = { sec: sec, more: more, btnWrap: btnWrap, total: all.length };
     });
+  }
 
-    var state = { expanded: false };
-    var total = cards.length;
-    var btn = document.createElement('button');
-    btn.className = 'show-more-btn';
-    btn.textContent = 'もっと見る（全' + total + '話）';
+  var filterBtns = document.querySelectorAll('.filter-btn[data-cat]');
+  filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      state.expanded = !state.expanded;
-      oldCards.forEach(function (c) { c.classList.toggle('card--collapsed', !state.expanded); });
-      btn.textContent = state.expanded ? '折りたたむ' : 'もっと見る（全' + total + '話）';
-    });
-
-    // 最後のカードの後ろにボタンを挿入
-    var lastCard = cards[cards.length - 1];
-    var nextSib = lastCard.nextElementSibling;
-    if (nextSib) { lastCard.parentNode.insertBefore(btn, nextSib); } else { lastCard.parentNode.appendChild(btn); }
-    sectionStates.push({ oldCards: oldCards, btn: btn, state: state });
-  });
-
-  // ── フィルター ─────────────────────────────────────────────────────────
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  var allCards = document.querySelectorAll('.articles .card');
-  var headers = document.querySelectorAll('.articles-section-header');
-
-  filterBtns.forEach(function (filterBtn) {
-    filterBtn.addEventListener('click', function () {
       filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      filterBtn.classList.add('active');
-      var cat = filterBtn.getAttribute('data-filter');
-      var isAll = cat === 'all';
+      btn.classList.add('active');
+      var selected = btn.dataset.cat;
 
-      headers.forEach(function (h) { h.classList.toggle('articles-section-header--hidden', !isAll); });
-
-      allCards.forEach(function (card) {
-        if (isAll) {
-          card.classList.remove('card--hidden');
-          // 折りたたみ状態を復元（展開済みでなければ）
-          if (card.dataset.smCollapsed === 'true') {
-            var sec = null;
-            for (var i = 0; i < sectionStates.length; i++) {
-              if (sectionStates[i].oldCards.indexOf(card) !== -1) { sec = sectionStates[i]; break; }
-            }
-            if (sec && !sec.state.expanded) card.classList.add('card--collapsed');
-          }
+      Object.keys(sections).forEach(function (key) {
+        var s = sections[key];
+        if (selected === 'all') {
+          s.sec.style.display = '';
+          s.more.style.display = 'none';
+          if (s.total > 3) s.btnWrap.style.display = '';
+        } else if (selected === key) {
+          s.sec.style.display = '';
+          s.more.style.display = s.total > 3 ? 'grid' : 'none';
+          s.btnWrap.style.display = 'none';
         } else {
-          var matches = card.getAttribute('data-category') === cat;
-          card.classList.toggle('card--hidden', !matches);
-          if (matches) card.classList.remove('card--collapsed'); // フィルター中は全件表示
+          s.sec.style.display = 'none';
         }
       });
-
-      sectionStates.forEach(function (s) { s.btn.classList.toggle('show-more-btn--hidden', !isAll); });
     });
   });
+
 })();
 </script>
 </body>
