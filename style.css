@@ -443,7 +443,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 
 /* ===== SERIES NAVIGATION ===== */
 .article-series-nav {
-  display: flex; justify-content: space-between; align-items: flex-start;
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;
   gap: 1rem; margin: 2.5rem 0;
   border-top: 1px solid var(--border); padding-top: 1.5rem;
 }
@@ -460,10 +460,10 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 .series-nav-title { font-size: 0.88rem; font-weight: 600; line-height: 1.4; }
 .series-nav-next { text-align: right; margin-left: auto; }
 .series-nav-list {
-  display: block; width: 100%; text-align: center;
+  flex: 0 0 100%; text-align: center;
   font-size: 0.82rem; color: var(--accent); text-decoration: none;
   letter-spacing: 0.05em; padding-top: 1rem;
-  border-top: 1px solid var(--border); margin-top: 0.5rem;
+  border-top: 1px solid var(--border);
 }
 .series-nav-list:hover { text-decoration: underline; }
 
