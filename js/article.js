@@ -354,8 +354,8 @@
 
   // ── Share Buttons ──────────────────────────────────────────────
   function injectShareButtons() {
-    var articleBody = document.querySelector('.article-body');
-    if (!articleBody) return;
+    var tagsEl = document.querySelector('.article-tags');
+    if (!tagsEl) return;
 
     var title = document.title.replace(' | Camino Libre', '');
     var url = location.href;
@@ -372,7 +372,7 @@
     xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
     xLink.target = '_blank';
     xLink.rel = 'noopener noreferrer';
-    xLink.textContent = '𝕏 でシェア';
+    xLink.textContent = 'X でシェア';
 
     var lineLink = document.createElement('a');
     lineLink.className = 'share-btn share-btn-line';
@@ -385,16 +385,17 @@
     copyBtn.className = 'share-btn share-btn-copy';
     copyBtn.textContent = 'URLコピー';
     copyBtn.addEventListener('click', function () {
-      function done(t) { copyBtn.textContent = t; setTimeout(function () { copyBtn.textContent = 'URLコピー'; }, 2000); }
+      var original = 'URLコピー';
+      function done(t) { copyBtn.textContent = t; setTimeout(function () { copyBtn.textContent = original; }, 2000); }
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(url).then(function () { done('✓ コピー済'); }).catch(function () { done('❌ 失敗'); });
+        navigator.clipboard.writeText(url).then(function () { done('コピーしました'); }).catch(function () { done('失敗'); });
       } else {
         try {
           var ta = document.createElement('textarea');
           ta.value = url; ta.style.cssText = 'position:fixed;opacity:0;';
           document.body.appendChild(ta); ta.select(); document.execCommand('copy');
-          document.body.removeChild(ta); done('✓ コピー済');
-        } catch (e) { done('❌ 失敗'); }
+          document.body.removeChild(ta); done('コピーしました');
+        } catch (e) { done('失敗'); }
       }
     });
 
@@ -403,12 +404,7 @@
     wrap.appendChild(lineLink);
     wrap.appendChild(copyBtn);
 
-    var tagsEl = articleBody.querySelector('.article-tags');
-    if (tagsEl) {
-      articleBody.insertBefore(wrap, tagsEl);
-    } else {
-      articleBody.appendChild(wrap);
-    }
+    tagsEl.parentNode.insertBefore(wrap, tagsEl);
   }
 
   // ── Series Navigation ──────────────────────────────────────────
