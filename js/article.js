@@ -635,4 +635,21 @@
     });
   }
 
+  function fitHeroTitle() {
+    var el = document.querySelector('.article-hero-title');
+    if (!el) return;
+    var lh = parseFloat(getComputedStyle(el).lineHeight);
+    var fs = parseFloat(getComputedStyle(el).fontSize);
+    while (el.scrollHeight > lh * 3 + 4 && fs > 14) {
+      fs -= 1;
+      el.style.fontSize = fs + 'px';
+      lh = parseFloat(getComputedStyle(el).lineHeight);
+    }
+  }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(fitHeroTitle);
+  } else {
+    window.addEventListener('load', fitHeroTitle);
+  }
+
 })();
