@@ -26,8 +26,8 @@
     { file: 'nicaragua-managua.html',     title: 'ニカラグアに行った時の話④ マナグア',                               category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg',                                    date: '2018-06-13' },
     { file: 'nicaragua-leon.html',        title: 'ニカラグアに行った時の話⑤ レオン',                                       category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg',                                    date: '2018-06-17' },
     { file: 'nicaragua-flor-de-cana.html', title: 'ニカラグアに行った時の話⑥ Flor de Caña工場見学',                            category: 'nicaragua',  tag: 'ニカラグア',       img: 'https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg',                  date: '2016-09-07' },
-    { file: 'el-salvador-ruins.html',     title: 'エルサルバドルに行った時の話① ホヤ・デ・セレンとタスマル',                     category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-ruins/ruins-1.jpg',                                                                                date: '2014-08-31' },
-    { file: 'el-salvador-volcan.html',    title: 'エルサルバドルに行った時の話② 警察官エスコートつきでサンタ・アナ火山へ',           category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-volcan/volcan-1.jpg',                                                                              date: '2014-09-02' },
+    { file: 'el-salvador-ruins.html',     title: 'ホヤ・デ・セレンとタスマル遺跡へ｜エルサルバドルの世界遺産とマヤ遺跡【エルサルバドル旅行記①】',                     category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-ruins/ruins-1.jpg',                                                                                date: '2014-08-31' },
+    { file: 'el-salvador-volcan.html',    title: 'サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】',           category: 'other',      tag: 'エルサルバドル',   img: '../images/el-salvador-volcan/volcan-1.jpg',                                                                              date: '2014-09-02' },
     { file: 'mexico-zocalo.html',         title: 'メキシコシティ歴史地区観光｜ソカロ・テンプロマヨール・大聖堂を歩く【メキシコ旅行記①】',                             category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/zocalo-catedral.jpg',                                                                                   date: '2026-02-22' },
     { file: 'mexico-guadalupe.html',      title: 'グアダルーペ大聖堂の見どころ｜テペヤックの丘と奇跡のマント【メキシコ旅行記②】',                                     category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/guadalupe-aerial.jpg',                                                                                  date: '2026-02-21' },
     { file: 'mexico-walk.html',           title: 'メキシコシティ街歩き｜革命記念塔・朝食・ストリートアートを巡る【メキシコ旅行記③】',                                     category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/revolucion-monument.jpg',                                                                               date: '2026-02-21' },
@@ -491,8 +491,8 @@
       { file: 'belize-3.html', title: 'ベリーズシティ街歩き｜スウィング・ブリッジと最終日の過ごし方【ベリーズ旅行記③】' }
     ],
     [
-      { file: 'el-salvador-ruins.html',  title: 'エルサルバドルに行った時の話① ホヤ・デ・セレンとタスマル' },
-      { file: 'el-salvador-volcan.html', title: 'エルサルバドルに行った時の話② 警察官エスコートつきでサンタ・アナ火山へ' }
+      { file: 'el-salvador-ruins.html',  title: 'ホヤ・デ・セレンとタスマル遺跡へ｜エルサルバドルの世界遺産とマヤ遺跡【エルサルバドル旅行記①】' },
+      { file: 'el-salvador-volcan.html', title: 'サンタ・アナ火山登山｜警察エスコート付きで火口湖を見に行った話【エルサルバドル旅行記②】' }
     ],
     [
       { file: 'panama-1.html', title: 'パナマに行った時の話① — パナマ・ビエホ、500年前の廃墟' },
