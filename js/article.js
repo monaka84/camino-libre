@@ -543,21 +543,14 @@
     }
     if (!currentArticle) return;
 
-    function shuffle(arr) {
-      var a = arr.slice();
-      for (var i = a.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var t = a[i]; a[i] = a[j]; a[j] = t;
-      }
-      return a;
-    }
+    function byDateDesc(a, b) { return new Date(b.date) - new Date(a.date); }
 
-    var sameCat = shuffle(ARTICLES.filter(function (a) {
+    var sameCat = ARTICLES.filter(function (a) {
       return a.file !== current && a.category === currentArticle.category;
-    }));
-    var others = shuffle(ARTICLES.filter(function (a) {
+    }).sort(byDateDesc);
+    var others = ARTICLES.filter(function (a) {
       return a.file !== current && a.category !== currentArticle.category;
-    }));
+    }).sort(byDateDesc);
 
     var picks = sameCat.slice(0, 3);
     if (picks.length < 3) picks = picks.concat(others.slice(0, 3 - picks.length));
