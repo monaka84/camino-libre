@@ -413,6 +413,7 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   font-size: 0.82rem; font-weight: 600; color: #fff;
   text-decoration: none; border: none; cursor: pointer;
   transition: opacity 0.2s; line-height: 1;
+  -webkit-appearance: none; appearance: none;
 }
 .share-btn:hover { opacity: 0.82; }
 .share-btn-x { background: #000; }

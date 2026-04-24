@@ -274,6 +274,16 @@
 (function () {
   if (typeof ARTICLES === 'undefined') return;
 
+  // シリーズ内の順番ルックアップ: file → { seriesIdx, pos }
+  var seriesOrder = {};
+  if (window.SERIES) {
+    window.SERIES.forEach(function (s, si) {
+      s.articles.forEach(function (a, i) {
+        seriesOrder[a.file] = { seriesIdx: si, pos: i };
+      });
+    });
+  }
+
   var CATEGORIES = [
     { key: 'costa-rica',  label: 'コスタリカ',    match: function(a){ return a.category === 'costa-rica'; } },
     { key: 'nicaragua',   label: 'ニカラグア',    match: function(a){ return a.category === 'nicaragua'; } },
@@ -311,7 +321,16 @@
   if (wrap) {
     CATEGORIES.forEach(function (cat) {
       var all = ARTICLES.filter(function (a) { return cat.match(a); })
-        .sort(function (a, b) { return new Date(b.date) - new Date(a.date); });
+        .sort(function (a, b) {
+          var oa = seriesOrder[a.file], ob = seriesOrder[b.file];
+          if (oa !== undefined && ob !== undefined) {
+            if (oa.seriesIdx !== ob.seriesIdx) return oa.seriesIdx - ob.seriesIdx;
+            return oa.pos - ob.pos;
+          }
+          if (oa !== undefined) return -1;
+          if (ob !== undefined) return 1;
+          return new Date(b.date) - new Date(a.date);
+        });
       if (all.length === 0) return;
 
       var sec = document.createElement('div');

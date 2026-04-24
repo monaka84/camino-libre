@@ -385,13 +385,17 @@
     copyBtn.className = 'share-btn share-btn-copy';
     copyBtn.textContent = 'URLコピー';
     copyBtn.addEventListener('click', function () {
-      navigator.clipboard.writeText(url).then(function () {
-        copyBtn.textContent = '✓ コピー済';
-        setTimeout(function () { copyBtn.textContent = 'URLコピー'; }, 2000);
-      }).catch(function () {
-        copyBtn.textContent = '❌ 失敗';
-        setTimeout(function () { copyBtn.textContent = 'URLコピー'; }, 2000);
-      });
+      function done(t) { copyBtn.textContent = t; setTimeout(function () { copyBtn.textContent = 'URLコピー'; }, 2000); }
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function () { done('✓ コピー済'); }).catch(function () { done('❌ 失敗'); });
+      } else {
+        try {
+          var ta = document.createElement('textarea');
+          ta.value = url; ta.style.cssText = 'position:fixed;opacity:0;';
+          document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+          document.body.removeChild(ta); done('✓ コピー済');
+        } catch (e) { done('❌ 失敗'); }
+      }
     });
 
     wrap.appendChild(label);
@@ -464,6 +468,8 @@
       { file: 'panama-3.html', title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】' }
     ]}
   ];
+
+  window.SERIES = SERIES;
 
   function injectSeriesNav() {
     var current = location.pathname.split('/').pop();
