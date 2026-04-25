@@ -436,13 +436,8 @@
   </div>
 </footer>
 
+<script src="../js/article.js?v=20260425e"></script>
 <script>
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const max = document.body.scrollHeight - window.innerHeight;
-    document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
-  });
-
   // ランダム青画像ヒーロー
   // 新しい画像を追加するときはこの配列に1行足すだけ
   var BLUE_IMAGES = [
@@ -458,68 +453,6 @@
   ];
   var img = BLUE_IMAGES[Math.floor(Math.random() * BLUE_IMAGES.length)];
   document.getElementById('aboutHero').style.backgroundImage = 'url("' + img + '")';
-
-  // v2 ヘッダー透過切替
-  window.addEventListener('scroll', function () {
-    var h = document.getElementById('v2Header');
-    if (window.scrollY > 80) h.classList.add('scrolled');
-    else h.classList.remove('scrolled');
-  });
-
-  // ハンバーガー（モバイル）＋ドロップダウン
-  (function () {
-    var header = document.getElementById('v2Header');
-    var burger = document.getElementById('v2Hamburger');
-    if (burger) {
-      burger.addEventListener('click', function () {
-        header.classList.toggle('menu-open');
-        if (!header.classList.contains('menu-open')) {
-          document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-        }
-      });
-    }
-    document.querySelectorAll('.v2-dropdown .dropdown-trigger').forEach(function (trigger) {
-      trigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) {
-          if (d !== trigger.parentElement) d.classList.remove('open');
-        });
-        trigger.parentElement.classList.toggle('open');
-      });
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.v2-dropdown')) {
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-      }
-    });
-  })();
-
-  // ダークモードトグル（読込前にlocalStorageから即適用）
-  (function () {
-    if (localStorage.getItem('theme') === 'dark') {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-    var headerInner = document.querySelector('.v2-header-inner');
-    if (!headerInner) return;
-    var btn = document.createElement('button');
-    btn.className = 'dark-toggle';
-    btn.setAttribute('aria-label', 'ダークモード切替');
-    btn.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀' : '🌙';
-    btn.addEventListener('click', function () {
-      var nowDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      if (nowDark) {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'light');
-        btn.textContent = '🌙';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        btn.textContent = '☀';
-      }
-    });
-    headerInner.appendChild(btn);
-  })();
 </script>
 
 </body>
