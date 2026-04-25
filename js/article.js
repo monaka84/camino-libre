@@ -224,7 +224,7 @@
 
   // ── Dark Mode Toggle ───────────────────────────────────────────
   function injectDarkModeToggle() {
-    var headerInner = document.querySelector('.header-inner');
+    var headerInner = document.querySelector('.header-inner, .v2-header-inner');
     if (!headerInner) return;
 
     var btn = document.createElement('button');
