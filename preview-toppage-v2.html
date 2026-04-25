@@ -525,10 +525,10 @@
     });
   }
 
-  // 最新記事を6件描画
+  // 最新記事を6件描画（公開日 published 優先、未設定は訪問日 date でフォールバック）
   if (typeof ARTICLES !== 'undefined') {
     var latest = ARTICLES.slice().sort(function (a, b) {
-      return new Date(b.date) - new Date(a.date);
+      return new Date(b.published || b.date) - new Date(a.published || a.date);
     }).slice(0, 6);
     var wrap = document.getElementById('v2Latest');
     latest.forEach(function (a) {
