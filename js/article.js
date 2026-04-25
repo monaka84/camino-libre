@@ -354,36 +354,17 @@
 
   // ── Share Buttons ──────────────────────────────────────────────
   function injectShareButtons() {
-    var tagsEl = document.querySelector('.article-tags');
-    if (!tagsEl) return;
-
     var title = document.title.replace(' | Camino Libre', '');
     var url = location.href;
 
-    var wrap = document.createElement('div');
-    wrap.className = 'share-buttons';
+    var xLink = document.querySelector('.share-btn-x');
+    if (xLink) xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
 
-    var label = document.createElement('span');
-    label.className = 'share-label';
-    label.textContent = 'シェアする';
+    var lineLink = document.querySelector('.share-btn-line');
+    if (lineLink) lineLink.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(title + '\n' + url);
 
-    var xLink = document.createElement('a');
-    xLink.className = 'share-btn share-btn-x';
-    xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
-    xLink.target = '_blank';
-    xLink.rel = 'noopener noreferrer';
-    xLink.textContent = 'X でシェア';
-
-    var lineLink = document.createElement('a');
-    lineLink.className = 'share-btn share-btn-line';
-    lineLink.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(title + '\n' + url);
-    lineLink.target = '_blank';
-    lineLink.rel = 'noopener noreferrer';
-    lineLink.textContent = 'LINE でシェア';
-
-    var copyBtn = document.createElement('button');
-    copyBtn.className = 'share-btn share-btn-copy';
-    copyBtn.textContent = 'URLコピー';
+    var copyBtn = document.querySelector('.share-btn-copy');
+    if (!copyBtn) return;
     copyBtn.addEventListener('click', function () {
       var original = 'URLコピー';
       function done(t) { copyBtn.textContent = t; setTimeout(function () { copyBtn.textContent = original; }, 2000); }
@@ -398,13 +379,6 @@
         } catch (e) { done('失敗'); }
       }
     });
-
-    wrap.appendChild(label);
-    wrap.appendChild(xLink);
-    wrap.appendChild(lineLink);
-    wrap.appendChild(copyBtn);
-
-    tagsEl.parentNode.insertBefore(wrap, tagsEl);
   }
 
   // ── Series Navigation ──────────────────────────────────────────
