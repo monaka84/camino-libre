@@ -543,11 +543,15 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   --gray: #787874;
   color-scheme: dark;
 }
+[data-theme="dark"] .logo { color: var(--text); }
 [data-theme="dark"] .card-title,
 [data-theme="dark"] .article-body h2,
 [data-theme="dark"] .article-body h3,
 [data-theme="dark"] .about-text h2,
 [data-theme="dark"] .related-title,
+[data-theme="dark"] .related-label,
+[data-theme="dark"] .spot-list h3,
+[data-theme="dark"] .article-info-box td:first-child,
 [data-theme="dark"] .section-label,
 [data-theme="dark"] .articles-section-header .section-label { color: var(--text); }
 [data-theme="dark"] .strip-card-title { color: rgba(255,255,255,0.85); }
