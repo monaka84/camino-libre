@@ -145,7 +145,7 @@
     panel.className = 'mobile-nav';
     panel.innerHTML =
       '<a href="' + base + 'index.html">ホーム</a>' +
-      '<a href="' + base + 'index.html#articles">記事一覧</a>' +
+      '<a href="' + base + 'stories.html">記事一覧</a>' +
       '<a href="' + base + 'profile/">プロフィール</a>';
     header.insertAdjacentElement('afterend', panel);
 
@@ -535,7 +535,7 @@
     if (seriesName && seriesCat) {
       var listLink = document.createElement('a');
       listLink.className = 'series-nav-list';
-      listLink.href = '../index.html?cat=' + seriesCat + '#articles';
+      listLink.href = '../stories.html?cat=' + seriesCat + '#articles';
       listLink.textContent = seriesName + ' 一覧を見る';
       nav.appendChild(listLink);
     }
