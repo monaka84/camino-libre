@@ -416,9 +416,13 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   -webkit-appearance: none; appearance: none;
 }
 .share-btn:hover { opacity: 0.82; }
+.share-btn-native { background: var(--accent); }
 .share-btn-x { background: #000; }
 .share-btn-line { background: #06c755; }
 .share-btn-copy { background: var(--gray); }
+.share-fallback { display: none; }
+.share-no-native .share-btn-native { display: none; }
+.share-no-native .share-fallback { display: inline-flex; }
 
 /* ===== LIGHTBOX ===== */
 .lightbox-overlay {
