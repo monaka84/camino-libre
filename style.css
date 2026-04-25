@@ -375,6 +375,12 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   .related-grid { grid-template-columns: 1fr; }
   nav { display: none; }
   .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 1.2rem;
+    font-size: 0.72rem;
+  }
   .article-hero { height: 280px; }
 }
 
