@@ -72,6 +72,7 @@
   window.ARTICLES = ARTICLES;
 
   document.addEventListener('DOMContentLoaded', function () {
+    initV2Header();
     injectScrollLine();
     injectBackToTop();
     injectDarkModeToggle();
@@ -86,6 +87,45 @@
     injectCopyCredit();
     injectSearch();
   });
+
+  // ── V2 Header (hamburger + dropdown + scroll) ──────────────────
+  function initV2Header() {
+    var header = document.querySelector('.v2-header');
+    if (!header || header.dataset.v2Init) return;
+    header.dataset.v2Init = '1';
+
+    var burger = header.querySelector('.v2-hamburger');
+    if (burger) {
+      burger.addEventListener('click', function () {
+        header.classList.toggle('menu-open');
+        if (!header.classList.contains('menu-open')) {
+          header.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
+        }
+      });
+    }
+
+    header.querySelectorAll('.v2-dropdown .dropdown-trigger').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        header.querySelectorAll('.v2-dropdown.open').forEach(function (d) {
+          if (d !== trigger.parentElement) d.classList.remove('open');
+        });
+        trigger.parentElement.classList.toggle('open');
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.v2-dropdown')) {
+        header.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
+      }
+    });
+
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 80) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  }
 
   // ── Mobile Nav ─────────────────────────────────────────────────
   function injectMobileNav() {
@@ -134,7 +174,7 @@
 
   // ── Search ─────────────────────────────────────────────────────
   function injectSearch() {
-    var headerInner = document.querySelector('.header-inner');
+    var headerInner = document.querySelector('.header-inner, .v2-header-inner');
     if (!headerInner) return;
 
     var btn = document.createElement('button');

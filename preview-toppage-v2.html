@@ -26,7 +26,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260425c">
+  <link rel="stylesheet" href="style.css?v=20260425d">
   <style>
     /* ── ヘッダー（透過＋スクロールで白背景に） ── */
     body { padding-top: 0; }
@@ -490,47 +490,9 @@
   © 2026 Camino Libre. All rights reserved.
 </footer>
 
-<script src="js/article.js?v=20260425c"></script>
+<script src="js/article.js?v=20260425e"></script>
 <script>
-  // ヘッダー透過切替
-  window.addEventListener('scroll', function () {
-    var h = document.getElementById('v2Header');
-    if (window.scrollY > 80) h.classList.add('scrolled');
-    else h.classList.remove('scrolled');
-  });
-
-  // ハンバーガー（モバイル）
-  (function () {
-    var header = document.getElementById('v2Header');
-    var burger = document.getElementById('v2Hamburger');
-    if (burger) {
-      burger.addEventListener('click', function () {
-        header.classList.toggle('menu-open');
-        // メニュー閉じたらドロップダウンも閉じる
-        if (!header.classList.contains('menu-open')) {
-          document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-        }
-      });
-    }
-    // ドロップダウンをクリックでも開閉（PC/モバイル共通）
-    document.querySelectorAll('.v2-dropdown .dropdown-trigger').forEach(function (trigger) {
-      trigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        // 他のドロップダウンを閉じる
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) {
-          if (d !== trigger.parentElement) d.classList.remove('open');
-        });
-        trigger.parentElement.classList.toggle('open');
-      });
-    });
-    // 外側クリックで閉じる
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.v2-dropdown')) {
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-      }
-    });
-  })();
+  // ヘッダー透過切替・ハンバーガー・ドロップダウンは js/article.js の initV2Header() が処理
 
   // 地域カードを動的生成（件数自動算出）
   if (typeof ARTICLES !== 'undefined') {

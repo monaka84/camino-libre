@@ -34,7 +34,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260425c">
+  <link rel="stylesheet" href="style.css?v=20260425d">
   <style>
     /* ── v2 ヘッダー（常に白） ── */
     body { padding-top: 64px; }
@@ -389,7 +389,7 @@
   </div>
 </footer>
 
-<script src="js/article.js?v=20260425c"></script>
+<script src="js/article.js?v=20260425e"></script>
 <script>
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
@@ -397,34 +397,7 @@
     document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
   });
 
-  // ハンバーガー（モバイル）
-  (function () {
-    var header = document.getElementById('v2Header');
-    var burger = document.getElementById('v2Hamburger');
-    if (burger) {
-      burger.addEventListener('click', function () {
-        header.classList.toggle('menu-open');
-        if (!header.classList.contains('menu-open')) {
-          document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-        }
-      });
-    }
-    document.querySelectorAll('.v2-dropdown .dropdown-trigger').forEach(function (trigger) {
-      trigger.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) {
-          if (d !== trigger.parentElement) d.classList.remove('open');
-        });
-        trigger.parentElement.classList.toggle('open');
-      });
-    });
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.v2-dropdown')) {
-        document.querySelectorAll('.v2-dropdown.open').forEach(function (d) { d.classList.remove('open'); });
-      }
-    });
-  })();
+  // ハンバーガー・ドロップダウンは js/article.js の initV2Header() が処理
 </script>
 <script>
 (function () {

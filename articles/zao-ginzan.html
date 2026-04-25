@@ -15,7 +15,7 @@
   <title>蔵王と銀山温泉1泊2日｜御釜・大露天風呂・大正ロマンの夜景 | Camino Libre</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=20260425c">
+  <link rel="stylesheet" href="../style.css?v=20260425d">
   <meta property="og:type" content="article">
   <meta property="og:title" content="蔵王と銀山温泉1泊2日｜御釜・大露天風呂・大正ロマンの夜景">
   <meta property="og:description" content="山形2日間の旅。蔵王の大露天風呂と神秘的な御釜、そして大正ロマンが薫る銀山温泉の夜景。">
@@ -27,16 +27,38 @@
   <meta name="twitter:description" content="山形2日間の旅。蔵王の大露天風呂と神秘的な御釜、そして大正ロマンが薫る銀山温泉の夜景。">
   <meta name="twitter:image" content="https://camino-libre.jp/images/zao-ginzan/20250628_133653099_iOS.jpg">
 </head>
-<body>
+<body class="v2-page">
 
 <div class="scroll-line" id="scrollLine"></div>
 
-<header>
-  <div class="header-inner">
-    <a href="../index.html" class="logo">Camino<span>Libre</span></a>
-    <nav>
-      <a href="../index.html">ホーム</a>
-      <a href="../index.html#articles">記事一覧</a>
+<header class="v2-header">
+  <div class="v2-header-inner">
+    <a href="../preview-toppage-v2.html" class="v2-logo">Camino<span>Libre</span></a>
+    <button class="v2-hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="v2-nav">
+      <a href="../preview-toppage-v2.html">ホーム</a>
+      <div class="v2-dropdown">
+        <button class="dropdown-trigger">目的地 ▾</button>
+        <div class="v2-dropdown-menu">
+          <div class="v2-dropdown-region">中南米</div>
+          <a href="../stories.html?cat=costa-rica"><img class="v2-flag" src="../images/flags/cr.svg" alt=""> コスタリカ</a>
+          <a href="../stories.html?cat=nicaragua"><img class="v2-flag" src="../images/flags/ni.svg" alt=""> ニカラグア</a>
+          <a href="../stories.html?cat=mexico"><img class="v2-flag" src="../images/flags/mx.svg" alt=""> メキシコ</a>
+          <a href="../stories.html?cat=panama"><img class="v2-flag" src="../images/flags/pa.svg" alt=""> パナマ</a>
+          <a href="../stories.html?cat=el-salvador"><img class="v2-flag" src="../images/flags/sv.svg" alt=""> エルサルバドル</a>
+          <a href="../stories.html?cat=belize"><img class="v2-flag" src="../images/flags/bz.svg" alt=""> ベリーズ</a>
+          <a href="../stories.html?cat=chile"><img class="v2-flag" src="../images/flags/cl.svg" alt=""> チリ</a>
+          <div class="v2-dropdown-region">アジア</div>
+          <a href="../stories.html?cat=taiwan"><img class="v2-flag" src="../images/flags/tw.svg" alt=""> 台湾</a>
+          <div class="v2-dropdown-region">日本</div>
+          <a href="../stories.html?cat=hokkaido"><img class="v2-flag" src="../images/flags/jp.svg" alt=""> 北海道</a>
+          <a href="../stories.html?cat=bike"><span class="v2-flag-emoji">🏍️</span> ツーリング</a>
+          <a href="../stories.html?cat=camp"><span class="v2-flag-emoji">⛺</span> キャンプ</a>
+        </div>
+      </div>
+      <a href="../stories.html">記事一覧</a>
       <a href="../profile/">プロフィール</a>
     </nav>
   </div>
@@ -177,6 +199,6 @@
     document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
   });
 </script>
-<script src="../js/article.js?v=20260425d"></script>
+<script src="../js/article.js?v=20260425e"></script>
 </body>
 </html>
