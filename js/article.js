@@ -359,36 +359,34 @@
     var wrap = document.querySelector('.share-buttons');
     if (!wrap) return;
 
-    if (navigator.share) {
-      var nativeBtn = document.querySelector('.share-btn-native');
-      if (nativeBtn) {
-        nativeBtn.addEventListener('click', function () {
-          navigator.share({ title: title, url: url }).catch(function () {});
-        });
-      }
-    } else {
-      wrap.classList.add('share-no-native');
-      var xLink = document.querySelector('.share-btn-x');
-      if (xLink) xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
-      var lineLink = document.querySelector('.share-btn-line');
-      if (lineLink) lineLink.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(title + '\n' + url);
-      var copyBtn = document.querySelector('.share-btn-copy');
-      if (copyBtn) {
-        copyBtn.addEventListener('click', function () {
-          var original = 'URLコピー';
-          function done(t) { copyBtn.textContent = t; setTimeout(function () { copyBtn.textContent = original; }, 2000); }
-          if (navigator.clipboard) {
-            navigator.clipboard.writeText(url).then(function () { done('コピーしました'); }).catch(function () { done('失敗'); });
-          } else {
-            try {
-              var ta = document.createElement('textarea');
-              ta.value = url; ta.style.cssText = 'position:fixed;opacity:0;';
-              document.body.appendChild(ta); ta.select(); document.execCommand('copy');
-              document.body.removeChild(ta); done('コピーしました');
-            } catch (e) { done('失敗'); }
+    var xLink = document.querySelector('.share-btn-x');
+    if (xLink) xLink.href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url);
+
+    var lineLink = document.querySelector('.share-btn-line');
+    if (lineLink) lineLink.href = 'https://line.me/R/msg/text/?' + encodeURIComponent(title + '\n' + url);
+
+    var copyBtn = document.querySelector('.share-btn-copy');
+    if (copyBtn) {
+      var copyLabel = copyBtn.querySelector('span');
+      var originalText = copyLabel ? copyLabel.textContent : 'コピー';
+      copyBtn.addEventListener('click', function () {
+        function done(t) {
+          if (copyLabel) {
+            copyLabel.textContent = t;
+            setTimeout(function () { copyLabel.textContent = originalText; }, 2000);
           }
-        });
-      }
+        }
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(function () { done('コピー済み'); }).catch(function () { done('失敗'); });
+        } else {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = url; ta.style.cssText = 'position:fixed;opacity:0;';
+            document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+            document.body.removeChild(ta); done('コピー済み');
+          } catch (e) { done('失敗'); }
+        }
+      });
     }
   }
 
