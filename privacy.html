@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4NRMFMEP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8W4NRMFMEP');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー ／ Camino Libre</title>
+  <meta name="description" content="Camino Libre における個人情報の取扱い、Cookie・アクセス解析の利用、お問い合わせ時の情報の扱いについて。">
+  <link rel="canonical" href="https://camino-libre.jp/privacy.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Camino Libre">
+  <meta property="og:title" content="プライバシーポリシー ／ Camino Libre">
+  <meta property="og:description" content="Camino Libre における個人情報の取扱いについて。">
+  <meta property="og:url" content="https://camino-libre.jp/privacy.html">
+  <meta property="og:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="プライバシーポリシー ／ Camino Libre">
+  <meta name="twitter:description" content="Camino Libre における個人情報の取扱いについて。">
+  <meta name="twitter:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260425d">
+  <style>
+    /* ── v2 ヘッダー（常に白） ── */
+    body { padding-top: 64px; }
+    .v2-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+    .v2-header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .v2-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--black); text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .v2-logo span { color: var(--accent); }
+    .v2-nav { display: flex; gap: 2rem; align-items: center; }
+    .v2-nav a, .v2-nav .dropdown-trigger {
+      font-size: 0.85rem; letter-spacing: 0.05em;
+      color: var(--black); text-decoration: none; cursor: pointer;
+      background: none; border: none; padding: 0;
+      font-family: inherit;
+    }
+    .v2-nav a:hover, .v2-nav .dropdown-trigger:hover { color: var(--accent); }
+    .v2-dropdown { position: relative; }
+    .v2-dropdown-menu {
+      position: absolute; top: calc(100% + 0.4rem); left: 50%;
+      transform: translateX(-50%);
+      background: #fff; min-width: 480px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-radius: 6px; padding: 1.5rem;
+      display: none;
+      grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem;
+      z-index: 200;
+    }
+    .v2-dropdown:hover .v2-dropdown-menu,
+    .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+    .v2-dropdown::after {
+      content: ''; position: absolute;
+      top: 100%; left: 0; right: 0; height: 0.6rem;
+    }
+    .v2-dropdown-region {
+      grid-column: 1 / -1;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      color: var(--accent); text-transform: uppercase;
+      margin-top: 0.5rem; margin-bottom: 0.3rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid var(--border);
+    }
+    .v2-dropdown-region:first-child { margin-top: 0; }
+    .v2-dropdown-menu a {
+      color: var(--black) !important;
+      font-size: 0.85rem; padding: 0.35rem 0.5rem;
+      border-radius: 3px;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .v2-dropdown-menu a:hover { background: var(--light-gray); }
+    .v2-flag {
+      display: inline-block;
+      width: 20px; height: 14px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .v2-flag-emoji {
+      display: inline-block; width: 20px;
+      text-align: center; font-size: 1rem;
+      vertical-align: middle;
+    }
+
+    /* ── ページヘッダー（コンパクト） ── */
+    .page-head {
+      max-width: 1200px; margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .page-head-sub {
+      font-size: 0.75rem; letter-spacing: 0.25em;
+      color: var(--accent); text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-head-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 0.8rem;
+    }
+    .page-head-desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── 本文 ── */
+    .policy-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.85;
+    }
+    .policy-body h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-body h2:first-child { margin-top: 0; }
+    .policy-body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin: 1.5rem 0 0.6rem;
+    }
+    .policy-body p { margin: 0 0 1rem; }
+    .policy-body ul {
+      margin: 0 0 1rem;
+      padding-left: 1.4rem;
+    }
+    .policy-body li { margin-bottom: 0.4rem; }
+    .policy-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .policy-body a:hover { text-decoration: none; }
+    .policy-meta {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    [data-theme="dark"] .page-head-title { color: var(--text); }
+    [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
+    [data-theme="dark"] .v2-logo, [data-theme="dark"] .v2-nav a, [data-theme="dark"] .v2-nav .dropdown-trigger { color: var(--text); }
+    [data-theme="dark"] .policy-body h2, [data-theme="dark"] .policy-body h3 { color: var(--text); }
+
+    /* ── ハンバーガーボタン（モバイル時のみ） ── */
+    .v2-hamburger {
+      display: none;
+      background: none; border: none; padding: 0.5rem;
+      cursor: pointer; width: 36px; height: 36px;
+      flex-direction: column; justify-content: center; gap: 5px;
+    }
+    .v2-hamburger span {
+      display: block; height: 2px; width: 22px;
+      background: var(--black); transition: all 0.3s;
+    }
+    .v2-header.menu-open .v2-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .v2-header.menu-open .v2-hamburger span:nth-child(2) { opacity: 0; }
+    .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      .v2-hamburger { display: flex; }
+      .v2-nav {
+        position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+        background: #fff;
+        flex-direction: column; align-items: stretch;
+        gap: 0; padding: 1rem 0;
+        overflow-y: auto;
+        transform: translateY(-100vh);
+        transition: transform 0.3s ease;
+        z-index: 99;
+      }
+      .v2-header.menu-open .v2-nav { transform: translateY(0); }
+      .v2-nav > a, .v2-nav .dropdown-trigger {
+        color: var(--black) !important;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        width: 100%;
+      }
+      .v2-dropdown { width: 100%; }
+      .v2-dropdown-menu {
+        position: static; transform: none;
+        display: none; min-width: 0;
+        grid-template-columns: 1fr; gap: 0;
+        box-shadow: none; padding: 0;
+        background: var(--light-gray); border-radius: 0;
+      }
+      .v2-dropdown:hover .v2-dropdown-menu { display: none; }
+      .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+      .v2-dropdown-menu a {
+        padding: 0.8rem 2.5rem !important;
+        border-bottom: 1px solid var(--border);
+      }
+      .v2-dropdown-region {
+        padding: 0.6rem 2rem 0.4rem;
+        margin: 0; border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<!-- v2 ヘッダー -->
+<header class="v2-header" id="v2Header">
+  <div class="v2-header-inner">
+    <a href="index.html" class="v2-logo">Camino<span>Libre</span></a>
+    <button class="v2-hamburger" id="v2Hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="v2-nav">
+      <a href="index.html">ホーム</a>
+      <div class="v2-dropdown">
+        <button class="dropdown-trigger">目的地 ▾</button>
+        <div class="v2-dropdown-menu">
+          <div class="v2-dropdown-region">中南米</div>
+          <a href="stories.html?cat=costa-rica"><img class="v2-flag" src="images/flags/cr.svg" alt=""> コスタリカ</a>
+          <a href="stories.html?cat=nicaragua"><img class="v2-flag" src="images/flags/ni.svg" alt=""> ニカラグア</a>
+          <a href="stories.html?cat=mexico"><img class="v2-flag" src="images/flags/mx.svg" alt=""> メキシコ</a>
+          <a href="stories.html?cat=panama"><img class="v2-flag" src="images/flags/pa.svg" alt=""> パナマ</a>
+          <a href="stories.html?cat=el-salvador"><img class="v2-flag" src="images/flags/sv.svg" alt=""> エルサルバドル</a>
+          <a href="stories.html?cat=belize"><img class="v2-flag" src="images/flags/bz.svg" alt=""> ベリーズ</a>
+          <a href="stories.html?cat=chile"><img class="v2-flag" src="images/flags/cl.svg" alt=""> チリ</a>
+          <div class="v2-dropdown-region">アジア</div>
+          <a href="stories.html?cat=taiwan"><img class="v2-flag" src="images/flags/tw.svg" alt=""> 台湾</a>
+          <div class="v2-dropdown-region">日本</div>
+          <a href="stories.html?cat=hokkaido"><img class="v2-flag" src="images/flags/jp.svg" alt=""> 北海道</a>
+          <a href="stories.html?cat=bike"><span class="v2-flag-emoji">🏍️</span> ツーリング</a>
+          <a href="stories.html?cat=camp"><span class="v2-flag-emoji">⛺</span> キャンプ</a>
+        </div>
+      </div>
+      <a href="stories.html">記事一覧</a>
+      <a href="profile/">プロフィール</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ページヘッダー -->
+<div class="page-head">
+  <div class="page-head-sub">Privacy Policy</div>
+  <h1 class="page-head-title">プライバシーポリシー</h1>
+  <p class="page-head-desc">Camino Libre における個人情報の取扱い、Cookie・アクセス解析の利用、お問い合わせ時の情報の扱いについて定めます。</p>
+</div>
+
+<!-- 本文 -->
+<main class="policy-body">
+
+  <h2>1. はじめに</h2>
+  <p>Camino Libre（以下「当サイト」）は、ご利用にあたって取得する情報の取扱いについて、以下のとおり定めます。当サイトをご利用いただいた時点で、本ポリシーにご同意いただいたものとみなします。</p>
+
+  <h2>2. 取得する情報</h2>
+  <h3>2-1. アクセス情報</h3>
+  <p>当サイトは Google Analytics（Google LLC 提供）を利用してアクセス状況を分析しています。これにより以下の情報が自動的に取得されます。</p>
+  <ul>
+    <li>IPアドレス（Google Analytics 側で匿名化処理されます）</li>
+    <li>ブラウザの種類・OS・端末情報</li>
+    <li>参照元 URL・閲覧したページ・滞在時間</li>
+    <li>おおよその地域情報（国・都市レベル）</li>
+  </ul>
+  <p>これらの情報には Cookie が利用されます。個人を特定する情報は含まれません。</p>
+
+  <h3>2-2. お問い合わせ時に取得する情報</h3>
+  <p>メールでお問い合わせいただいた場合、メールアドレス・お名前・お問い合わせ本文を取得します。これらは返信および記録のためにのみ使用します。</p>
+
+  <h3>2-3. サーバーログ</h3>
+  <p>当サイトはホスティングサービス（Netlify）を利用しています。同サービスにおいて、IPアドレスやアクセス時刻などのサーバーログが一時的に記録される場合があります。</p>
+
+  <h2>3. 利用目的</h2>
+  <p>取得した情報は、以下の目的でのみ利用します。</p>
+  <ul>
+    <li>サイトの利用状況の把握、コンテンツ・操作性の改善</li>
+    <li>お問い合わせへの返信</li>
+    <li>不正アクセス・スパム等への対応</li>
+  </ul>
+
+  <h2>4. 第三者提供</h2>
+  <p>取得した情報は、ご本人の同意がある場合または法令に基づく開示請求がある場合を除き、第三者に提供しません。</p>
+  <p>ただし、Google Analytics・Google Fonts・Netlify など、本ポリシー第2項で示した外部サービスの利用にともない、当該事業者が定めるプライバシーポリシーに基づいて情報が処理されます。</p>
+  <ul>
+    <li>Google のプライバシーポリシー: <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">https://policies.google.com/privacy?hl=ja</a></li>
+    <li>Netlify のプライバシーポリシー: <a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">https://www.netlify.com/privacy/</a></li>
+  </ul>
+
+  <h2>5. Cookie とオプトアウト</h2>
+  <p>当サイトはアクセス解析のために Cookie を利用しています。Cookie の利用を望まない場合は、お使いのブラウザの設定により Cookie を無効化することができます。</p>
+  <p>また、Google Analytics による情報収集を拒否したい場合は、Google が提供する <a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン</a> をご利用いただけます。</p>
+
+  <h2>6. 外部リンク・埋め込みコンテンツ</h2>
+  <p>当サイトは、画面表示の最適化のため Google Fonts を利用しています。これにともない、ご利用環境のIPアドレスやブラウザ情報が Google に送信されます。</p>
+  <p>また、記事内には Google マップへのリンクなど外部サイトへのリンクが含まれます。リンク先での情報の取扱いについては、各サイトのプライバシーポリシーをご確認ください。</p>
+
+  <h2>7. 著作権について</h2>
+  <p>当サイトに掲載されている文章・写真・その他コンテンツの著作権は、特に明記がない限り当サイト運営者に帰属します。引用は出典を明示の上、著作権法の範囲内で行ってください。無断転載・無断利用は固くお断りします。</p>
+
+  <h2>8. 免責事項</h2>
+  <p>当サイトに掲載される情報は、執筆時点での個人の体験・調査に基づくものであり、その正確性・完全性・最新性を保証するものではありません。掲載情報を利用したことによって生じたいかなる損害についても、当サイト運営者は責任を負いかねます。</p>
+  <p>掲載内容は予告なく変更・削除することがあります。</p>
+
+  <h2>9. お問い合わせ</h2>
+  <p>本ポリシーに関するお問い合わせ、または取得した情報の開示・訂正・削除のご依頼は、以下までご連絡ください。</p>
+  <ul>
+    <li>運営者: Camino Libre 運営者</li>
+    <li>連絡先: <a href="mailto:info@camino-libre.jp">info@camino-libre.jp</a></li>
+  </ul>
+
+  <h2>10. 改定について</h2>
+  <p>本ポリシーは、法令の変更や運営方針の見直しに応じて、予告なく改定する場合があります。重要な変更を行う場合は、当ページ上で告知します。</p>
+
+  <div class="policy-meta">
+    制定日: 2026年4月25日<br>
+    最終改定日: 2026年4月25日
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Camino<span>Libre</span></div>
+    <div class="footer-nav">
+      <a href="index.html">ホーム</a>
+      <a href="stories.html">記事一覧</a>
+      <a href="profile/">プロフィール</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+    <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/article.js?v=20260425e"></script>
+<script>
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const max = document.body.scrollHeight - window.innerHeight;
+    document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
+  });
+</script>
+</body>
+</html>

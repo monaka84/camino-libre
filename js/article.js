@@ -50,7 +50,7 @@
     { file: 'zao-ginzan.html',            title: '蔵王と銀山温泉1泊2日｜御釜・大露天風呂・大正ロマンの夜景',                                     category: 'other',      tag: '東北',             img: '../images/zao-ginzan/20250628_133653099_iOS.jpg',                                                                         date: '2025-06-28' },
     { file: 'himawari-tsunan.html',       title: '新潟夏旅2日間｜津南ひまわり畑と長岡花火大会を巡る',                           category: 'other',      tag: '新潟',             img: '../images/himawari/20250802_011958175_iOS_1.jpg',                                                                         date: '2025-08-02' },
     { file: 'hokkaido-xsr900-day1.html',  title: '大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①',                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250819_070951847_iOS.jpg',                                                                    date: '2025-08-19' },
-    { file: 'hokkaido-xsr900-day2.html',  title: 'ウポポイと帯広の豚丼を巡る上陸初日｜XSR900北海道ツーリング記録②',                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250820_054937983_iOS.jpg',                                                                    date: '2025-08-20' },
+    { file: 'hokkaido-xsr900-day2.html',  title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡るXSR900北海道ツーリング記録②',                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250820_054937983_iOS.jpg',                                                                    date: '2025-08-20' },
     { file: 'hokkaido-xsr900-day3.html',  title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_010411011_iOS.jpg',                                                                    date: '2025-08-21' },
     { file: 'hokkaido-xsr900-day4.html',  title: '納沙布岬から知床五湖へ走る道東ツーリング｜XSR900北海道ツーリング記録④',                                    category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_072833977_iOS.jpg',                                                                    date: '2025-08-21' },
     { file: 'hokkaido-xsr900-day5.html',  title: '神の子池・網走監獄・美幌峠を巡る｜XSR900北海道ツーリング記録⑤',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
@@ -459,7 +459,7 @@
     ]},
     { name: 'XSR900北海道ツーリング記録', catKey: 'hokkaido', articles: [
       { file: 'hokkaido-xsr900-day1.html', title: '大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①' },
-      { file: 'hokkaido-xsr900-day2.html', title: 'ウポポイと帯広の豚丼を巡る上陸初日｜XSR900北海道ツーリング記録②' },
+      { file: 'hokkaido-xsr900-day2.html', title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡るXSR900北海道ツーリング記録②' },
       { file: 'hokkaido-xsr900-day3.html', title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③' },
       { file: 'hokkaido-xsr900-day4.html', title: '納沙布岬から知床五湖へ走る道東ツーリング｜XSR900北海道ツーリング記録④' },
       { file: 'hokkaido-xsr900-day5.html', title: '神の子池・網走監獄・美幌峠を巡る｜XSR900北海道ツーリング記録⑤' },
