@@ -1,5 +1,6 @@
-// このファイルはスクリプトにより生成（記事画像のEXIF GPS優先 → 記事中央値 → Nominatim）
-// 編集する場合は手動で緯度経度を補正可能
+// このファイルは scripts/build-spots.py により自動生成されたマップ用スポットデータ。
+// 生成優先度: 写真EXIF GPS → 記事内画像のGPS中央値 → 既存座標。
+// EXIF GPS のない記事のスポットは js/spots.js に直接追記してください。
 (function () {
   window.SPOTS = [
     {"name": "浄土平", "detail": "福島県福島市土湯温泉町字浄土平 / アクセス：磐梯吾妻スカイライン経由、福島市内から車で約1時間（冬期閉鎖あり）", "lat": 37.731331, "lng": 140.258942, "article": "bandai-azuma.html", "articleTitle": "磐梯吾妻スカイラインツーリング"},
