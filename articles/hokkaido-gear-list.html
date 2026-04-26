@@ -41,17 +41,29 @@
 
     .gear-item {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
+      grid-template-columns: 160px 1fr;
+      gap: 0.5rem 1.2rem;
       padding: 1rem;
       border: 1px solid var(--border);
       border-radius: 6px;
       margin: 1.2rem 0;
       background: #fff;
+      align-items: start;
     }
-    .gear-item h4 { margin: 0; font-size: 1rem; }
-    .gear-item .gear-meta { font-size: 0.78rem; color: var(--text-light); }
-    .gear-item p { margin: 0; font-size: 0.9rem; line-height: 1.7; }
+    .gear-item .gear-img {
+      grid-row: 1 / -1;
+      grid-column: 1;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #fafafa;
+      border-radius: 4px;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+    .gear-item h4 { margin: 0; font-size: 1rem; grid-column: 2; }
+    .gear-item .gear-meta { font-size: 0.78rem; color: var(--text-light); grid-column: 2; }
+    .gear-item p { margin: 0; font-size: 0.9rem; line-height: 1.7; grid-column: 2; }
     .gear-item .gear-link {
       display: inline-block;
       background: #ff9900; color: #111;
@@ -61,8 +73,18 @@
       font-weight: 700;
       font-size: 0.82rem;
       align-self: start;
+      justify-self: start;
+      grid-column: 2;
     }
     .gear-item .gear-link:hover { opacity: 0.85; }
+    @media (max-width: 600px) {
+      .gear-item { grid-template-columns: 1fr; }
+      .gear-item .gear-img { grid-row: auto; grid-column: 1; max-width: 220px; margin: 0 auto; }
+      .gear-item h4,
+      .gear-item .gear-meta,
+      .gear-item p,
+      .gear-item .gear-link { grid-column: 1; }
+    }
 
     .pr-disclosure {
       font-size: 0.78rem;
@@ -178,6 +200,7 @@
     <p>北海道は走行距離が長く、宿泊数も多い。<strong>サイドバッグ＋シートバッグ</strong>の組み合わせが現実解。</p>
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/iron-jias-seatbag.jpg" alt="IRON JIA'S バイクシートバッグ" loading="lazy">
       <h4>IRON JIA'S バイクシートバッグ ツーリングバッグ</h4>
       <div class="gear-meta">IRON JIA'S / 容量50L / 防水ドラムバッグ</div>
       <p>防水性は完璧で、雨でも中身は無事だった。セットもしやすく、空気バルブが付いているので圧縮できて嵩張らないのが便利。50Lあれば長期ツーリングの荷物が一通り入る。</p>
@@ -185,6 +208,7 @@
     </div>
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/hepco-becker-streetbag.jpg" alt="Hepco &amp; Becker ソフトバッグ Street" loading="lazy">
       <h4>Hepco &amp; Becker ソフトバッグ Street（640603-0001）</h4>
       <div class="gear-meta">Hepco &amp; Becker / 12L 片側1個 / ドイツ製</div>
       <p>C-Bowサイドキャリアに手軽にセットでき、走行中もしっかり安定する。バッグ自体に防水機能はないものの、付属のレインカバーをかければ防水になり、内側のインナーカバーに物を入れておけばある程度の雨では中身が濡れない。左右で計24Lの収納が確保でき、シートバッグと組み合わせて使った。</p>
@@ -228,6 +252,7 @@
     -->
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/rstaichi-rss013.jpg" alt="RS TAICHI DRYMASTER アローシューズ RSS013" loading="lazy">
       <h4>RS TAICHI DRYMASTER アローシューズ RSS013</h4>
       <div class="gear-meta">RSタイチ / ドライマスター（防水・透湿） / BOAフィットシステム / シフトガード・プロテクター内蔵</div>
       <p>アッパーにTAICHIオリジナルの防水・透湿素材"ドライマスター"を採用した全天候対応のライディングシューズ。BOAダイヤルで着脱が一瞬、外側に張り出したソールとシューズ内外のプロテクターで足首への衝撃を緩和する。ソールは軽量で歩きやすく、ツーリング先での散策にもそのまま使える。実際に使ってみた感触として、防水機能は小雨程度なら靴の中までは濡れず安心して走れる。ただし土砂降りに当たるとさすがに浸水してくるので、本格的な雨が予想される場面では通常の長靴の方が確実だと感じた。一方で、足首が上までガチッと固定されないタイプなので、バイクを降りたあとの街歩きや、観光地の山道・階段でも動きやすい。ライディングブーツにありがちな"歩くと疲れる"感覚がなく、ツーリング先での散策にそのまま使えるのは大きな利点。</p>
@@ -279,6 +304,7 @@
     -->
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/spconnect-spc-case.jpg" alt="SP Connect SPC+ スマートフォンケース" loading="lazy">
       <h4>SP Connect SPC+ スマートフォンケース（iPhone 13ProMax/12ProMax用）</h4>
       <div class="gear-meta">SP Connect / 品番52646 / MagSafe対応 / SPC+マウントシステム / 自転車・車・バイクマウント対応</div>
       <p>携帯の固定はSP Connect が一番安心できる。専用ケースとマウントを組み合わせるモジュラー式で、ケース背面のSPC+コネクタにバイク側マウントをワンタッチで連結できる。これまで走行中に外れたことは一度もなく、それでいて取り付け・取り外しは片手で一瞬。MagSafe対応・ワイヤレス充電可・衝撃吸収構造で、ナビ以外の普段使いケースとしても成立する。<strong>ただしSP Connect 専用ケースを購入する必要があり、ケースは機種ごとの専用設計</strong>。自分の iPhone / Android モデルに合ったケースを選ばないと使えない点には注意。</p>
@@ -298,6 +324,7 @@
     -->
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/airtag.jpg" alt="Apple AirTag" loading="lazy">
       <h4>AirTag</h4>
       <div class="gear-meta">Apple / 紛失防止タグ</div>
       <p>枝幸で財布を落としたときに本当に救われた。バイクのキー・財布・荷物に1つずつ入れておくと、万が一のときの安心感が違う。</p>
@@ -305,6 +332,7 @@
     </div>
 
     <div class="gear-item">
+      <img class="gear-img" src="../images/products/maxrunon-d10.jpg" alt="MAXRUNON D10 バイクインカム" loading="lazy">
       <h4>MAXRUNON D10 バイクインカム</h4>
       <div class="gear-meta">MAXRUNON / Bluetooth 5.4（通信距離1.6km） / IPX7防水 / 1000mAh・12時間 / 4人同時通話・FMラジオ</div>
       <p>値段は安いが、やりたいことは一通りできた。Googleマップの音声案内、音楽、ラジオ、そして ChatGPT との会話までこれ1台で済む。会話モードにしておけば運転しながら雑談できるし、知らないことをすぐ聞けて移動時間が学習時間になる。長時間ツーリングの相棒として相性がいい。</p>

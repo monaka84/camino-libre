@@ -18,14 +18,30 @@
   <link rel="stylesheet" href="../style.css?v=20260426c">
   <style>
     .product-box {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 0.6rem 1.5rem;
+      align-items: start;
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.5rem;
       margin: 2rem 0;
       background: var(--light-gray);
     }
-    .product-box h3 { margin: 0 0 0.6rem; font-size: 1.05rem; }
-    .product-box .product-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1rem; }
+    .product-box .product-img {
+      grid-row: 1 / -1;
+      grid-column: 1;
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 4px;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+    .product-box h3 { margin: 0 0 0.6rem; font-size: 1.05rem; grid-column: 2; }
+    .product-box .product-meta { font-size: 0.82rem; color: var(--text-light); margin-bottom: 1rem; grid-column: 2; }
+    .product-box > p { grid-column: 2; }
     .product-box .product-link {
       display: inline-block;
       background: #ff9900; color: #111;
@@ -34,8 +50,18 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 0.88rem;
+      justify-self: start;
+      grid-column: 2;
     }
     .product-box .product-link:hover { opacity: 0.85; }
+    @media (max-width: 600px) {
+      .product-box { grid-template-columns: 1fr; }
+      .product-box .product-img { grid-row: auto; grid-column: 1; max-width: 240px; margin: 0 auto; }
+      .product-box h3,
+      .product-box .product-meta,
+      .product-box > p,
+      .product-box .product-link { grid-column: 1; }
+    }
     .pr-disclosure {
       font-size: 0.78rem;
       color: var(--text-light);
@@ -176,6 +202,7 @@
   <p>これは米国モンタナ州のメーカーが製造する熊撃退スプレー。米国の森林警備隊（National Park Service）に採用されているモデルで、グリズリー対策として実績がある。日本でもヒグマ・ツキノワグマに有効とされている。</p>
 
   <div class="product-box">
+    <img class="product-img" src="../images/products/udap-12hp.jpg" alt="UDAP 12HP 熊撃退スプレー" loading="lazy">
     <h3>UDAP 12HP 熊撃退スプレー（ホルスター付）</h3>
     <div class="product-meta">米国森林警備隊採用品 / 正規輸入品 / カプサイシン2%</div>
     <p style="font-size:0.9rem;line-height:1.7;margin:0 0 1rem;">射程約9m、噴射時間約4秒。トレッキング用ホルスター付きで腰に下げて携行できる。航空機での持ち込みは不可（北海道へは現地で購入するか、フェリー利用がおすすめ）。</p>
