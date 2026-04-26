@@ -9,12 +9,12 @@
   })();
 
   var ARTICLES = [
-    { file: 'hokkaido-sr400-day1.html',   title: '大洗からさんふらわあで苫小牧、初日は札幌へ｜SR400北海道ツーリング記録①',                                                       category: 'bike',       tag: '北海道',           img: '../images/hokkaido/tomakomai-ferry.jpg',                                                                                  date: '2021-06-18' },
-    { file: 'hokkaido-sr400-day2.html',   title: '札幌から石狩経由オロロンラインで稚内へ｜SR400北海道ツーリング記録②',                                                           category: 'bike',       tag: '北海道',           img: '../images/hokkaido/オロロンライン.jpg',                                                                                    date: '2021-06-20' },
-    { file: 'hokkaido-sr400-day3.html',   title: '宗谷岬・白い道・エサヌカ線、紋別の夜にヒグマと遭遇｜SR400北海道ツーリング記録③',                                              category: 'bike',       tag: '北海道',           img: '../images/hokkaido/soya-misaki-sr400-self.jpg',                                                                            date: '2021-06-21' },
-    { file: 'hokkaido-sr400-day4.html',   title: '紋別から美瑛へ、青い池とパッチワークの路｜SR400北海道ツーリング記録④',                                                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido/aoi-ike-pano.jpg',                                                                                       date: '2021-06-22' },
-    { file: 'hokkaido-sr400-day5.html',   title: '富良野ファーム富田から苫小牧、フェリーで大洗へ｜SR400北海道ツーリング記録⑤',                                                   category: 'bike',       tag: '北海道',           img: '../images/hokkaido/furano-lavender.jpg',                                                                                    date: '2021-06-23' },
-    { file: 'hokkaido-bear-spray.html',   title: '知床ツーリングで実感した熊撃退スプレーの必要性｜UDAP 12HP【装備編】',                                                            category: 'bike',       tag: '北海道',           img: '../images/og/hokkaido-bear-spray.jpg',                                                                                      date: '2026-04-26' },
+    { file: 'hokkaido-sr400-day1.html',   title: '大洗からさんふらわあで苫小牧｜初日は札幌へ【SR400北海道ツーリング記録①】',                                                       category: 'bike',       tag: '北海道',           img: '../images/hokkaido/tomakomai-ferry.jpg',                                                                                  date: '2021-06-18' },
+    { file: 'hokkaido-sr400-day2.html',   title: '札幌から石狩経由オロロンラインで稚内へ【SR400北海道ツーリング記録②】',                                                           category: 'bike',       tag: '北海道',           img: '../images/hokkaido/オロロンライン.jpg',                                                                                    date: '2021-06-20' },
+    { file: 'hokkaido-sr400-day3.html',   title: '宗谷岬・白い道・エサヌカ線｜紋別の夜にヒグマと遭遇【SR400北海道ツーリング記録③】',                                              category: 'bike',       tag: '北海道',           img: '../images/hokkaido/soya-misaki-sr400-self.jpg',                                                                            date: '2021-06-21' },
+    { file: 'hokkaido-sr400-day4.html',   title: '紋別から美瑛へ｜青い池とパッチワークの路【SR400北海道ツーリング記録④】',                                                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido/aoi-ike-pano.jpg',                                                                                       date: '2021-06-22' },
+    { file: 'hokkaido-sr400-day5.html',   title: '富良野ファーム富田から苫小牧｜フェリーで大洗へ【SR400北海道ツーリング記録⑤】',                                                   category: 'bike',       tag: '北海道',           img: '../images/hokkaido/furano-lavender.jpg',                                                                                    date: '2021-06-23' },
+    { file: 'hokkaido-bear-spray.html',   title: '知床ツーリングで実感した熊撃退スプレーの必要性｜UDAP 12HP【装備編①】',                                                            category: 'bike',       tag: '北海道',           img: '../images/og/hokkaido-bear-spray.jpg',                                                                                      date: '2026-04-26' },
     { file: 'hokkaido-gear-list.html',    title: '北海道ツーリング装備リスト｜2,400km走って分かった必須アイテム',                                                                  category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250819_070951847_iOS.jpg',                                                                      date: '2026-04-26' },
     { file: 'hokkaido-routes.html',       title: '北海道ツーリング3回の記録｜SR400・XSR900・車で走ったルートと宿まとめ',                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido/エサヌカ線.jpg',                                                                                          date: '2026-04-26' },
     { file: 'taiwan.html',                title: '台湾旅行記｜基隆の夕暮れと十分のランタン上げが想像以上によかった',                   category: 'other',      tag: '台湾',             img: '../images/taiwan/z50_0939_dxo.jpg',                                                                                      date: '2025-09-01' },
@@ -46,10 +46,10 @@
     { file: 'spanish-dictionary.html',    title: 'スペイン語辞書おすすめ比較｜紙辞書・電子辞書・アプリを中米経験者が選ぶ',                           category: 'other',      tag: 'スペイン語',       img: 'https://static.wixstatic.com/media/949ec9_316ae78b6611491fad1cb3d780461968~mv2.jpg',                                    date: '2016-10-12' },
     { file: 'bandai-azuma.html',          title: '磐梯吾妻スカイラインツーリング｜火山地帯を走る福島の絶景ルート',                               category: 'bike',       tag: 'ツーリング',       img: '../images/bandai/IMG_3857.jpg',                                                                                          date: '2018-10-01' },
     { file: 'five-color-lake.html',       title: '五色沼観光｜福島・裏磐梯でエメラルドグリーンの湖沼群を歩く',                                         category: 'bike',       tag: '旅',               img: '../images/five-color-lake/IMG_8015.jpg',                                                                                 date: '2018-10-02' },
-    { file: 'hokkaido-car-day1.html',     title: '青森から新幹線で函館へ、夜の街を歩く｜北海道車旅①',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/hakodate-night-view-2022.jpg',                                                                       date: '2022-08-25' },
-    { file: 'hokkaido-car-day2.html',     title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る｜北海道車旅②',                                                                      category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/mt-yotei.jpg',                                                                                       date: '2022-08-26' },
-    { file: 'hokkaido-car-day3.html',     title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼｜北海道車旅③',                                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/kamui-misaki-pano.jpg',                                                                              date: '2022-08-27' },
-    { file: 'hokkaido-car-day4.html',     title: '函館朝市・五稜郭・北海道第一歩の地碑｜北海道車旅④',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/goryokaku.jpg',                                                                                      date: '2022-08-28' },
+    { file: 'hokkaido-car-day1.html',     title: '青森から新幹線で函館へ｜夜の街を歩く【北海道車旅①】',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/hakodate-night-view-2022.jpg',                                                                       date: '2022-08-25' },
+    { file: 'hokkaido-car-day2.html',     title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る【北海道車旅②】',                                                                      category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/mt-yotei.jpg',                                                                                       date: '2022-08-26' },
+    { file: 'hokkaido-car-day3.html',     title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼【北海道車旅③】',                                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/kamui-misaki-pano.jpg',                                                                              date: '2022-08-27' },
+    { file: 'hokkaido-car-day4.html',     title: '函館朝市・五稜郭・北海道第一歩の地碑【北海道車旅④】',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/goryokaku.jpg',                                                                                      date: '2022-08-28' },
     { file: 'touring-chiba-xsr900.html',  title: 'XSR900千葉ソロツーリング｜笠森観音と房総の山道を走る',                               category: 'bike',       tag: 'ツーリング',       img: '../images/touring-chiba2/IMG_2388.jpg',                                                                                  date: '2026-04-01' },
     { file: 'chile-1.html',               title: 'サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】',                                 category: 'other',      tag: 'チリ',             img: '../images/chile/20251012_143804099_iOS.jpg',                                                                              date: '2025-10-12' },
     { file: 'chile-2.html',               title: 'ロス・ドミニコス工芸市場へ｜サンティアゴで民芸品と白い教会を巡る【チリ旅行記②】',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251014_205137977_iOS.jpg',                                                                              date: '2025-10-14' },
@@ -59,14 +59,14 @@
     { file: 'belize-3.html',              title: 'ベリーズシティ街歩き｜スウィング・ブリッジと最終日の過ごし方【ベリーズ旅行記③】',                       category: 'other',      tag: 'ベリーズ',         img: '../images/belize/20251020_144751630_iOS.jpg',                                                                             date: '2025-10-20' },
     { file: 'zao-ginzan.html',            title: '蔵王と銀山温泉1泊2日｜御釜・大露天風呂・大正ロマンの夜景',                                     category: 'other',      tag: '東北',             img: '../images/zao-ginzan/20250628_133653099_iOS.jpg',                                                                         date: '2025-06-28' },
     { file: 'himawari-tsunan.html',       title: '新潟夏旅2日間｜津南ひまわり畑と長岡花火大会を巡る',                           category: 'other',      tag: '新潟',             img: '../images/himawari/20250802_011958175_iOS_1.jpg',                                                                         date: '2025-08-02' },
-    { file: 'hokkaido-xsr900-day1.html',  title: '大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①',                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250819_070951847_iOS.jpg',                                                                    date: '2025-08-19' },
-    { file: 'hokkaido-xsr900-day2.html',  title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡るXSR900北海道ツーリング記録②',                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250820_054937983_iOS.jpg',                                                                    date: '2025-08-20' },
-    { file: 'hokkaido-xsr900-day3.html',  title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_010411011_iOS.jpg',                                                                    date: '2025-08-21' },
-    { file: 'hokkaido-xsr900-day4.html',  title: '納沙布岬から知床五湖へ走る道東ツーリング｜XSR900北海道ツーリング記録④',                                    category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_072833977_iOS.jpg',                                                                    date: '2025-08-21' },
-    { file: 'hokkaido-xsr900-day5.html',  title: '神の子池・網走監獄・美幌峠を巡る｜XSR900北海道ツーリング記録⑤',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
-    { file: 'hokkaido-xsr900-day6.html',  title: '枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_040949567_iOS.jpg',                                                                    date: '2025-08-24' },
-    { file: 'hokkaido-xsr900-day7.html',  title: 'オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦',                               category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250825_110201838_iOS.jpg',                                                                    date: '2025-08-25' },
-    { file: 'hokkaido-xsr900-day8.html',  title: '美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧',                        category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250826_002032526_iOS.jpg',                                                                    date: '2025-08-26' },
+    { file: 'hokkaido-xsr900-day1.html',  title: '大洗からさんふらわあで苫小牧へ【XSR900北海道ツーリング記録①】',                         category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250819_070951847_iOS.jpg',                                                                    date: '2025-08-19' },
+    { file: 'hokkaido-xsr900-day2.html',  title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡る【XSR900北海道ツーリング記録②】',                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250820_054937983_iOS.jpg',                                                                    date: '2025-08-20' },
+    { file: 'hokkaido-xsr900-day3.html',  title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート【XSR900北海道ツーリング記録③】',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_010411011_iOS.jpg',                                                                    date: '2025-08-21' },
+    { file: 'hokkaido-xsr900-day4.html',  title: '納沙布岬から知床五湖へ走る道東ツーリング【XSR900北海道ツーリング記録④】',                                    category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_072833977_iOS.jpg',                                                                    date: '2025-08-21' },
+    { file: 'hokkaido-xsr900-day5.html',  title: '神の子池・網走監獄・美幌峠を巡る【XSR900北海道ツーリング記録⑤】',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
+    { file: 'hokkaido-xsr900-day6.html',  title: '枝幸で財布を落としてAirTagに救われた話【XSR900北海道ツーリング記録⑥】',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_040949567_iOS.jpg',                                                                    date: '2025-08-24' },
+    { file: 'hokkaido-xsr900-day7.html',  title: 'オロロンラインを稚内から旭川へ走る【XSR900北海道ツーリング記録⑦】',                               category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250825_110201838_iOS.jpg',                                                                    date: '2025-08-25' },
+    { file: 'hokkaido-xsr900-day8.html',  title: '美瑛の青い池・白ひげの滝から苫小牧へ【XSR900北海道ツーリング記録⑧】',                        category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250826_002032526_iOS.jpg',                                                                    date: '2025-08-26' },
     { file: 'panama-1.html',              title: 'パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】',                         category: 'other',      tag: 'パナマ',           img: '../images/panama/pv-1.jpg',                                                                                               date: '2025-01-10' },
     { file: 'panama.html',                title: 'カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】',           category: 'other',      tag: 'パナマ',           img: '../images/panama/panama-1.jpg',                                                                                          date: '2025-01-11' },
     { file: 'panama-3.html',              title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】',             category: 'other',      tag: 'パナマ',           img: '../images/panama/canal-1.jpg',                                                                                           date: '2025-01-12' },
@@ -468,27 +468,27 @@
       { file: 'mexico-walmart.html',   title: 'メキシコ土産はウォルマートが穴場｜サルサ・コーヒー・チョコレート購入記【メキシコ旅行記④】' }
     ]},
     { name: 'SR400北海道ツーリング記録', catKey: 'hokkaido', articles: [
-      { file: 'hokkaido-sr400-day1.html', title: '大洗からさんふらわあで苫小牧、初日は札幌へ｜SR400北海道ツーリング記録①' },
-      { file: 'hokkaido-sr400-day2.html', title: '札幌から石狩経由オロロンラインで稚内へ｜SR400北海道ツーリング記録②' },
-      { file: 'hokkaido-sr400-day3.html', title: '宗谷岬・白い道・エサヌカ線、紋別の夜にヒグマと遭遇｜SR400北海道ツーリング記録③' },
-      { file: 'hokkaido-sr400-day4.html', title: '紋別から美瑛へ、青い池とパッチワークの路｜SR400北海道ツーリング記録④' },
-      { file: 'hokkaido-sr400-day5.html', title: '富良野ファーム富田から苫小牧、フェリーで大洗へ｜SR400北海道ツーリング記録⑤' }
+      { file: 'hokkaido-sr400-day1.html', title: '大洗からさんふらわあで苫小牧｜初日は札幌へ【SR400北海道ツーリング記録①】' },
+      { file: 'hokkaido-sr400-day2.html', title: '札幌から石狩経由オロロンラインで稚内へ【SR400北海道ツーリング記録②】' },
+      { file: 'hokkaido-sr400-day3.html', title: '宗谷岬・白い道・エサヌカ線｜紋別の夜にヒグマと遭遇【SR400北海道ツーリング記録③】' },
+      { file: 'hokkaido-sr400-day4.html', title: '紋別から美瑛へ｜青い池とパッチワークの路【SR400北海道ツーリング記録④】' },
+      { file: 'hokkaido-sr400-day5.html', title: '富良野ファーム富田から苫小牧｜フェリーで大洗へ【SR400北海道ツーリング記録⑤】' }
     ]},
     { name: 'XSR900北海道ツーリング記録', catKey: 'hokkaido', articles: [
-      { file: 'hokkaido-xsr900-day1.html', title: '大洗からさんふらわあで苫小牧へ｜XSR900北海道ツーリング記録①' },
-      { file: 'hokkaido-xsr900-day2.html', title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡るXSR900北海道ツーリング記録②' },
-      { file: 'hokkaido-xsr900-day3.html', title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート｜XSR900北海道ツーリング記録③' },
-      { file: 'hokkaido-xsr900-day4.html', title: '納沙布岬から知床五湖へ走る道東ツーリング｜XSR900北海道ツーリング記録④' },
-      { file: 'hokkaido-xsr900-day5.html', title: '神の子池・網走監獄・美幌峠を巡る｜XSR900北海道ツーリング記録⑤' },
-      { file: 'hokkaido-xsr900-day6.html', title: '枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥' },
-      { file: 'hokkaido-xsr900-day7.html', title: 'オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦' },
-      { file: 'hokkaido-xsr900-day8.html', title: '美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧' }
+      { file: 'hokkaido-xsr900-day1.html', title: '大洗からさんふらわあで苫小牧へ【XSR900北海道ツーリング記録①】' },
+      { file: 'hokkaido-xsr900-day2.html', title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡る【XSR900北海道ツーリング記録②】' },
+      { file: 'hokkaido-xsr900-day3.html', title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート【XSR900北海道ツーリング記録③】' },
+      { file: 'hokkaido-xsr900-day4.html', title: '納沙布岬から知床五湖へ走る道東ツーリング【XSR900北海道ツーリング記録④】' },
+      { file: 'hokkaido-xsr900-day5.html', title: '神の子池・網走監獄・美幌峠を巡る【XSR900北海道ツーリング記録⑤】' },
+      { file: 'hokkaido-xsr900-day6.html', title: '枝幸で財布を落としてAirTagに救われた話【XSR900北海道ツーリング記録⑥】' },
+      { file: 'hokkaido-xsr900-day7.html', title: 'オロロンラインを稚内から旭川へ走る【XSR900北海道ツーリング記録⑦】' },
+      { file: 'hokkaido-xsr900-day8.html', title: '美瑛の青い池・白ひげの滝から苫小牧へ【XSR900北海道ツーリング記録⑧】' }
     ]},
     { name: '北海道車旅', catKey: 'hokkaido', articles: [
-      { file: 'hokkaido-car-day1.html', title: '青森から新幹線で函館へ、夜の街を歩く｜北海道車旅①' },
-      { file: 'hokkaido-car-day2.html', title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る｜北海道車旅②' },
-      { file: 'hokkaido-car-day3.html', title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼｜北海道車旅③' },
-      { file: 'hokkaido-car-day4.html', title: '函館朝市・五稜郭・北海道第一歩の地碑｜北海道車旅④' }
+      { file: 'hokkaido-car-day1.html', title: '青森から新幹線で函館へ｜夜の街を歩く【北海道車旅①】' },
+      { file: 'hokkaido-car-day2.html', title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る【北海道車旅②】' },
+      { file: 'hokkaido-car-day3.html', title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼【北海道車旅③】' },
+      { file: 'hokkaido-car-day4.html', title: '函館朝市・五稜郭・北海道第一歩の地碑【北海道車旅④】' }
     ]},
     { name: 'チリ旅行記', catKey: 'chile', articles: [
       { file: 'chile-1.html', title: 'サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】' },
@@ -508,6 +508,9 @@
       { file: 'panama-1.html', title: 'パナマ・ビエホ観光｜500年前の廃墟とスペイン植民地時代の歴史【パナマ旅行記①】' },
       { file: 'panama.html',   title: 'カスコ・ビエホとマリスコス市場を歩く｜世界遺産の旧市街と魚市場【パナマ旅行記②】' },
       { file: 'panama-3.html', title: 'ミラフローレス閘門見学｜パナマ運河で巨大船が通る瞬間を見た【パナマ旅行記③】' }
+    ]},
+    { name: '装備編', catKey: 'hokkaido', articles: [
+      { file: 'hokkaido-bear-spray.html', title: '知床ツーリングで実感した熊撃退スプレーの必要性｜UDAP 12HP【装備編①】' }
     ]}
   ];
 
