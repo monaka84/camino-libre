@@ -40,30 +40,27 @@
     }
 
     .gear-item {
-      display: grid;
-      grid-template-columns: 160px 1fr;
-      gap: 0.5rem 1.2rem;
       padding: 1rem;
       border: 1px solid var(--border);
       border-radius: 6px;
       margin: 1.2rem 0;
       background: #fff;
-      align-items: start;
+      overflow: hidden;
     }
     .gear-item .gear-img {
-      grid-row: 1 / -1;
-      grid-column: 1;
-      width: 100%;
+      float: left;
+      width: 160px;
       aspect-ratio: 1;
       object-fit: contain;
       background: #fafafa;
       border-radius: 4px;
       padding: 6px;
       box-sizing: border-box;
+      margin: 0 1.2rem 0.6rem 0;
     }
-    .gear-item h4 { margin: 0; font-size: 1rem; grid-column: 2; }
-    .gear-item .gear-meta { font-size: 0.78rem; color: var(--text-light); grid-column: 2; }
-    .gear-item p { margin: 0; font-size: 0.9rem; line-height: 1.7; grid-column: 2; }
+    .gear-item h4 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .gear-item .gear-meta { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.5rem; }
+    .gear-item p { margin: 0 0 0.6rem; font-size: 0.9rem; line-height: 1.7; }
     .gear-item .gear-link {
       display: inline-block;
       background: #ff9900; color: #111;
@@ -72,18 +69,15 @@
       text-decoration: none;
       font-weight: 700;
       font-size: 0.82rem;
-      align-self: start;
-      justify-self: start;
-      grid-column: 2;
     }
     .gear-item .gear-link:hover { opacity: 0.85; }
     @media (max-width: 600px) {
-      .gear-item { grid-template-columns: 1fr; }
-      .gear-item .gear-img { grid-row: auto; grid-column: 1; max-width: 220px; margin: 0 auto; }
-      .gear-item h4,
-      .gear-item .gear-meta,
-      .gear-item p,
-      .gear-item .gear-link { grid-column: 1; }
+      .gear-item .gear-img {
+        float: none;
+        display: block;
+        max-width: 220px;
+        margin: 0 auto 1rem;
+      }
     }
 
     .pr-disclosure {
@@ -213,7 +207,14 @@
       <div class="gear-meta">Hepco &amp; Becker / 12L 片側1個 / ドイツ製</div>
       <p>C-Bowサイドキャリアに手軽にセットでき、走行中もしっかり安定する。バッグ自体に防水機能はないものの、付属のレインカバーをかければ防水になり、内側のインナーカバーに物を入れておけばある程度の雨では中身が濡れない。左右で計24Lの収納が確保でき、シートバッグと組み合わせて使った。</p>
       <a class="gear-link" href="https://www.amazon.co.jp/dp/B08R88YD41?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
-      <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-light);">▶ <strong>これから買うならこっちがおすすめ：</strong>同じC-Bow規格で取り付けられる<a href="https://www.amazon.co.jp/dp/B0D5CQ9981?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Hepco &amp; Becker Xcore サイドケース 左右セット</a>（片側18L / 計36L、アルミ＋ポリカ製ハードケース、キー2個付属）。完全防水ではないが、ハード構造で耐衝撃性が高く鍵も掛かるので、長期ツーリングでの安心感は段違い。</p>
+    </div>
+
+    <div class="gear-item">
+      <img class="gear-img" src="../images/products/hepco-becker-xcore.jpg" alt="Hepco &amp; Becker サイドケース Xcore" loading="lazy">
+      <h4>Hepco &amp; Becker サイドケース Xcore 左右セット（610295-0001）</h4>
+      <div class="gear-meta">Hepco &amp; Becker / 18L×2（計36L） / アルミ+ポリカーボネート+PBT / 片側2.8kg / キー2個付属</div>
+      <p>同じC-Bow規格でソフトバッグの上位互換となる選択肢。アルミ＋ポリカ＋PBT製のハードシェル構造で耐衝撃性が高く、鍵付きで宿やキャンプ場に離席する時の安心感が大きい。容量は片側18L／計36L とソフトバッグの倍以上、長期ツーリングや北海道の本格周遊向け。完全防水仕様ではないため、雨天時は内部に養生が必要。重量は片側2.8kg×2でソフトバッグから増える点は留意。</p>
+      <a class="gear-link" href="https://www.amazon.co.jp/dp/B0D5CSCKP2?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
     </div>
 
     <div class="placeholder">📝 ここに使ったバッグの写真を1枚（積載状態のXSR900など）</div>
@@ -332,13 +333,13 @@
     </div>
 
     <div class="gear-item">
-      <img class="gear-img" src="../images/products/maxrunon-d10.jpg" alt="MAXRUNON D10 バイクインカム" loading="lazy">
-      <h4>MAXRUNON D10 バイクインカム</h4>
-      <div class="gear-meta">MAXRUNON / Bluetooth 5.4（通信距離1.6km） / IPX7防水 / 1000mAh・12時間 / 4人同時通話・FMラジオ</div>
+      <img class="gear-img" src="../images/products/maxrunon-d10.jpg" alt="MAXRUNON D10 Mesh バイクインカム" loading="lazy">
+      <h4>MAXRUNON D10 Mesh バイクインカム（Mesh通信対応アップデート版）</h4>
+      <div class="gear-meta">MAXRUNON / Mesh通信対応 / Bluetooth 5.4 / IPX7防水 / 1000mAh・12時間 / OTAアップデート・専用アプリ対応 / スターリーグレー</div>
       <p>値段は安いが、やりたいことは一通りできた。Googleマップの音声案内、音楽、ラジオ、そして ChatGPT との会話までこれ1台で済む。会話モードにしておけば運転しながら雑談できるし、知らないことをすぐ聞けて移動時間が学習時間になる。長時間ツーリングの相棒として相性がいい。</p>
+      <p style="margin-top:0.6rem;font-size:0.85rem;color:var(--text-light);">▶ Mesh通信対応により、グループツーリング時にBluetoothより安定して接続できる。OTAアップデート・専用アプリ対応で、購入後もファームウェア更新で機能追加が見込める現行モデル。¥7,980（クーポン適用でさらに割引、2026-04時点）と価格もこなれている。</p>
       <p style="margin-top:0.6rem;font-size:0.85rem;color:var(--text-light);">⚠️ <strong>注意：</strong>ChatGPT の高度な音声モード（Advanced Voice Mode）には利用上限がある。無料プランは月15分程度、Plus でも1日30〜45分ほどで上限に達し、その後は応答が遅い従来の音声モードに切り替わる。長時間移動でフル活用したい場合は Pro プラン（音声無制限）か、上限超過後の通常音声モードでの運用を想定しておくとよい。</p>
-      <a class="gear-link" href="https://www.amazon.co.jp/dp/B0F1N1HQJ9?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
-      <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-light);">▶ <strong>これから買うならこっちがおすすめ：</strong>同じMAXRUNON D10の<a href="https://www.amazon.co.jp/dp/B0FBSCPYTX?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Mesh通信対応アップデート版</a>。OTAアップデート・専用アプリ対応で、Mesh通信ならグループツーリング時にBluetoothより安定して接続できる。¥7,980（クーポン適用でさらに割引、2026-04時点）と価格もこなれていて、現行モデルとして在庫が安定しているのも◎。</p>
+      <a class="gear-link" href="https://www.amazon.co.jp/dp/B0FBSCPYTX?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
     </div>
   </div>
 
