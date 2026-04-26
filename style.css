@@ -252,8 +252,10 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   font-size: 2.2rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 1rem;
 }
 .article-hero-meta {
-  display: flex; gap: 1.5rem; color: rgba(255,255,255,0.65); font-size: 0.8rem;
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem;
+  color: rgba(255,255,255,0.65); font-size: 0.8rem;
 }
+.article-hero-meta > span { white-space: nowrap; }
 
 .article-body {
   max-width: 800px; margin: 0 auto; padding: 3rem 2rem 5rem;
@@ -382,6 +384,11 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
     font-size: 0.72rem;
   }
   .article-hero { height: 280px; }
+  .article-hero-content { padding: 1.5rem 1rem; }
+  .article-hero-meta { gap: 0.3rem 0.8rem; font-size: 0.7rem; }
+}
+@media (max-width: 380px) {
+  .article-hero-meta { font-size: 0.65rem; gap: 0.3rem 0.6rem; }
 }
 
 /* Spot list (visit summary) */
