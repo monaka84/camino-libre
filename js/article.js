@@ -46,7 +46,10 @@
     { file: 'spanish-dictionary.html',    title: 'スペイン語辞書おすすめ比較｜紙辞書・電子辞書・アプリを中米経験者が選ぶ',                           category: 'other',      tag: 'スペイン語',       img: 'https://static.wixstatic.com/media/949ec9_316ae78b6611491fad1cb3d780461968~mv2.jpg',                                    date: '2016-10-12' },
     { file: 'bandai-azuma.html',          title: '磐梯吾妻スカイラインツーリング｜火山地帯を走る福島の絶景ルート',                               category: 'bike',       tag: 'ツーリング',       img: '../images/bandai/IMG_3857.jpg',                                                                                          date: '2018-10-01' },
     { file: 'five-color-lake.html',       title: '五色沼観光｜福島・裏磐梯でエメラルドグリーンの湖沼群を歩く',                                         category: 'bike',       tag: '旅',               img: '../images/five-color-lake/IMG_8015.jpg',                                                                                 date: '2018-10-02' },
-    { file: 'hokkaido-car.html',          title: '北海道ソロドライブ｜神威岬・黄金岬・函館夜景を巡る一人旅',                                     category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/神威岬.jpg',                                                                                      date: '2025-11-01' },
+    { file: 'hokkaido-car-day1.html',     title: '青森から新幹線で函館へ、夜の街を歩く｜北海道車旅①',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/hakodate-night-view-2022.jpg',                                                                       date: '2022-08-25' },
+    { file: 'hokkaido-car-day2.html',     title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る｜北海道車旅②',                                                                      category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/mt-yotei.jpg',                                                                                       date: '2022-08-26' },
+    { file: 'hokkaido-car-day3.html',     title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼｜北海道車旅③',                                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/kamui-misaki-pano.jpg',                                                                              date: '2022-08-27' },
+    { file: 'hokkaido-car-day4.html',     title: '函館朝市・五稜郭・北海道第一歩の地碑｜北海道車旅④',                                                                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-car/goryokaku.jpg',                                                                                      date: '2022-08-28' },
     { file: 'touring-chiba-xsr900.html',  title: 'XSR900千葉ソロツーリング｜笠森観音と房総の山道を走る',                               category: 'bike',       tag: 'ツーリング',       img: '../images/touring-chiba2/IMG_2388.jpg',                                                                                  date: '2026-04-01' },
     { file: 'chile-1.html',               title: 'サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】',                                 category: 'other',      tag: 'チリ',             img: '../images/chile/20251012_143804099_iOS.jpg',                                                                              date: '2025-10-12' },
     { file: 'chile-2.html',               title: 'ロス・ドミニコス工芸市場へ｜サンティアゴで民芸品と白い教会を巡る【チリ旅行記②】',                                   category: 'other',      tag: 'チリ',             img: '../images/chile/20251014_205137977_iOS.jpg',                                                                              date: '2025-10-14' },
@@ -480,6 +483,12 @@
       { file: 'hokkaido-xsr900-day6.html', title: '枝幸で財布を落としてAirTagに救われた話｜XSR900北海道ツーリング記録⑥' },
       { file: 'hokkaido-xsr900-day7.html', title: 'オロロンラインを稚内から旭川へ走る｜XSR900北海道ツーリング記録⑦' },
       { file: 'hokkaido-xsr900-day8.html', title: '美瑛の青い池・白ひげの滝から苫小牧へ｜XSR900北海道ツーリング記録⑧' }
+    ]},
+    { name: '北海道車旅', catKey: 'hokkaido', articles: [
+      { file: 'hokkaido-car-day1.html', title: '青森から新幹線で函館へ、夜の街を歩く｜北海道車旅①' },
+      { file: 'hokkaido-car-day2.html', title: '羊蹄山・ニッカ余市蒸溜所・小樽運河を巡る｜北海道車旅②' },
+      { file: 'hokkaido-car-day3.html', title: '積丹半島ドライブ｜神威岬・美国の黄金岬・清寿司のウニイクラ丼｜北海道車旅③' },
+      { file: 'hokkaido-car-day4.html', title: '函館朝市・五稜郭・北海道第一歩の地碑｜北海道車旅④' }
     ]},
     { name: 'チリ旅行記', catKey: 'chile', articles: [
       { file: 'chile-1.html', title: 'サンティアゴ市内観光｜チリ最高裁・美術館・歴史地区を歩く【チリ旅行記①】' },
