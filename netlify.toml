@@ -2,6 +2,30 @@
   publish = "."
 
 [[redirects]]
+  from = "/articles/hokkaido-touring.html"
+  to = "/articles/hokkaido-sr400-day1.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/articles/hokkaido-touring"
+  to = "/articles/hokkaido-sr400-day1.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/articles/monbetsu-bear-encounter.html"
+  to = "/articles/hokkaido-sr400-day3.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/articles/monbetsu-bear-encounter"
+  to = "/articles/hokkaido-sr400-day3.html"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/articles/:slug"
   to   = "/articles/:slug.html"
   status = 200

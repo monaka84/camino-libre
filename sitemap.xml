@@ -131,7 +131,42 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://camino-libre.jp/articles/hokkaido-touring.html</loc>
+    <loc>https://camino-libre.jp/articles/hokkaido-sr400-day1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-sr400-day2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-sr400-day3.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-sr400-day4.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-sr400-day5.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-bear-spray.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-gear-list.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/hokkaido-routes.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
