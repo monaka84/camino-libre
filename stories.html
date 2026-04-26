@@ -432,7 +432,7 @@
     var img = a.img.replace('../', '');
     var seriesMatch = a.title.match(/【(.*?)】/);
     var series = seriesMatch ? seriesMatch[1] : '';
-    var title = a.title.replace(/｜/g, ' · ').replace(/【.*?】/g, '').trim();
+    var title = a.title.replace(/【.*?】/g, '').trim();
     var card = document.createElement('a');
     card.className = 'recent-card';
     card.href = 'articles/' + a.file;

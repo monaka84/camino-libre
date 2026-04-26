@@ -544,7 +544,7 @@
     var wrap = document.getElementById('v2Latest');
     latest.forEach(function (a) {
       var img = a.img.replace('../', '');
-      var title = a.title.replace(/｜/g, ' · ').replace(/【.*?】/g, '').trim();
+      var title = a.title.replace(/【.*?】/g, '').trim();
       var card = document.createElement('a');
       card.className = 'v2-card';
       card.href = 'articles/' + a.file;
