@@ -169,6 +169,8 @@
       font-weight: 900; line-height: 1.2;
       margin-bottom: 1.5rem;
       text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+      word-break: keep-all;
+      overflow-wrap: normal;
     }
     .v2-hero-title .hang {
       margin-right: -1em;
@@ -403,6 +405,7 @@
     @media (max-width: 480px) {
       .v2-region-grid, .v2-latest-grid { grid-template-columns: 1fr; }
       .v2-hero { min-height: 500px; }
+      .v2-hero-title { font-size: 1.5rem; }
     }
   </style>
 </head>
