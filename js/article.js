@@ -63,7 +63,7 @@
     { file: 'hokkaido-xsr900-day2.html',  title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡る【XSR900北海道ツーリング記録②】',                          category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250820_054937983_iOS.jpg',                                                                    date: '2025-08-20' },
     { file: 'hokkaido-xsr900-day3.html',  title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート【XSR900北海道ツーリング記録③】',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_010411011_iOS.jpg',                                                                    date: '2025-08-21' },
     { file: 'hokkaido-xsr900-day4.html',  title: '納沙布岬から知床五湖へ走る道東ツーリング【XSR900北海道ツーリング記録④】',                                    category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250821_072833977_iOS.jpg',                                                                    date: '2025-08-21' },
-    { file: 'hokkaido-xsr900-day5.html',  title: '神の子池・網走監獄・美幌峠を巡る【XSR900北海道ツーリング記録⑤】',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
+    { file: 'hokkaido-xsr900-day5.html',  title: '神の子池・美幌峠・網走監獄を巡る【XSR900北海道ツーリング記録⑤】',                            category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250823_022248708_iOS.jpg',                                                                    date: '2025-08-23' },
     { file: 'hokkaido-xsr900-day6.html',  title: '枝幸で財布を落としてAirTagに救われた話【XSR900北海道ツーリング記録⑥】',                                category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250824_040949567_iOS.jpg',                                                                    date: '2025-08-24' },
     { file: 'hokkaido-xsr900-day7.html',  title: 'オロロンラインを稚内から旭川へ走る【XSR900北海道ツーリング記録⑦】',                               category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250825_110201838_iOS.jpg',                                                                    date: '2025-08-25' },
     { file: 'hokkaido-xsr900-day8.html',  title: '美瑛の青い池・白ひげの滝から苫小牧へ【XSR900北海道ツーリング記録⑧】',                        category: 'bike',       tag: '北海道',           img: '../images/hokkaido-xsr900/20250826_002032526_iOS.jpg',                                                                    date: '2025-08-26' },
@@ -479,7 +479,7 @@
       { file: 'hokkaido-xsr900-day2.html', title: '苫小牧から帯広へ｜二風谷アイヌ文化博物館と十勝豚丼を巡る【XSR900北海道ツーリング記録②】' },
       { file: 'hokkaido-xsr900-day3.html', title: '厚岸蒸留所と根室の海鮮を楽しむ東北海道ルート【XSR900北海道ツーリング記録③】' },
       { file: 'hokkaido-xsr900-day4.html', title: '納沙布岬から知床五湖へ走る道東ツーリング【XSR900北海道ツーリング記録④】' },
-      { file: 'hokkaido-xsr900-day5.html', title: '神の子池・網走監獄・美幌峠を巡る【XSR900北海道ツーリング記録⑤】' },
+      { file: 'hokkaido-xsr900-day5.html', title: '神の子池・美幌峠・網走監獄を巡る【XSR900北海道ツーリング記録⑤】' },
       { file: 'hokkaido-xsr900-day6.html', title: '枝幸で財布を落としてAirTagに救われた話【XSR900北海道ツーリング記録⑥】' },
       { file: 'hokkaido-xsr900-day7.html', title: 'オロロンラインを稚内から旭川へ走る【XSR900北海道ツーリング記録⑦】' },
       { file: 'hokkaido-xsr900-day8.html', title: '美瑛の青い池・白ひげの滝から苫小牧へ【XSR900北海道ツーリング記録⑧】' }
