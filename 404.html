@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4NRMFMEP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8W4NRMFMEP');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>ページが見つかりません | Camino Libre</title>
+  <meta name="description" content="お探しのページは見つかりませんでした。Camino Libre のトップへ戻るか、記事一覧から目的のページを探してください。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260428a">
+  <style>
+    body { padding-top: 0; }
+    .v2-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.06);
+    }
+    .nf-wrap {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center;
+      padding: 6rem 1.5rem 3rem;
+    }
+    .nf-code {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 6rem; font-weight: 900;
+      line-height: 1; color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .nf-title {
+      font-size: 1.4rem; font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem; color: var(--black);
+    }
+    .nf-desc {
+      color: var(--text-light);
+      font-size: 0.95rem; line-height: 1.9;
+      max-width: 480px; margin: 0 auto 2.4rem;
+    }
+    .nf-actions {
+      display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center;
+    }
+    .nf-btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: transform 0.2s, background 0.2s, color 0.2s;
+    }
+    .nf-btn--primary {
+      background: var(--accent); color: #fff;
+    }
+    .nf-btn--primary:hover { transform: translateY(-2px); }
+    .nf-btn--ghost {
+      border: 1px solid var(--border); color: var(--text);
+    }
+    .nf-btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
+    @media (max-width: 600px) {
+      .nf-code { font-size: 4.5rem; }
+      .nf-title { font-size: 1.15rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="v2-header" id="v2Header">
+  <div class="v2-header-inner">
+    <a href="/" class="v2-logo">Camino<span>Libre</span></a>
+    <button class="v2-hamburger" id="v2Hamburger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="v2-nav">
+      <a href="/">ホーム</a>
+      <a href="/stories.html">記事一覧</a>
+      <a href="/profile/">プロフィール</a>
+    </nav>
+  </div>
+</header>
+
+<main class="nf-wrap">
+  <div class="nf-code">404</div>
+  <h1 class="nf-title">ページが見つかりません</h1>
+  <p class="nf-desc">お探しのページは移動・削除されたか、URL が間違っている可能性があります。下のリンクから目的のページを探してみてください。</p>
+  <div class="nf-actions">
+    <a href="/" class="nf-btn nf-btn--primary">ホームへ戻る</a>
+    <a href="/stories.html" class="nf-btn nf-btn--ghost">記事一覧を見る</a>
+  </div>
+</main>
+
+<footer class="v2-footer">
+  <div style="margin-bottom:0.6rem;">
+    <a href="/privacy.html" style="color:rgba(255,255,255,0.7);text-decoration:none;letter-spacing:0.05em;">プライバシーポリシー</a>
+  </div>
+  © 2026 Camino Libre. All rights reserved.
+</footer>
+
+<script src="js/article.js?v=20260428a"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# 旧URL（過去にリネーム/統合された記事）→ 新URL の 301
+/articles/hokkaido-touring.html        /articles/hokkaido-sr400-day1   301
+/articles/hokkaido-touring             /articles/hokkaido-sr400-day1   301
+/articles/monbetsu-bear-encounter.html /articles/hokkaido-sr400-day3   301
+/articles/monbetsu-bear-encounter      /articles/hokkaido-sr400-day3   301
