@@ -279,35 +279,6 @@
       opacity: 0.85;
     }
 
-    /* ── 最新記事セクション（カードクリーン版） ── */
-    .v2-latest { padding: 5rem 2rem; }
-    .v2-latest-grid {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-    }
-    .v2-card {
-      text-decoration: none; color: inherit;
-      display: block;
-    }
-    .v2-card-img {
-      aspect-ratio: 4/3;
-      background-size: cover; background-position: center;
-      border-radius: 4px; margin-bottom: 1rem;
-      transition: transform 0.4s;
-    }
-    .v2-card:hover .v2-card-img { transform: translateY(-4px); }
-    .v2-card-tag {
-      font-size: 0.7rem; letter-spacing: 0.15em;
-      color: var(--accent); text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    .v2-card-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1rem; font-weight: 500;
-      line-height: 1.55; color: var(--black);
-    }
-
     /* ── Start Here / Travel Gear セクション ── */
     .v2-startguide { padding: 5rem 2rem; }
     .v2-startguide--gear { background: var(--light-gray); }
@@ -412,7 +383,7 @@
     .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     @media (max-width: 768px) {
-      .v2-region-grid, .v2-latest-grid, .v2-startguide-grid { grid-template-columns: 1fr 1fr; }
+      .v2-region-grid, .v2-startguide-grid { grid-template-columns: 1fr 1fr; }
       .v2-startguide { padding: 3.5rem 1.5rem; }
       .v2-hamburger { display: flex; }
       .v2-nav {
@@ -455,7 +426,7 @@
       }
     }
     @media (max-width: 480px) {
-      .v2-region-grid, .v2-latest-grid, .v2-startguide-grid { grid-template-columns: 1fr; }
+      .v2-region-grid, .v2-startguide-grid { grid-template-columns: 1fr; }
       .v2-hero { min-height: 500px; }
       .v2-hero-title { font-size: 1.7rem; }
       .v2-hero-desc { font-size: 0.85rem; line-height: 1.7; }
@@ -571,15 +542,6 @@
   <div class="v2-region-grid" id="v2RegionGrid"></div>
 </section>
 
-<!-- 最新記事 -->
-<section class="v2-latest">
-  <div class="v2-section-head">
-    <div class="v2-section-sub">Latest Stories</div>
-    <h2 class="v2-section-title">最新の旅の記録</h2>
-  </div>
-  <div class="v2-latest-grid" id="v2Latest"></div>
-</section>
-
 <!-- 旅の装備｜実際に使ったもの -->
 <section class="v2-startguide v2-startguide--gear">
   <div class="v2-section-head">
@@ -666,25 +628,6 @@
     });
   }
 
-  // 最新記事を6件描画（公開日 published 優先、未設定は訪問日 date でフォールバック）
-  if (typeof ARTICLES !== 'undefined') {
-    var latest = ARTICLES.slice().sort(function (a, b) {
-      return new Date(b.published || b.date) - new Date(a.published || a.date);
-    }).slice(0, 6);
-    var wrap = document.getElementById('v2Latest');
-    latest.forEach(function (a) {
-      var img = a.img.replace('../', '');
-      var title = a.title.replace(/【.*?】/g, '').trim();
-      var card = document.createElement('a');
-      card.className = 'v2-card';
-      card.href = 'articles/' + a.file;
-      card.innerHTML =
-        '<div class="v2-card-img" style="background-image:url(\'' + img + '\')"></div>' +
-        '<div class="v2-card-tag">' + a.tag + '</div>' +
-        '<div class="v2-card-title">' + title + '</div>';
-      wrap.appendChild(card);
-    });
-  }
 </script>
 </body>
 </html>
