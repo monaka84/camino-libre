@@ -308,6 +308,55 @@
       line-height: 1.55; color: var(--black);
     }
 
+    /* ── Start Here / Travel Gear セクション ── */
+    .v2-startguide { padding: 5rem 2rem; }
+    .v2-startguide--gear { background: var(--light-gray); }
+    .v2-startguide-grid {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .v2-startguide-card {
+      text-decoration: none; color: inherit;
+      display: flex; flex-direction: column;
+      background: #fff; border-radius: 6px; overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .v2-startguide-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+    }
+    .v2-startguide-card-img {
+      aspect-ratio: 16/10;
+      background-size: cover; background-position: center;
+    }
+    .v2-startguide-card-body {
+      padding: 1.4rem 1.5rem 1.6rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+      flex: 1;
+    }
+    .v2-startguide-card-tag {
+      font-size: 0.7rem; letter-spacing: 0.15em;
+      color: var(--accent); text-transform: uppercase;
+      font-weight: 700;
+    }
+    .v2-startguide-card-title {
+      font-size: 1.05rem; font-weight: 700; line-height: 1.5;
+      color: var(--black);
+    }
+    .v2-startguide-card-desc {
+      font-size: 0.85rem; line-height: 1.75;
+      color: var(--text-light);
+      flex: 1;
+    }
+    .v2-startguide-card-cta {
+      font-size: 0.78rem; letter-spacing: 0.08em;
+      color: var(--accent); font-weight: 700;
+      margin-top: 0.4rem;
+    }
+    [data-theme="dark"] .v2-startguide-card { background: #1a1a1a; }
+
     /* ── CTA バンド ── */
     .v2-cta {
       background: var(--black); color: #fff;
@@ -363,7 +412,8 @@
     .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     @media (max-width: 768px) {
-      .v2-region-grid, .v2-latest-grid { grid-template-columns: 1fr 1fr; }
+      .v2-region-grid, .v2-latest-grid, .v2-startguide-grid { grid-template-columns: 1fr 1fr; }
+      .v2-startguide { padding: 3.5rem 1.5rem; }
       .v2-hamburger { display: flex; }
       .v2-nav {
         position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
@@ -405,7 +455,7 @@
       }
     }
     @media (max-width: 480px) {
-      .v2-region-grid, .v2-latest-grid { grid-template-columns: 1fr; }
+      .v2-region-grid, .v2-latest-grid, .v2-startguide-grid { grid-template-columns: 1fr; }
       .v2-hero { min-height: 500px; }
       .v2-hero-title { font-size: 1.7rem; }
       .v2-hero-desc { font-size: 0.85rem; line-height: 1.7; }
@@ -467,6 +517,43 @@
   <div class="v2-hero-scroll">SCROLL ↓</div>
 </section>
 
+<!-- はじめての方へ｜シリーズから読む -->
+<section class="v2-startguide">
+  <div class="v2-section-head">
+    <div class="v2-section-sub">Start Here</div>
+    <h2 class="v2-section-title">はじめての方へ｜シリーズから読む</h2>
+  </div>
+  <div class="v2-startguide-grid">
+    <a href="articles/costa-rica-intro" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/costa-rica-2025/cr-1.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">Costa Rica · 中米</div>
+        <h3 class="v2-startguide-card-title">コスタリカ滞在記</h3>
+        <p class="v2-startguide-card-desc">元在住者が見た自然・治安・暮らし。9本続く中南米シリーズの起点です。</p>
+        <div class="v2-startguide-card-cta">①から読む →</div>
+      </div>
+    </a>
+    <a href="articles/hokkaido-sr400-day1" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/hokkaido/tomakomai-ferry.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">Hokkaido · バイク</div>
+        <h3 class="v2-startguide-card-title">SR400 北海道ツーリング</h3>
+        <p class="v2-startguide-card-desc">大洗からフェリーで苫小牧へ。5日間の北海道ひとり旅、全記録の1日目から。</p>
+        <div class="v2-startguide-card-cta">①から読む →</div>
+      </div>
+    </a>
+    <a href="articles/belize-1" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/belize/20251018_213429265_iOS.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">Belize · カリブ海</div>
+        <h3 class="v2-startguide-card-title">ベリーズ旅行記</h3>
+        <p class="v2-startguide-card-desc">夜明けのカリブ海と、空から見たグレート・ブルーホール。3本完結のミニシリーズ。</p>
+        <div class="v2-startguide-card-cta">①から読む →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
 <!-- プロフィール -->
 <section class="v2-profile">
   <div class="v2-profile-avatar"><img src="images/profile.jpg" alt=""></div>
@@ -491,6 +578,43 @@
     <h2 class="v2-section-title">最新の旅の記録</h2>
   </div>
   <div class="v2-latest-grid" id="v2Latest"></div>
+</section>
+
+<!-- 旅の装備｜実際に使ったもの -->
+<section class="v2-startguide v2-startguide--gear">
+  <div class="v2-section-head">
+    <div class="v2-section-sub">Travel Gear</div>
+    <h2 class="v2-section-title">旅の装備｜実際に使ったもの</h2>
+  </div>
+  <div class="v2-startguide-grid">
+    <a href="articles/hokkaido-bear-spray" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/og/hokkaido-bear-spray.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">熊撃退スプレー</div>
+        <h3 class="v2-startguide-card-title">UDAP 12HP｜知床で実感した必要性</h3>
+        <p class="v2-startguide-card-desc">紋別でヒグマと至近距離で遭遇した自分が、北海道に必ず持っていく1本。</p>
+        <div class="v2-startguide-card-cta">記事を読む →</div>
+      </div>
+    </a>
+    <a href="articles/hokkaido-gear-list" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/hokkaido-xsr900/20250819_070951847_iOS.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">ツーリング装備</div>
+        <h3 class="v2-startguide-card-title">2,400km走って分かった必須アイテム</h3>
+        <p class="v2-startguide-card-desc">2回の北海道ツーリングで「これは必要」だったものをまとめたリスト。</p>
+        <div class="v2-startguide-card-cta">記事を読む →</div>
+      </div>
+    </a>
+    <a href="articles/touring-camp-gear" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/og/touring-camp-gear.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">キャンプ道具</div>
+        <h3 class="v2-startguide-card-title">バイクソロキャンプ道具まとめ</h3>
+        <p class="v2-startguide-card-desc">テント・シュラフ・マット選びの基本と、実際に選んだもの。</p>
+        <div class="v2-startguide-card-cta">記事を読む →</div>
+      </div>
+    </a>
+  </div>
 </section>
 
 <!-- CTA -->
