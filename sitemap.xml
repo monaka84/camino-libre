@@ -256,6 +256,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://camino-libre.jp/articles/mexico-anthropology</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://camino-libre.jp/articles/mexico-guanajuato</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://camino-libre.jp/articles/mexico-walmart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
