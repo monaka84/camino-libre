@@ -878,37 +878,17 @@ body.v2-page .v2-header[style*="rgba(255,255,255,0.96)"] .v2-lang-switcher .lang
   background: rgba(255,255,255,0.06);
 }
 
-/* Mobile (hamburger menu): full-width inline-list style */
+/* Mobile: switcher sits next to the dark-mode / search buttons in the
+   header (outside .v2-nav). Stay as a compact pill, dropdown floats. */
 @media (max-width: 768px) {
   .v2-lang-switcher {
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid var(--border);
+    margin-left: 0.3rem;
   }
   .v2-lang-switcher .lang-trigger {
-    width: 100%;
-    background: none !important;
-    border: none !important;
-    border-radius: 0;
-    color: var(--black) !important;
-    text-align: left;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    justify-content: space-between;
+    padding: 0.3rem 0.55rem 0.3rem 0.65rem;
+    font-size: 0.72rem;
   }
   .v2-lang-switcher .lang-menu {
-    position: static;
-    display: none;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    background: var(--light-gray);
-    width: 100%;
-    min-width: 0;
-  }
-  .v2-lang-switcher.open .lang-menu { display: block; }
-  .v2-lang-switcher .lang-menu a {
-    padding: 0.85rem 2.5rem;
-    border-bottom: 1px solid var(--border);
+    min-width: 130px;
   }
 }
