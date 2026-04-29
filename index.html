@@ -38,7 +38,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260429a">
+  <link rel="stylesheet" href="style.css?v=20260430a">
   <style>
     /* ── ヘッダー（透過＋スクロールで白背景に） ── */
     body { padding-top: 0; }
@@ -439,26 +439,9 @@
       .v2-hero { min-height: 500px; }
       .v2-hero-title { font-size: 1.7rem; }
       .v2-hero-desc { font-size: 0.85rem; line-height: 1.7; }
-    }
-    .article-lang-switcher { text-align: center; font-size: 0.85rem; padding: 0.6rem 1rem; background: rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.08); position: relative; z-index: 99; }
-    .article-lang-switcher .lang-label { color: #666; margin-right: 0.5rem; }
-    .article-lang-switcher a, .article-lang-switcher strong { margin: 0 0.5rem; text-decoration: none; }
-    .article-lang-switcher a { color: #555; }
-    .article-lang-switcher a:hover { color: var(--accent, #c2876a); }
-    .article-lang-switcher strong { color: var(--accent, #c2876a); }
-    [data-theme="dark"] .article-lang-switcher { background: rgba(255,255,255,0.04); border-bottom-color: rgba(255,255,255,0.08); }
-    [data-theme="dark"] .article-lang-switcher .lang-label { color: #aaa; }
-    [data-theme="dark"] .article-lang-switcher a { color: #ccc; }
-  </style>
+    }</style>
 </head>
 <body>
-
-<div class="article-lang-switcher" lang="ja">
-  <span class="lang-label">言語:</span>
-  <strong aria-current="page">日本語</strong>
-  <a href="en/" hreflang="en" lang="en">English</a>
-  <a href="es/" hreflang="es" lang="es">Español</a>
-</div>
 
 <!-- ヘッダー（透過 → スクロールで白） -->
 <header class="v2-header" id="v2Header">
@@ -490,6 +473,14 @@
       </div>
       <a href="stories.html">記事一覧</a>
       <a href="profile/">プロフィール</a>
+          <div class="v2-lang-switcher" data-current-lang="ja">
+        <button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">日本語</button>
+        <div class="lang-menu" role="menu">
+          <a href="#" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+          <a href="en/" hreflang="en" lang="en">English</a>
+          <a href="es/" hreflang="es" lang="es">Español</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -627,7 +618,7 @@
   © 2026 Camino Libre. All rights reserved.
 </footer>
 
-<script src="js/article.js?v=20260429b"></script>
+<script src="js/article.js?v=20260430a"></script>
 <script>
   // ヘッダー透過切替・ハンバーガー・ドロップダウンは js/article.js の initV2Header() が処理
 

@@ -87,6 +87,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initV2Header();
+    initLangSwitcher();
     injectScrollLine();
     injectBackToTop();
     injectDarkModeToggle();
@@ -100,6 +101,38 @@
     injectCopyCredit();
     injectSearch();
   });
+
+  // ── Language switcher dropdown toggle ──────────────────────────
+  function initLangSwitcher() {
+    var triggers = document.querySelectorAll('.v2-lang-switcher .lang-trigger');
+    if (!triggers.length) return;
+    triggers.forEach(function (btn) {
+      if (btn.dataset.langInit) return;
+      btn.dataset.langInit = '1';
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var parent = btn.parentElement;
+        var willOpen = !parent.classList.contains('open');
+        document.querySelectorAll('.v2-lang-switcher.open').forEach(function (el) {
+          if (el !== parent) {
+            el.classList.remove('open');
+            var b = el.querySelector('.lang-trigger');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          }
+        });
+        parent.classList.toggle('open', willOpen);
+        btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.v2-lang-switcher')) return;
+      document.querySelectorAll('.v2-lang-switcher.open').forEach(function (el) {
+        el.classList.remove('open');
+        var b = el.querySelector('.lang-trigger');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   // ── V2 Header (hamburger + dropdown + scroll) ──────────────────
   function initV2Header() {

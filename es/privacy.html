@@ -40,7 +40,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=20260429a">
+  <link rel="stylesheet" href="../style.css?v=20260430a">
   <style>
     /* ── v2 ヘッダー（常に白） ── */
     body { padding-top: 64px; }
@@ -247,17 +247,7 @@
         padding: 0.6rem 2rem 0.4rem;
         margin: 0; border-bottom: none;
       }
-    }
-    .article-lang-switcher { text-align: center; font-size: 0.85rem; padding: 0.6rem 1rem; background: rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.08); margin-top: 64px; }
-    .article-lang-switcher .lang-label { color: #666; margin-right: 0.5rem; }
-    .article-lang-switcher a, .article-lang-switcher strong { margin: 0 0.5rem; text-decoration: none; }
-    .article-lang-switcher a { color: #555; }
-    .article-lang-switcher a:hover { color: var(--accent, #c2876a); }
-    .article-lang-switcher strong { color: var(--accent, #c2876a); }
-    [data-theme="dark"] .article-lang-switcher { background: rgba(255,255,255,0.04); border-bottom-color: rgba(255,255,255,0.08); }
-    [data-theme="dark"] .article-lang-switcher .lang-label { color: #aaa; }
-    [data-theme="dark"] .article-lang-switcher a { color: #ccc; }
-  </style>
+    }</style>
 </head>
 <body>
 
@@ -293,16 +283,17 @@
       </div>
       <a href="../stories.html">Artículos</a>
       <a href="../profile/">Perfil</a>
+          <div class="v2-lang-switcher" data-current-lang="es">
+        <button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">Español</button>
+        <div class="lang-menu" role="menu">
+          <a href="../privacy.html" hreflang="ja" lang="ja">日本語</a>
+          <a href="../en/privacy.html" hreflang="en" lang="en">English</a>
+          <a href="#" hreflang="es" lang="es" aria-current="page">Español</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
-
-<div class="article-lang-switcher" lang="es">
-  <span class="lang-label">Leer en:</span>
-  <a href="../privacy.html" hreflang="ja" lang="ja">日本語</a>
-  <a href="../en/privacy.html" hreflang="en" lang="en">English</a>
-  <strong aria-current="page">Español</strong>
-</div>
 
 <!-- ページヘッダー -->
 <div class="page-head">
@@ -405,7 +396,7 @@
   </div>
 </footer>
 
-<script src="../js/article.js?v=20260429b"></script>
+<script src="../js/article.js?v=20260430a"></script>
 <script>
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
