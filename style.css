@@ -787,6 +787,9 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 .v2-lang-switcher {
   position: relative;
   display: inline-block;
+  /* Push lang switcher (and the dark-toggle / search buttons that follow it
+     in .v2-header-inner) over to the right side, next to the moon icon. */
+  margin-left: auto;
 }
 .v2-lang-switcher .lang-trigger {
   background: rgba(255,255,255,0.1);
