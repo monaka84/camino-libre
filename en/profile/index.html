@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4NRMFMEP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8W4NRMFMEP');
+  </script>
+  <link rel="canonical" href="https://camino-libre.jp/en/profile/">
+  <link rel="alternate" hreflang="ja" href="https://camino-libre.jp/profile/">
+  <link rel="alternate" hreflang="en" href="https://camino-libre.jp/en/profile/">
+  <link rel="alternate" hreflang="es" href="https://camino-libre.jp/es/profile/">
+  <link rel="alternate" hreflang="x-default" href="https://camino-libre.jp/profile/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Camino Libre</title>
+  <meta name="description" content="About Monaka — traveler, motorcyclist, and former Costa Rica resident behind Camino Libre.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Profile | Camino Libre">
+  <meta property="og:description" content="About Monaka — traveler, motorcyclist, and former Costa Rica resident.">
+  <meta property="og:url" content="https://camino-libre.jp/en/profile/">
+  <meta property="og:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="es_419">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css?v=20260429a">
+  <style>
+    .about-page { max-width: 800px; margin: 0 auto; padding: 5rem 2rem 6rem; }
+    .about-page-header { text-align: center; margin-bottom: 4rem; }
+    .about-page-avatar { width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 1.5rem; background: linear-gradient(135deg, #2d4a3e, #c8a96e); }
+    .about-page-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .about-page-name { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; }
+    .about-page-role { font-size: 0.85rem; color: var(--accent); letter-spacing: 0.1em; }
+    .about-divider { width: 40px; height: 2px; background: var(--accent); margin: 3rem auto; }
+    .about-body { font-size: 1rem; color: var(--text-light); line-height: 2; }
+    .about-body p { margin-bottom: 1.5rem; }
+    .about-facts { margin: 3.5rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; }
+    .about-fact-num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .about-fact-label { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.05em; }
+    .about-tags-wrap { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.5rem; }
+    .about-back { text-align: center; margin-top: 4rem; }
+    .about-back a { font-size: 0.88rem; color: var(--accent); border: 1px solid var(--accent); padding: 0.65rem 2rem; border-radius: 4px; text-decoration: none; letter-spacing: 0.05em; }
+    .about-back a:hover { background: var(--accent); color: #fff; }
+    @media (max-width: 600px) { .about-facts { grid-template-columns: 1fr 1fr; } .about-fact-num { font-size: 1.6rem; } }
+    .about-hero { position: relative; width: 100%; height: 360px; background-size: cover; background-position: center; overflow: hidden; }
+    .about-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.55) 100%); }
+    .about-hero-content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; }
+    .about-hero-avatar { width: 88px; height: 88px; border-radius: 50%; overflow: hidden; border: 3px solid rgba(255,255,255,0.6); }
+    .about-hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .about-hero-name { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #fff; letter-spacing: 0.05em; }
+    .about-hero-role { font-size: 0.82rem; color: rgba(255,255,255,0.8); letter-spacing: 0.1em; }
+    @media (max-width: 600px) { .about-hero { height: 280px; } .about-hero-name { font-size: 1.6rem; } }
+    .about-pullquote { text-align: center; padding: 3rem 2rem; border-top: 1px solid var(--border); }
+    .about-pullquote-text { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--black); line-height: 1.3; max-width: 600px; margin: 0 auto; }
+    .v2-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(255,255,255,0); transition: background 0.3s, box-shadow 0.3s; }
+    .v2-header.scrolled { background: rgba(255,255,255,0.96); box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+    .v2-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .v2-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: #fff; text-decoration: none; letter-spacing: 0.02em; transition: color 0.3s; }
+    .v2-logo span { color: var(--accent); }
+    .v2-header.scrolled .v2-logo { color: var(--black); }
+    .v2-nav { display: flex; gap: 2rem; align-items: center; }
+    .v2-nav a, .v2-nav .dropdown-trigger { font-size: 0.85rem; letter-spacing: 0.05em; color: rgba(255,255,255,0.95); text-decoration: none; cursor: pointer; background: none; border: none; padding: 0; font-family: inherit; transition: color 0.3s; }
+    .v2-header.scrolled .v2-nav a, .v2-header.scrolled .v2-nav .dropdown-trigger { color: var(--black); }
+    .v2-nav a:hover, .v2-nav .dropdown-trigger:hover { color: var(--accent); }
+    .v2-dropdown { position: relative; }
+    .v2-dropdown-menu { position: absolute; top: calc(100% + 0.4rem); left: 50%; transform: translateX(-50%); background: #fff; min-width: 480px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border-radius: 6px; padding: 1.5rem; display: none; grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem; z-index: 200; }
+    .v2-dropdown:hover .v2-dropdown-menu, .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+    .v2-dropdown::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 0.6rem; }
+    .v2-dropdown-region { grid-column: 1 / -1; font-family: 'Playfair Display', serif; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-top: 0.5rem; margin-bottom: 0.3rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--border); }
+    .v2-dropdown-region:first-child { margin-top: 0; }
+    .v2-dropdown-menu a { color: var(--black) !important; font-size: 0.85rem; padding: 0.35rem 0.5rem; border-radius: 3px; display: flex; align-items: center; gap: 0.5rem; }
+    .v2-dropdown-menu a:hover { background: var(--light-gray); }
+    .v2-flag { display: inline-block; width: 20px; height: 14px; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); vertical-align: middle; flex-shrink: 0; }
+    .v2-flag-emoji { display: inline-block; width: 20px; text-align: center; font-size: 1rem; vertical-align: middle; }
+    .v2-hamburger { display: none; background: none; border: none; padding: 0.5rem; cursor: pointer; width: 36px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+    .v2-hamburger span { display: block; height: 2px; width: 22px; background: #fff; transition: all 0.3s; }
+    .v2-header.scrolled .v2-hamburger span, .v2-header.menu-open .v2-hamburger span { background: var(--black); }
+    .v2-header.menu-open .v2-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .v2-header.menu-open .v2-hamburger span:nth-child(2) { opacity: 0; }
+    .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .v2-header .dark-toggle { border-color: rgba(255,255,255,0.4); color: #fff; margin-left: 1rem; }
+    .v2-header.scrolled .dark-toggle, .v2-header.menu-open .dark-toggle { border-color: var(--border); color: var(--text-light); }
+    @media (max-width: 768px) {
+      .v2-hamburger { display: flex; }
+      .v2-nav { position: fixed; top: 64px; left: 0; right: 0; bottom: 0; background: #fff; flex-direction: column; align-items: stretch; gap: 0; padding: 1rem 0; overflow-y: auto; transform: translateY(-100vh); transition: transform 0.3s ease; z-index: 99; }
+      .v2-header.menu-open .v2-nav { transform: translateY(0); }
+      .v2-nav > a, .v2-nav .dropdown-trigger { color: var(--black) !important; padding: 1rem 2rem; font-size: 1rem; text-align: left; border-bottom: 1px solid var(--border); width: 100%; }
+      .v2-dropdown { width: 100%; }
+      .v2-dropdown-menu { position: static; transform: none; display: none; min-width: 0; grid-template-columns: 1fr; gap: 0; box-shadow: none; padding: 0; background: var(--light-gray); border-radius: 0; }
+      .v2-dropdown:hover .v2-dropdown-menu { display: none; }
+      .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+      .v2-dropdown-menu a { padding: 0.8rem 2.5rem !important; border-bottom: 1px solid var(--border); }
+      .v2-dropdown-region { padding: 0.6rem 2rem 0.4rem; margin: 0; border-bottom: none; }
+    }
+    .article-lang-switcher { text-align: center; font-size: 0.85rem; padding: 0.6rem 1rem; background: rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.08); margin-top: 64px; }
+    .article-lang-switcher .lang-label { color: #666; margin-right: 0.5rem; }
+    .article-lang-switcher a, .article-lang-switcher strong { margin: 0 0.5rem; text-decoration: none; }
+    .article-lang-switcher a { color: #555; }
+    .article-lang-switcher a:hover { color: var(--accent, #c2876a); }
+    .article-lang-switcher strong { color: var(--accent, #c2876a); }
+    [data-theme="dark"] .article-lang-switcher { background: rgba(255,255,255,0.04); border-bottom-color: rgba(255,255,255,0.08); }
+    [data-theme="dark"] .article-lang-switcher .lang-label { color: #aaa; }
+    [data-theme="dark"] .article-lang-switcher a { color: #ccc; }
+  </style>
+</head>
+<body>
+
+<div class="scroll-line" id="scrollLine"></div>
+
+<header class="v2-header" id="v2Header">
+  <div class="v2-header-inner">
+    <a href="../index.html" class="v2-logo">Camino<span>Libre</span></a>
+    <button class="v2-hamburger" id="v2Hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="v2-nav">
+      <a href="../index.html">Home</a>
+      <div class="v2-dropdown">
+        <button class="dropdown-trigger">Destinations ▾</button>
+        <div class="v2-dropdown-menu">
+          <div class="v2-dropdown-region">Latin America</div>
+          <a href="../stories.html?cat=costa-rica"><img class="v2-flag" src="../../images/flags/cr.svg" alt=""> Costa Rica</a>
+          <a href="../stories.html?cat=nicaragua"><img class="v2-flag" src="../../images/flags/ni.svg" alt=""> Nicaragua</a>
+          <a href="../stories.html?cat=mexico"><img class="v2-flag" src="../../images/flags/mx.svg" alt=""> Mexico</a>
+          <a href="../stories.html?cat=panama"><img class="v2-flag" src="../../images/flags/pa.svg" alt=""> Panama</a>
+          <a href="../stories.html?cat=el-salvador"><img class="v2-flag" src="../../images/flags/sv.svg" alt=""> El Salvador</a>
+          <a href="../stories.html?cat=belize"><img class="v2-flag" src="../../images/flags/bz.svg" alt=""> Belize</a>
+          <a href="../stories.html?cat=chile"><img class="v2-flag" src="../../images/flags/cl.svg" alt=""> Chile</a>
+          <div class="v2-dropdown-region">Asia</div>
+          <a href="../stories.html?cat=taiwan"><img class="v2-flag" src="../../images/flags/tw.svg" alt=""> Taiwan</a>
+          <div class="v2-dropdown-region">Japan</div>
+          <a href="../stories.html?cat=hokkaido"><img class="v2-flag" src="../../images/flags/jp.svg" alt=""> Hokkaido</a>
+          <a href="../stories.html?cat=bike"><span class="v2-flag-emoji">🏍️</span> Touring</a>
+          <a href="../stories.html?cat=camp"><span class="v2-flag-emoji">⛺</span> Camping</a>
+        </div>
+      </div>
+      <a href="../stories.html">Stories</a>
+      <a href="./">Profile</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-lang-switcher" lang="en">
+  <span class="lang-label">Read in:</span>
+  <a href="../../profile/" hreflang="ja" lang="ja">日本語</a>
+  <strong aria-current="page">English</strong>
+  <a href="../../es/profile/" hreflang="es" lang="es">Español</a>
+</div>
+
+<div class="about-hero" id="aboutHero">
+  <div class="about-hero-overlay"></div>
+  <div class="about-hero-content">
+    <div class="about-hero-avatar">
+      <img src="../../images/profile.jpg" alt="">
+    </div>
+    <div class="about-hero-name">Monaka</div>
+    <div class="about-hero-role">Traveler · Rider · Former Costa Rica Resident</div>
+  </div>
+</div>
+
+<div class="about-page">
+
+  <div class="about-body">
+    <p>After living in Costa Rica, I became drawn to travel and daily life across Latin America. In Japan, I keep making motorcycle trips around the country.</p>
+
+    <p>"Camino Libre" means "free road" in Spanish. Here I record my travels and life in Costa Rica and other Latin American countries, my journey learning Spanish, and my motorcycle trips.</p>
+
+    <p>In Latin America, while visiting tourist spots, I've been drawn most to the scenes embedded in everyday life — the back alleys, small eateries, the small exchanges with locals. In Japan, I ride. Coastal roads, mountain passes, straight roads that seem to go on forever — there are sights you only catch by riding through them yourself.</p>
+
+  </div>
+
+  <div class="about-tags-wrap">
+    <span class="tag-pill">Costa Rica</span>
+    <span class="tag-pill">Nicaragua</span>
+    <span class="tag-pill">Mexico</span>
+    <span class="tag-pill">Chile</span>
+    <span class="tag-pill">Belize</span>
+    <span class="tag-pill">Panama</span>
+    <span class="tag-pill">El Salvador</span>
+    <span class="tag-pill">Taiwan</span>
+    <span class="tag-pill">Hokkaido</span>
+    <span class="tag-pill">Motorcycle</span>
+    <span class="tag-pill">Camping</span>
+    <span class="tag-pill">Spanish</span>
+  </div>
+
+  <div class="about-contact" style="text-align:center;margin-top:1rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+    <a href="mailto:info@camino-libre.jp" style="font-size:0.88rem;color:var(--text-light);text-decoration:none;letter-spacing:0.03em;">Contact: info@camino-libre.jp</a>
+  </div>
+
+  <div class="about-back">
+    <a href="../stories.html">← All stories</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Camino<span>Libre</span></div>
+    <div class="footer-nav">
+      <a href="../index.html">Home</a>
+      <a href="../stories.html">Stories</a>
+      <a href="./">Profile</a>
+      <a href="../privacy.html">Privacy Policy</a>
+    </div>
+    <div class="footer-copy">© 2026 Camino Libre. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="../../js/article.js?v=20260429b"></script>
+<script>
+  var BLUE_IMAGES = [
+    '../../images/hokkaido-car/神威岬.jpg',
+    '../../images/hokkaido-car/神威岬のコピー.jpg',
+    '../../images/belize/20251019_213939041_iOS.jpg',
+    '../../images/belize/20251018_213429265_iOS.jpg',
+    '../../images/five-color-lake/IMG_8015.jpg',
+    '../../images/five-color-lake/IMG_8035.jpg',
+    '../../images/izu-touring/sea.jpg',
+    '../../images/taiwan/z50_0939_dxo.jpg',
+    '../../images/costa-rica-irazu/irazu-crater-view.jpg',
+  ];
+  var img = BLUE_IMAGES[Math.floor(Math.random() * BLUE_IMAGES.length)];
+  document.getElementById('aboutHero').style.backgroundImage = 'url("' + img + '")';
+</script>
+
+</body>
+</html>

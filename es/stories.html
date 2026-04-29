@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4NRMFMEP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8W4NRMFMEP');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículos | Camino Libre</title>
+  <meta name="description" content="Todas las crónicas de viaje de Camino Libre — Latinoamérica, Hokkaidō y viajes en moto.">
+  <link rel="canonical" href="https://camino-libre.jp/es/stories.html">
+  <link rel="alternate" hreflang="ja" href="https://camino-libre.jp/stories.html">
+  <link rel="alternate" hreflang="en" href="https://camino-libre.jp/en/stories.html">
+  <link rel="alternate" hreflang="es" href="https://camino-libre.jp/es/stories.html">
+  <link rel="alternate" hreflang="x-default" href="https://camino-libre.jp/stories.html">
+  <meta property="og:title" content="Artículos | Camino Libre">
+  <meta property="og:description" content="Todas las crónicas de viaje de Camino Libre.">
+  <meta property="og:url" content="https://camino-libre.jp/es/stories.html">
+  <meta property="og:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta property="og:locale" content="es_419">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css?v=20260429a">
+  <style>
+    body { padding-top: 64px; }
+    .v2-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(255,255,255,0.96); box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
+    .v2-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .v2-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--black); text-decoration: none; }
+    .v2-logo span { color: var(--accent); }
+    .v2-nav { display: flex; gap: 2rem; align-items: center; }
+    .v2-nav a { font-size: 0.85rem; color: var(--black); text-decoration: none; }
+    .v2-nav a:hover { color: var(--accent); }
+    .article-lang-switcher { text-align: center; font-size: 0.85rem; padding: 0.6rem 1rem; background: rgba(0,0,0,0.04); border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .article-lang-switcher .lang-label { color: #666; margin-right: 0.5rem; }
+    .article-lang-switcher a, .article-lang-switcher strong { margin: 0 0.5rem; text-decoration: none; }
+    .article-lang-switcher a { color: #555; }
+    .article-lang-switcher strong { color: var(--accent, #c2876a); }
+    .page-head { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 1.5rem; text-align: center; }
+    .page-head-sub { font-size: 0.75rem; letter-spacing: 0.25em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.8rem; }
+    .page-head-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; color: var(--black); margin-bottom: 0.8rem; }
+    .page-head-desc { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; max-width: 580px; margin: 0 auto; }
+    .stories-grid { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+    .story-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+    .story-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .story-card-img { width: 100%; aspect-ratio: 16/10; background-size: cover; background-position: center; background-color: var(--light-gray); }
+    .story-card-body { padding: 1rem 1.2rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
+    .story-card-tag { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.4rem; }
+    .story-card-title { font-size: 1rem; font-weight: 700; color: var(--black); line-height: 1.4; margin: 0 0 0.6rem; }
+    .story-card-date { font-size: 0.78rem; color: var(--text-light); margin-top: auto; }
+    .stories-empty { text-align: center; padding: 4rem 2rem; color: var(--text-light); }
+    .stories-empty a { color: var(--accent); }
+    footer { background: #1c1c1c; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; text-align: center; font-size: 0.8rem; }
+    footer .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 0.8rem; }
+    [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
+    [data-theme="dark"] .v2-logo, [data-theme="dark"] .v2-nav a { color: var(--text); }
+    [data-theme="dark"] .story-card { background: var(--card-bg); }
+    [data-theme="dark"] .story-card-title { color: var(--text); }
+    [data-theme="dark"] .page-head-title { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<header class="v2-header">
+  <div class="v2-header-inner">
+    <a href="./" class="v2-logo">Camino<span>Libre</span></a>
+    <nav class="v2-nav">
+      <a href="./">Inicio</a>
+      <a href="stories.html">Artículos</a>
+      <a href="profile/">Perfil</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-lang-switcher" lang="es">
+  <span class="lang-label">Leer en:</span>
+  <a href="../stories.html" hreflang="ja" lang="ja">日本語</a>
+  <a href="../en/stories.html" hreflang="en" lang="en">English</a>
+  <strong aria-current="page">Español</strong>
+</div>
+
+<div class="page-head">
+  <div class="page-head-sub">Todos los artículos</div>
+  <h1 class="page-head-title">Artículos</h1>
+  <p class="page-head-desc">Crónicas de viaje por Latinoamérica, Hokkaidō y rutas en moto por Japón. Los artículos traducidos aparecerán aquí a medida que se vayan completando. <a href="../stories.html" style="color:var(--accent)">Ver todos los artículos originales en japonés →</a></p>
+</div>
+
+<div id="storiesGrid" class="stories-grid"></div>
+
+<footer>
+  <div class="footer-nav" style="margin-bottom:1rem;">
+    <a href="./">Inicio</a>
+    <a href="stories.html">Artículos</a>
+    <a href="profile/">Perfil</a>
+    <a href="privacy.html">Política de privacidad</a>
+  </div>
+  © 2026 Camino Libre. All rights reserved.
+</footer>
+
+<script src="../js/article.js?v=20260429b"></script>
+<script>
+  var TRANSLATED_ES = [
+    'costa-rica-intro'
+  ];
+
+  var TITLE_OVERRIDES_ES = {
+    'costa-rica-intro': '¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente — Crónicas de Costa Rica #1'
+  };
+
+  if (typeof ARTICLES !== 'undefined') {
+    var grid = document.getElementById('storiesGrid');
+    var available = ARTICLES.filter(function(a){
+      var slug = a.file.replace('.html', '');
+      return TRANSLATED_ES.indexOf(slug) !== -1;
+    });
+    if (available.length === 0) {
+      grid.outerHTML = '<div class="stories-empty">Las traducciones al español se están agregando poco a poco. <a href="../stories.html">Ver artículos originales en japonés →</a></div>';
+    } else {
+      available.forEach(function(a){
+        var slug = a.file.replace('.html', '');
+        var title = TITLE_OVERRIDES_ES[slug] || a.title;
+        var img = a.img;
+        if (img.indexOf('http') !== 0 && img.indexOf('../') !== 0) img = '../' + img;
+        if (img.indexOf('../images/') === 0) img = '../' + img.substring(3);
+        var card = document.createElement('a');
+        card.className = 'story-card';
+        card.href = '../articles/es/' + a.file;
+        card.innerHTML =
+          '<div class="story-card-img" style="background-image:url(\'' + img + '\')"></div>' +
+          '<div class="story-card-body">' +
+            '<div class="story-card-tag">' + (a.tag || '') + '</div>' +
+            '<h3 class="story-card-title">' + title + '</h3>' +
+            '<div class="story-card-date">' + (a.date || '') + '</div>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
