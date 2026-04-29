@@ -17,6 +17,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 LANG_LABELS = {
+    'ja': '🌐 JA',
+    'en': '🌐 EN',
+    'es': '🌐 ES',
+}
+# Full language names for the dropdown menu items.
+LANG_NAMES = {
     'ja': '日本語',
     'en': 'English',
     'es': 'Español',
@@ -79,7 +85,7 @@ def build_v2_switcher(current, urls):
     label = LANG_LABELS[current]
     items = []
     for code in ('ja', 'en', 'es'):
-        text = LANG_LABELS[code]
+        text = LANG_NAMES[code]
         if code == current:
             items.append(
                 f'          <a href="#" hreflang="{code}" lang="{code}" aria-current="page">{text}</a>'
@@ -92,7 +98,7 @@ def build_v2_switcher(current, urls):
     items_html = '\n'.join(items)
     return (
         f'      <div class="v2-lang-switcher" data-current-lang="{current}">\n'
-        f'        <button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Language">{label}</button>\n'
+        f'        <button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Language" title="Change language / 言語 / Idioma">{label}</button>\n'
         f'        <div class="lang-menu" role="menu">\n'
         f'{items_html}\n'
         f'        </div>\n'
