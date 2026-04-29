@@ -41,6 +41,7 @@
     { file: 'mexico-walmart.html',        title: 'メキシコ土産はウォルマートが穴場｜サルサ・コーヒー・チョコレート購入記【メキシコ旅行記④】',                           category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/walmart-salsa.jpg',                                                                                     date: '2026-02-22', keywords: ['メキシコ', 'ウォルマート', 'お土産', 'サルサ', 'コーヒー', 'チョコレート', 'ショッピング'] },
     { file: 'mexico-anthropology.html',   title: '国立人類学博物館で巡る古代メキシコ｜太陽の石とコアトリクエ・オルメカ巨頭【メキシコ周遊記①】',                          category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/anthropology-aztec-hall.jpg',                                                                           date: '2015-06-20', keywords: ['メキシコ', 'メキシコシティ', '人類学博物館', 'アステカ', 'オルメカ', 'コアトリクエ', '太陽の石', '古代文明'] },
     { file: 'mexico-guanajuato.html',     title: '「宝石箱の街」グアナファト｜ピピラ像の夜景と接吻の小道、ミイラ博物館の真実【メキシコ周遊記②】',                          category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/guanajuato-night.jpg',                                                                                  date: '2015-06-21', keywords: ['メキシコ', 'グアナファト', '世界遺産', 'ピピラ像', '接吻の小道', 'ミイラ博物館', '夜景', '宝石箱'] },
+    { file: 'mexico-teotihuacan.html',    title: 'テオティワカン遺跡を歩く｜太陽のピラミッド・月のピラミッド・羽毛の蛇神殿【メキシコ周遊記③】',                                category: 'mexico',     tag: 'メキシコ',         img: '../images/mexico/teotihuacan-sun-pyramid.jpg',                                                                            date: '2015-06-22', keywords: ['メキシコ', 'テオティワカン', '太陽のピラミッド', '月のピラミッド', '羽毛の蛇神殿', '死者の道', '古代文明', '周遊記'] },
     { file: 'touring-camp-gear.html',     title: 'バイクソロキャンプ道具まとめ｜テント・シュラフ・マット選び【キャンプ道具編①】',                       category: 'camp',       tag: 'キャンプ・ギア',   img: '../images/og/touring-camp-gear.jpg',                                                                                       date: '2017-11-12', keywords: ['バイク', 'ソロキャンプ', 'キャンプ道具', 'テント', 'シュラフ', 'マット', 'ギア'] },
     { file: 'camp-mori-makiba.html',      title: '森のまきばオートキャンプ場レビュー｜冬のソロキャンプと料金・雰囲気',                               category: 'camp',       tag: 'キャンプ',         img: 'https://static.wixstatic.com/media/949ec9_be02da1f1cce47dfa15fb7184f2e8dd6~mv2_d_4032_3024_s_4_2.jpg',                  date: '2018-12-15', keywords: ['森のまきば', 'オートキャンプ場', '千葉', 'ソロキャンプ', '冬キャンプ', 'レビュー'] },
     { file: 'atsukan.html',               title: '家で熱燗を楽しむ日本酒レビュー｜萬寿鏡F60と八海山雪室貯蔵三年',                                       category: 'other',      tag: '酒・グルメ',       img: 'https://static.wixstatic.com/media/949ec9_69fcb4358adc4328a919ec0cfc491f98~mv2_d_2987_3938_s_4_2.jpg',                  date: '2017-01-10', keywords: ['熱燗', '日本酒', '萬寿鏡', '八海山', '雪室貯蔵', 'グルメ', '酒'] },
@@ -445,7 +446,8 @@
     ]},
     { name: 'メキシコ周遊記', catKey: 'mexico', articles: [
       { file: 'mexico-anthropology.html', title: '国立人類学博物館で巡る古代メキシコ｜太陽の石とコアトリクエ・オルメカ巨頭【メキシコ周遊記①】' },
-      { file: 'mexico-guanajuato.html',   title: '「宝石箱の街」グアナファト｜ピピラ像の夜景と接吻の小道、ミイラ博物館の真実【メキシコ周遊記②】' }
+      { file: 'mexico-guanajuato.html',   title: '「宝石箱の街」グアナファト｜ピピラ像の夜景と接吻の小道、ミイラ博物館の真実【メキシコ周遊記②】' },
+      { file: 'mexico-teotihuacan.html',  title: 'テオティワカン遺跡を歩く｜太陽のピラミッド・月のピラミッド・羽毛の蛇神殿【メキシコ周遊記③】' }
     ]},
     { name: 'SR400北海道ツーリング記録', catKey: 'hokkaido', articles: [
       { file: 'hokkaido-sr400-day1.html', title: '大洗からさんふらわあで苫小牧｜初日は札幌へ【SR400北海道ツーリング記録①】' },
