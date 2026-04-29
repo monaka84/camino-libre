@@ -287,6 +287,9 @@
       display: grid; grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
     }
+    .v2-startguide--gear .v2-startguide-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
     .v2-startguide-card {
       text-decoration: none; color: inherit;
       display: flex; flex-direction: column;
@@ -384,6 +387,7 @@
 
     @media (max-width: 768px) {
       .v2-region-grid, .v2-startguide-grid { grid-template-columns: 1fr 1fr; }
+      .v2-startguide--gear .v2-startguide-grid { grid-template-columns: repeat(2, 1fr); }
       .v2-startguide { padding: 3.5rem 1.5rem; }
       .v2-hamburger { display: flex; }
       .v2-nav {
@@ -427,6 +431,7 @@
     }
     @media (max-width: 480px) {
       .v2-region-grid, .v2-startguide-grid { grid-template-columns: 1fr; }
+      .v2-startguide--gear .v2-startguide-grid { grid-template-columns: 1fr; }
       .v2-hero { min-height: 500px; }
       .v2-hero-title { font-size: 1.7rem; }
       .v2-hero-desc { font-size: 0.85rem; line-height: 1.7; }
@@ -576,6 +581,15 @@
         <div class="v2-startguide-card-cta">記事を読む →</div>
       </div>
     </a>
+    <a href="articles/long-haul-flight-tips" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/flight/jal-gate.jpg')"></div>
+      <div class="v2-startguide-card-body">
+        <div class="v2-startguide-card-tag">機内装備</div>
+        <h3 class="v2-startguide-card-title">長距離フライトを少しでも楽にする</h3>
+        <p class="v2-startguide-card-desc">ネックピロー・有線イヤホン・2way系シューズに加えて、スーツケースは大型＋機内持ち込みの2個体制で。</p>
+        <div class="v2-startguide-card-cta">記事を読む →</div>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -593,7 +607,7 @@
   © 2026 Camino Libre. All rights reserved.
 </footer>
 
-<script src="js/article.js?v=20260429a"></script>
+<script src="js/article.js?v=20260429b"></script>
 <script>
   // ヘッダー透過切替・ハンバーガー・ドロップダウンは js/article.js の initV2Header() が処理
 

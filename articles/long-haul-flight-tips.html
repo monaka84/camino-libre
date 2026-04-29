@@ -16,18 +16,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css?v=20260429a">
+  <style>
+    .pr-disclosure {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      background: #fff8e6;
+      border-left: 3px solid #c8a96e;
+      padding: 0.8rem 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .gear-item {
+      padding: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin: 1.2rem 0;
+      background: #fff;
+      overflow: hidden;
+    }
+    .gear-item .gear-img {
+      float: left;
+      width: 160px;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #fafafa;
+      border-radius: 4px;
+      padding: 6px;
+      box-sizing: border-box;
+      margin: 0 1.2rem 0.6rem 0;
+    }
+    .gear-item h4 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .gear-item .gear-meta { font-size: 0.78rem; color: var(--text-light); margin-bottom: 0.5rem; }
+    .gear-item p { margin: 0 0 0.6rem; font-size: 0.9rem; line-height: 1.7; }
+    .gear-item .gear-link {
+      display: inline-block;
+      background: #ff9900; color: #111;
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+    .gear-item .gear-link:hover { opacity: 0.85; }
+    @media (max-width: 600px) {
+      .gear-item .gear-img {
+        float: none;
+        display: block;
+        max-width: 220px;
+        margin: 0 auto 1rem;
+      }
+    }
+  </style>
   <meta property="og:type" content="article">
   <meta property="og:title" content="長距離フライトの過ごし方｜エコノミーでも少し快適に過ごす工夫">
-  <meta property="og:description" content="長距離フライトを少し快適に過ごすための工夫をまとめました。空気式ネックピロー、有線イヤホン、2ピン変換アダプタ、Bluetoothトランスミッター、スマホでの資料確認など、エコノミー席でも使いやすい持ち物を実体験ベースで紹介します。">
+  <meta property="og:description" content="長距離フライトを少し快適に過ごすための工夫をまとめました。空気式ネックピロー（Tabine）、有線イヤホン（final E3000）と2ピン変換、AirFly Pro、コンタクト用アルコールティッシュ、踵を踏める2way系シューズ（KEEN HOODMOC HS）、サムソナイト＋LOJELのスーツケース2個体制など、エコノミー席でも使いやすい持ち物を実体験ベースで紹介します。">
   <meta property="og:url" content="https://camino-libre.jp/articles/long-haul-flight-tips.html">
-  <meta property="og:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta property="og:image" content="https://camino-libre.jp/images/flight/jal-gate.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Camino Libre">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="長距離フライトの過ごし方｜エコノミーでも少し快適に過ごす工夫">
-  <meta name="twitter:description" content="長距離フライトを少し快適に過ごすための工夫をまとめました。空気式ネックピロー、有線イヤホン、2ピン変換アダプタ、Bluetoothトランスミッター、スマホでの資料確認など、エコノミー席でも使いやすい持ち物を実体験ベースで紹介します。">
-  <meta name="twitter:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta name="twitter:description" content="長距離フライトを少し快適に過ごすための工夫をまとめました。空気式ネックピロー（Tabine）、有線イヤホン（final E3000）と2ピン変換、AirFly Pro、コンタクト用アルコールティッシュ、踵を踏める2way系シューズ（KEEN HOODMOC HS）、サムソナイト＋LOJELのスーツケース2個体制など、エコノミー席でも使いやすい持ち物を実体験ベースで紹介します。">
+  <meta name="twitter:image" content="https://camino-libre.jp/images/flight/jal-gate.jpg">
 </head>
 <body class="v2-page">
 
@@ -66,7 +117,7 @@
   </div>
 </header>
 
-<div class="article-hero" style="background-image: url('../images/hero/og-image.jpg'); background-position: center center;">
+<div class="article-hero" style="background-image: url('../images/flight/jal-gate.jpg'); background-position: center center;">
   <div class="article-hero-overlay"></div>
   <div class="article-hero-content">
     <div class="article-category">海外旅行</div>
@@ -76,7 +127,7 @@
       <span class="dot">·</span>
       <span>2026年4月</span>
       <span class="dot">·</span>
-      <span>5分で読める</span>
+      <span>10分で読める</span>
     </div>
   </div>
 </div>
@@ -89,17 +140,45 @@
 
   <p>ただし、エコノミー席はとにかくスペースがない。グッズを積み込みすぎるとかえって出し入れが面倒になり、結局使わない。だから優先順位は<strong>「小さく使えるもの」「出し入れしやすいもの」「なくしても困りにくいもの」</strong>。この3つを軸に、いつも持ち込んでいるものを紹介する。</p>
 
-  <div class="pr-disclosure">
-    ※ 本記事はAmazonアソシエイトリンクを含みます。実際に使った感触や旅行中の必要性をもとに紹介していて、合わない人もいるはずなので、参考程度に。詳細は<a href="../privacy.html">プライバシーポリシー</a>をご覧ください。
-  </div>
-
   <h2>寝る——空気式ネックピロー</h2>
 
-  <p>以前は低反発のしっかりしたネックピローを2つほど買って試したが、どちらも結局使わなくなった。理由はシンプルで、<strong>体積が大きくて荷物になる</strong>のが嫌だった。機内に持ち込むまでの「手間」が、機内での「快適さ」に勝ってしまったということだ。</p>
+  <p>ネックピローは、以前しっかりしたタイプを2つほど買ったことがある。確かに首は支えられるのだが、個人的には<strong>とにかく荷物になる</strong>のが苦手だった。</p>
 
-  <p>その点、空気で膨らませる<strong>Tabine minimalU+</strong>のような空気式ピローは、使わないときは小さく畳めて、リュックの隅に収まる。低反発ピローほどガッチリ首を固定してはくれないが、機内で「軽く首を支える」用途としては必要十分。乗り換えのある路線でも、移動の合間に空気を抜いて畳んでおけるのがありがたい。</p>
+  <p>その点、<strong>Tabine</strong>は空気式なので、使わないときはかなり小さくできる。低反発タイプのような「がっちり支える感じ」ではないが、飛行機やバスの移動中に首を少し支える用途としては十分だった。</p>
 
-  <p><a href="https://www.amazon.co.jp/s?k=Tabine+minimalU%2B+%E3%83%8D%E3%83%83%E3%82%AF%E3%83%94%E3%83%AD%E3%83%BC&tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ Tabine minimalU+ ネックピローを Amazon で見る</a></p>
+  <p>「荷物が増えるくらいなら、多少コンパクトさを優先したい」という人には、かなり相性がいいと思う。</p>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/tabine-pillow.jpg" alt="Tabine minimalU+ 空気式ネックピロー" loading="lazy">
+    <h4>Tabine minimalU+ 空気式ネックピロー</h4>
+    <div class="gear-meta">旅寝工房 / 型番 minimalU+ / インフレータブル / 厚さ4cm・卵3つより軽い超薄型 / 空気ポンプ内蔵収納ケース / カラビナ付 / コットン調生地・防汚性</div>
+    <p>使わないときはかなり小さくできるのが魅力。空気量で首の支え具合を調整でき、低反発タイプのような「がっちり支える感じ」ではないが、機内やバスでの移動中に首を支える用途としては十分。収納ケースが空気ポンプを兼ねているので肺活量に頼らず膨らませられ、カラビナでバッグに外付けできるのも荷物を増やしたくない人と相性が良い。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0DLMBJ1HX?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
+
+  <h2>光と音を遮る——アイマスクと耳栓</h2>
+
+  <p>機内は思った以上に光と音の刺激が多い。窓側の人がシェードを開けたまま寝ていたり、隣の人がスクリーンを点けっぱなしにしていたり、エンジン音やカートが行き来する音と、寝つきたいときに限って邪魔になるものが揃っている。</p>
+
+  <p>そこで毎回ポーチに入れているのが<strong>アイマスク</strong>と<strong>耳栓</strong>。どちらも軽くて小さいので入れている感覚もないが、いざ眠りたいときに「持ってきてよかった」と毎回思う定番アイテムだ。耳栓は<strong>左右がコードでつながっているタイプ</strong>を選ぶのが大事で、これがないと寝ている間に外れて高確率で片方をなくす。アイマスクはヒモが細すぎないものの方が、寝返りしてもズレにくくて快適だった。</p>
+
+  <p>機内エンタメに集中したいときは外せばいいだけなので、使うかどうかはその時の機内の状況次第。とにかく<strong>「眠れる選択肢」を持っておく</strong>ことが、長距離フライトでは効いてくる。</p>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/gowell-earplugs.jpg" alt="ゴーウェル コード付き耳栓 GW-1502" loading="lazy">
+    <h4>ゴーウェル コード付き耳栓 GW-1502</h4>
+    <div class="gear-meta">Gowell / 型番 GW-1502-001 / シリコン製 / コード付き / 繰り返し使用可</div>
+    <p>シリコンの3段フランジで耳にフィットしやすい。何よりも<strong>左右をつなぐネックストラップが重要</strong>で、これがないと寝ている間に外れて片方なくす。コード付きを選ぶだけで、機内での「耳栓ロスト」がほぼなくなる。シリコン素材なので繰り返し洗って使えて、ポーチに入れっぱなしにできるのも便利。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0757KWL1J?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/claxia-eye-mask.jpg" alt="CLAXIA SLEEPMASK 立体型アイマスク" loading="lazy">
+    <h4>CLAXIA SLEEPMASK 立体型アイマスク</h4>
+    <div class="gear-meta">CLAXIA / 型番 CLA-001 / 立体3D構造 / 完全遮光 / 東大医学部睡眠専門医 監修</div>
+    <p>アイマスクは正直どれでも構わないが、<strong>機内で配られる薄いタイプより自分で買ったものの方が確実に快適</strong>だった。立体型は目の周りに圧がかからず、まつ毛にも触れない。完全遮光で隣席のスクリーン光や窓側のシェード光を遮れる。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0D9XR2M55?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <h2>映画と音——有線イヤホンと2ピン変換アダプタ</h2>
 
@@ -107,11 +186,23 @@
 
   <p>それ以降、機内では<strong>final E3000</strong>のような手頃な有線イヤホンを基本にしている。値段の割に音はしっかりしていて、機内モニター程度の音源には十分。何より、なくした時の心理的ダメージが小さいので「気を張らなくていい」のが楽だ。</p>
 
-  <p><a href="https://www.amazon.co.jp/dp/B071FB3PNM?tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ final E3000 を Amazon で見る</a></p>
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/final-e3000.jpg" alt="final E3000 有線イヤホン" loading="lazy">
+    <h4>final E3000 カナル型有線イヤホン</h4>
+    <div class="gear-meta">final / 型番 FI-E3DSS / 3.5mm有線 / カナル型 / イヤーピース5サイズ・イヤーフック・ポーチ同梱</div>
+    <p>値段の割に音はしっかりしていて、機内モニターの音源には十分。なくした時の心理的ダメージが小さく、Bluetoothを座席で2回落とした経験から、長距離フライトでは有線に戻った。イヤーピースが5サイズ付属するので耳に合わせやすい。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B071FB3PNM?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <p>ただし機材によっては、機内モニターのイヤホン端子が<strong>2ピン式</strong>になっていることがある。普通の3.5mm有線イヤホンはそのまま挿さらないので、小さな変換アダプタを1つ常備しておくと安心だ。安いし軽いし、なくても困らないが、ある日突然必要になる類のもの。</p>
 
-  <p><a href="https://www.amazon.co.jp/s?k=%E6%A9%9F%E5%86%85+2%E3%83%94%E3%83%B3+%E5%A4%89%E6%8F%9B%E3%82%A2%E3%83%80%E3%83%97%E3%82%BF&tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ 機内用2ピン変換アダプタを Amazon で見る</a></p>
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/drawheart-airline-adapter.jpg" alt="Drawheart 機内用 2ピン → 3.5mm 変換アダプタ DH672" loading="lazy">
+    <h4>Drawheart 機内用 2ピン → 3.5mm 変換アダプタ DH672</h4>
+    <div class="gear-meta">Drawheart / 型番 DH672 / 2個セット / 金メッキ端子 / 軽量プラスチック</div>
+    <p>機材によって機内モニターのイヤホン端子が2ピン式になっていることがある。普通の3.5mm有線イヤホンでは挿さらないので、小さな変換アダプタを1つ常備しておくと安心。2個セットなので片方をなくしても予備が効く。安くて軽く、ある日突然必要になる類のもの。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0FXB2KC5B?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <h2>ワイヤレス派には Bluetoothトランスミッター</h2>
 
@@ -119,7 +210,13 @@
 
   <p>機内モニターと自分のお気に入りのイヤホンを組み合わせられるのは魅力的だが、寝落ちしやすい人はBluetoothイヤホンを落とすリスクは引き続きあるので、自分の睡眠スタイル次第で。</p>
 
-  <p><a href="https://www.amazon.co.jp/s?k=Twelve+South+AirFly+Pro&tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ AirFly Pro / Pro 2 を Amazon で見る</a></p>
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/airfly-pro.jpg" alt="Twelve South AirFly Bluetoothトランスミッター" loading="lazy">
+    <h4>Twelve South AirFly（Bluetoothトランスミッター）</h4>
+    <div class="gear-meta">Twelve South / Bluetoothオーディオトランスミッタ / 3.5mm接続 / 2ピン端子対応 / 音量調整ボタン搭載</div>
+    <p>機内モニターのイヤホンジャックに挿すと、モニターの音声をBluetoothで自分のワイヤレスイヤホンに飛ばせる。2ピン端子にも付属アダプタで対応していて、機材を選ばず使えるこのジャンルの定番モデル。本体側に音量±ボタンが付いているのも地味に便利。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0DWT9FM4J?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <h2>仕事資料は iPad・スマホに入れておく</h2>
 
@@ -129,29 +226,91 @@
 
   <h2>足元——機内スリッパより、最初から楽な靴</h2>
 
-  <p>機内用スリッパや使い捨てサンダルに履き替える方法もあるが、個人的には<strong>脱いだ靴の置き場</strong>に困るのが気になっていた。狭い足元に靴を置くと出入りのたびに引っかかるし、シートポケットには入らない。荷物が多い時はさらに扱いにくい。</p>
+  <p>機内用にスリッパやサンダルを持ち込む人もいるが、個人的には<strong>脱いだ靴の置き場</strong>に困るのが気になる。足元に靴を置くと邪魔だし、荷物が多いとさらに扱いにくい。</p>
 
-  <p>それなら最初から、空港から<strong>OOFOS OOriginal</strong>のようなサンダル系の楽な靴で出発してしまう方が合理的だった。脱ぎ履きが要らず、機内ではそのまま伸ばせばいい。気候や航空会社のドレスコード（一部の上位クラスや国際線でサンダルNGの場合あり）には事前確認を。</p>
+  <p>とはいえサンダル一本だと現地での移動に向かない。中南米のように石畳や砂利の道を長時間歩く場面が出てくると、つま先や足の裏に負担がかかって観光どころではなくなる。</p>
 
-  <p><a href="https://www.amazon.co.jp/s?k=OOFOS+OOriginal&tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ OOFOS OOriginal を Amazon で見る</a></p>
+  <p>そこで最近落ち着いたのが、<strong>かかとを踏める2way系のシューズ</strong>だ。たとえば<strong>KEEN HOODMOC HS（フッドモック エイチエス）</strong>のような、つま先はしっかり覆われていて、かかとを起こせばシューズ、踏めばスリップオン／サンダルのように履けるタイプ。機内では踵を踏んで楽に履き、着いてからは足を覆って歩けるので、サンダルと靴を別々に持つ必要がない。</p>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/keen-hoodmoc-hs.jpg" alt="KEEN HOODMOC HS" loading="lazy">
+    <h4>KEEN HOODMOC HS（フッドモック エイチエス）</h4>
+    <div class="gear-meta">KEEN / HOODコレクション / バンジーシューレース / 防水（トゥ・3/4） / コンバーチブル（踵踏み可） / ソール厚2cm</div>
+    <p>つま先と前足部はしっかり覆われていて、踵を起こせばシューズ、踏めばスリップオン／サンダルのように使えるコンバーチブル設計。バンジーレースで脱ぎ履きが速く、機内では踵を踏んで楽に履き、現地ではきちんと足を覆って歩ける。サンダルと靴を別々に持つ必要がない。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0GJ3PZ66G?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
+
+  <h2>コンタクトの付け外し——アルコールティッシュ</h2>
+
+  <p>長距離フライトでコンタクトを付けたまま寝るのは目への負担が大きい。途中で一度外してメガネに切り替え、着陸前にまた付け直す——という運用にしている人は多いはずだ。</p>
+
+  <p>その付け外しの時に欠かせないのが<strong>アルコールティッシュ</strong>。機内のトイレは混んでいて手を洗いに行くだけでも一苦労なので、座席で手指をその場で消毒できる小型ティッシュがあると安心だ。コンタクトを触る前に1枚出して拭くだけで、清潔さの不安がだいぶ減る。</p>
+
+  <p>個包装の使い捨てタイプを5〜10枚ほどポーチに入れておけば、行き帰りの長距離フライトで足りる。さらに<strong>旅行先でも普通に使うので、機内用と現地用に2パックほど持っていくと安心</strong>。食事前や化粧直しにも使えるので、結果的にいちばん出番が多い小物かもしれない。</p>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/amazon-alcohol-wipes.jpg" alt="by Amazon アルコール除菌ウエットティッシュ" loading="lazy">
+    <h4>アルコール除菌ウエットティッシュ（100均で十分）</h4>
+    <div class="gear-meta">アルコール除菌 / メッシュタイプ / 個包装は100均で / まとめ買いはAmazon</div>
+    <p>機内のトイレが混んでいる時でも、座席で手指をその場で消毒できる。コンタクトを触る前に1枚出して拭くだけで、清潔さの不安が減る。食事前や化粧直しにも使えて出番が多い。<strong>旅行先でも普通に使うので、2パックほど持っていくと安心</strong>（機内用＋現地用）。<strong>機内に持ち込む分は100均の個包装タイプで十分</strong>で、ブランドにこだわる必要はない。家にストックしたい時だけ Amazon Basics などのまとめ買いパックから。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B089TF4TQ6?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <h2>機内で使う小物は、小さなポーチにまとめる</h2>
 
-  <p>有線イヤホン・2ピン変換・リップクリーム・目薬・充電ケーブル・常備薬・耳栓——機内で使うものは、大きな機内バッグから毎回取り出すのではなく、<strong>小さなポーチ1つにまとめて座席のシートポケットに入れて</strong>おくと出し入れが圧倒的に楽だ。隣の人にお願いして上の収納から荷物を出してもらう手間も減る。</p>
+  <p>有線イヤホン・2ピン変換・耳栓・アイマスク・アルコールティッシュ・リップクリーム・目薬・充電ケーブル・常備薬——機内で使うものは、大きな機内バッグから毎回取り出すのではなく、<strong>小さなポーチ1つにまとめて座席のシートポケットに入れて</strong>おくと出し入れが圧倒的に楽だ。隣の人にお願いして上の収納から荷物を出してもらう手間も減る。</p>
 
-  <p>ガジェットポーチ系（UGREEN や無印良品のメッシュケースなど）が、仕切りがあって中身が見やすく便利。大きさは「シートポケットに入る幅」を目安に選ぶといい。</p>
+  <p>ガジェットポーチ系（UGREEN や無印良品のメッシュケースなど）が、仕切りがあって中身が見やすく便利。大きさは「シートポケットに入る幅」、そして<strong>厚みが出ない薄型</strong>を選ぶのが、エコノミー席で取り回ししやすいコツ。</p>
 
-  <p><a href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%83%9D%E3%83%BC%E3%83%81+%E5%B0%8F%E5%9E%8B&tag=monaka84-22" target="_blank" rel="noopener noreferrer sponsored">▶ 小型ガジェットポーチを Amazon で見る</a></p>
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/placeholder.jpg" alt="薄型ガジェットポーチ" loading="lazy">
+    <h4>薄型ガジェットポーチ（特定ブランドなし）</h4>
+    <div class="gear-meta">薄型 / 仕切りあり / シートポケット対応</div>
+    <p>機内のシートポケットに入れて使うので、<strong>厚みのないスリムなタイプ</strong>を選ぶのがコツ。仕切りがあって中身が見やすく、エコノミー席のシートポケットに無理なく収まる幅であれば、ブランドはどれでも構わない。UGREEN や無印良品のメッシュケース系がよく出回っているが、こだわりはない。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/s?k=%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88%E3%83%9D%E3%83%BC%E3%83%81+%E8%96%84%E5%9E%8B&tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
+
+  <h2>荷物の分け方——大型スーツケース＋機内持ち込みの2個体制</h2>
+
+  <p>1週間ほどの海外滞在では、<strong>大型スーツケース1つ＋機内持ち込みキャリー1つ</strong>の2個体制に落ち着いている。具体的には<strong>サムソナイト</strong>の大型と、<strong>LOJEL</strong>の機内持ち込みサイズ。</p>
+
+  <figure>
+    <img src="../images/flight/suitcases-samsonite-lojel.jpg" alt="LOJELの機内持ち込みキャリー（左）とサムソナイトの大型スーツケース（右）">
+  </figure>
+
+  <p>はじめは大型スーツケース1つで足りると思っていたが、実際にやってみると不便だった。<strong>乗り継ぎ空港でターミナル間を歩く距離は思った以上に長く</strong>、お土産や上着・PCバッグなどを手で抱えて歩くと、到着前にすでに疲弊してしまう。機内持ち込み用のキャリーが1つあるだけで、両手が空くだけでなく、追加の荷物もそのまま転がして移動できる。</p>
+
+  <p>もう1つ大きいのが<strong>ロストバゲッジ対策</strong>。乗り継ぎが多い行程ほど預け荷物が遅延・紛失する確率は上がるので、最低でも<strong>1日分の着替え・常備薬・コンタクト・充電器</strong>は機内持ち込みの方に分けて入れている。これだけ守っておけば、万一スーツケースが届かなくても1〜2日は持ちこたえられる。</p>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/samsonite-polygon.jpg" alt="サムソナイト POLYGON SPINNER 75" loading="lazy">
+    <h4>サムソナイト POLYGON SPINNER 75（109L）</h4>
+    <div class="gear-meta">Samsonite / 109L / 75cm / ハードシェル / 4輪スピナー / ※現在は廃盤</div>
+    <p>1週間の海外滞在で使っている預け入れ用の大型スーツケース。表面のポリゴン（多面体）デザインがサムソナイトらしく、ハードシェルで耐久性も高い。ただし<strong>現行モデルとしては廃盤</strong>のため、新規で買うなら同シリーズの後継や現行の大型ハードシェル（ESSENS／TRUNK／VOLANT 等）が候補になる。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/s?k=Samsonite+%E5%A4%A7%E5%9E%8B+%E3%83%8F%E3%83%BC%E3%83%89%E3%82%B7%E3%82%A7%E3%83%AB+75cm&tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">サムソナイトの現行大型モデルを Amazon で見る</a>
+  </div>
+
+  <div class="gear-item">
+    <img class="gear-img" src="../images/products/lojel-cubo.jpg" alt="LOJEL Cubo Refresh-S" loading="lazy">
+    <h4>LOJEL Cubo Refresh-S（機内持ち込みサイズ）</h4>
+    <div class="gear-meta">Lojel / 37L（拡張時42L） / W35.5×H53×D25(28)cm / 約3.4kg / TSAロック / 4輪ダブルキャスター</div>
+    <p>機内持ち込み専用のキャリー。フロントアクセスでPC・書類をすぐ取り出せて、乗り継ぎ時も転がして移動できる。ロストバゲッジ対策として、1日分の着替え・常備薬・コンタクト・充電器をこちらに分散して入れている。</p>
+    <a class="gear-link" href="https://www.amazon.co.jp/dp/B0CVN5LDMY?tag=monaka84-22" target="_blank" rel="nofollow noopener noreferrer">Amazonで詳細を見る</a>
+  </div>
 
   <h2>まとめ</h2>
 
   <p>長距離フライトを少しでも楽にするコツは、「全部揃える」ことではない。むしろ<strong>自分のフライトスタイル（寝る派／映画派／作業派）に合わせて1〜2品ずつ試す</strong>方が、結果的に荷物も減り、機内でのストレスも減る。</p>
 
-  <p>個人的に外せないのは、有線イヤホン・2ピン変換・小型ポーチの3つ。これだけは毎回手元に置いている。あとは、その時々のフライト時間や寝るかどうかで、空気式ピローと楽な靴を足すかどうかを決めている。<br>機内で「あれ持ってくればよかった」と後悔した記憶があれば、次のフライトでまず1つ追加してみる、くらいの試し方で十分だと思う。</p>
+  <p>個人的に外せないのは、有線イヤホン・2ピン変換・耳栓・アイマスク・アルコールティッシュ・小型ポーチ。これだけは毎回手元に置いている。あとは、その時々のフライト時間や寝るかどうかで、空気式ピローと楽な靴を足すかどうかを決めている。スーツケースは大型＋機内持ち込みの2個体制が前提で、ロストバゲッジ対策と乗り継ぎでの取り回しも兼ねている。<br>機内で「あれ持ってくればよかった」と後悔した記憶があれば、次のフライトでまず1つ追加してみる、くらいの試し方で十分だと思う。</p>
 
   <blockquote>
     20時間超のフライトでも、ちょっとした準備の差で着いた瞬間の体力残量がだいぶ違う。詰め込まず、削りすぎず、自分の旅のスタイルに合うラインを探していくのが、いちばんの「快適」への近道だと思う。
   </blockquote>
+
+  <div class="pr-disclosure">
+    ※ 本記事はAmazonアソシエイトリンクを含みます。詳細は<a href="../privacy.html">プライバシーポリシー</a>をご覧ください。
+  </div>
 
   <div class="share-buttons">
     <span class="share-label">シェアする</span>
@@ -199,6 +358,6 @@
     document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
   });
 </script>
-<script src="../js/article.js?v=20260429a"></script>
+<script src="../js/article.js?v=20260429b"></script>
 </body>
 </html>
