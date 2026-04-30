@@ -243,6 +243,15 @@
       font-size: clamp(1.8rem, 3.5vw, 2.4rem);
       font-weight: 700;
     }
+    .v2-section-title a {
+      color: inherit; text-decoration: none;
+    }
+    .v2-section-title a:hover { color: var(--accent); }
+    .v2-section-lead {
+      max-width: 640px; margin: 1rem auto 0;
+      font-size: 0.9rem; line-height: 1.7;
+      color: var(--text-light);
+    }
     .v2-region-grid {
       max-width: 1200px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(3, 1fr);
@@ -506,10 +515,11 @@
 </section>
 
 <!-- はじめての方へ｜シリーズから読む -->
-<section class="v2-startguide">
+<section class="v2-startguide" id="start-here">
   <div class="v2-section-head">
     <div class="v2-section-sub">Start Here</div>
-    <h2 class="v2-section-title">はじめての方へ</h2>
+    <h2 class="v2-section-title"><a href="#start-here">はじめての方へ</a></h2>
+    <p class="v2-section-lead">コスタリカ滞在記で物語、北海道ツーリングで旅の手触り、装備記事で実用情報——気になるところからどうぞ。</p>
   </div>
   <div class="v2-startguide-grid">
     <a href="articles/costa-rica-intro" class="v2-startguide-card">
@@ -530,12 +540,12 @@
         <div class="v2-startguide-card-cta">①から読む →</div>
       </div>
     </a>
-    <a href="articles/belize-1" class="v2-startguide-card">
-      <div class="v2-startguide-card-img" style="background-image:url('images/belize/20251018_213429265_iOS-1200.jpg')"></div>
+    <a href="articles/hokkaido-gear-list" class="v2-startguide-card">
+      <div class="v2-startguide-card-img" style="background-image:url('images/hokkaido-xsr900/20250819_070951847_iOS-1200.jpg')"></div>
       <div class="v2-startguide-card-body">
-        <div class="v2-startguide-card-tag">Belize · カリブ海</div>
-        <h3 class="v2-startguide-card-title">ベリーズ旅行記</h3>
-        <p class="v2-startguide-card-desc">夜明けのカリブ海と、空から見たグレート・ブルーホール。3本完結のミニシリーズ。</p>
+        <div class="v2-startguide-card-tag">Hokkaido · 装備</div>
+        <h3 class="v2-startguide-card-title">北海道ツーリング装備リスト</h3>
+        <p class="v2-startguide-card-desc">バイクで2回走って分かった、本当に必要な装備。バッグ・ウェア・キャンプギア・クマ対策まで、カテゴリ別に紹介。</p>
         <div class="v2-startguide-card-cta">①から読む →</div>
       </div>
     </a>
