@@ -493,8 +493,8 @@
   <img class="v2-hero-img"
        src="../images/hero/blue-hole-1920.jpg"
        srcset="../images/hero/blue-hole-800.jpg 800w,
-               images/hero/blue-hole-1200.jpg 1200w,
-               images/hero/blue-hole-1920.jpg 1920w"
+               ../images/hero/blue-hole-1200.jpg 1200w,
+               ../images/hero/blue-hole-1920.jpg 1920w"
        sizes="100vw"
        alt="Belize Great Blue Hole (aerial photo from a small plane)"
        fetchpriority="high"
@@ -645,7 +645,7 @@
       var card = document.createElement('a');
       card.className = 'v2-region-card';
       card.href = 'stories.html?cat=' + r.key;
-      card.style.backgroundImage = "url('" + r.cover.replace('../', '') + "')";
+      card.style.backgroundImage = "url('" + r.cover + "')";
       card.innerHTML =
         '<div class="v2-region-body">' +
           '<img class="v2-region-flag" src="../images/flags/' + r.flag + '.svg" alt="">' +
