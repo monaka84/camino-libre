@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W4NRMFMEP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,64 +11,347 @@
     gtag('config', 'G-8W4NRMFMEP');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artículos | Camino Libre</title>
-  <meta name="description" content="Todas las crónicas de viaje de Camino Libre — Latinoamérica, Hokkaidō y viajes en moto.">
+  <title>Todos los artículos — Camino Libre</title>
+  <meta name="description" content="Desde las series por entregas hasta los ensayos sueltos: todos los artículos de Camino Libre, filtrables por país, región o tema.">
   <link rel="canonical" href="https://camino-libre.jp/es/stories">
   <link rel="alternate" hreflang="ja" href="https://camino-libre.jp/stories">
   <link rel="alternate" hreflang="en" href="https://camino-libre.jp/en/stories">
   <link rel="alternate" hreflang="es" href="https://camino-libre.jp/es/stories">
   <link rel="alternate" hreflang="x-default" href="https://camino-libre.jp/stories">
-  <meta property="og:title" content="Artículos | Camino Libre">
-  <meta property="og:description" content="Todas las crónicas de viaje de Camino Libre.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Camino Libre">
+  <meta property="og:title" content="Todos los artículos — Camino Libre">
+  <meta property="og:description" content="Desde las series por entregas hasta los ensayos sueltos: todos los artículos, filtrables por país, región o tema.">
   <meta property="og:url" content="https://camino-libre.jp/es/stories">
   <meta property="og:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_419">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Todos los artículos — Camino Libre">
+  <meta name="twitter:description" content="Desde las series por entregas hasta los ensayos sueltos: todos los artículos, filtrables por país, región o tema.">
+  <meta name="twitter:image" content="https://camino-libre.jp/images/hero/og-image.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css?v=20260430i">
   <style>
+    /* ── v2 ヘッダー（常に白） ── */
     body { padding-top: 64px; }
-    .v2-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(255,255,255,0.96); box-shadow: 0 1px 8px rgba(0,0,0,0.08); }
-    .v2-header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-    .v2-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--black); text-decoration: none; }
+    .v2-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+    }
+    .v2-header-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .v2-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--black); text-decoration: none;
+      letter-spacing: 0.02em;
+    }
     .v2-logo span { color: var(--accent); }
     .v2-nav { display: flex; gap: 2rem; align-items: center; margin-left: 3rem; }
-    .v2-nav a { font-size: 0.85rem; color: var(--black); text-decoration: none; }
-    .v2-nav a:hover { color: var(--accent); }.page-head { max-width: 900px; margin: 0 auto; padding: 3rem 2rem 1.5rem; text-align: center; }
-    .page-head-sub { font-size: 0.75rem; letter-spacing: 0.25em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.8rem; }
-    .page-head-title { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; color: var(--black); margin-bottom: 0.8rem; }
-    .page-head-desc { font-size: 0.95rem; color: var(--text-light); line-height: 1.7; max-width: 580px; margin: 0 auto; }
-    .stories-grid { max-width: 1100px; margin: 0 auto; padding: 2rem 2rem 5rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
-    .story-card { background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: flex; flex-direction: column; }
-    .story-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
-    .story-card-img { width: 100%; aspect-ratio: 16/10; background-size: cover; background-position: center; background-color: var(--light-gray); }
-    .story-card-body { padding: 1rem 1.2rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
-    .story-card-tag { font-size: 0.72rem; letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 0.4rem; }
-    .story-card-title { font-size: 1rem; font-weight: 700; color: var(--black); line-height: 1.4; margin: 0 0 0.6rem; }
-    .story-card-date { font-size: 0.78rem; color: var(--text-light); margin-top: auto; }
-    .stories-empty { text-align: center; padding: 4rem 2rem; color: var(--text-light); }
-    .stories-empty a { color: var(--accent); }
-    footer { background: #1c1c1c; color: rgba(255,255,255,0.6); padding: 3rem 2rem 2rem; text-align: center; font-size: 0.8rem; }
-    footer .footer-nav a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 0.8rem; }
-    [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
-    [data-theme="dark"] .v2-logo, [data-theme="dark"] .v2-nav a { color: var(--text); }
-    [data-theme="dark"] .story-card { background: var(--card-bg); }
-    [data-theme="dark"] .story-card-title { color: var(--text); }
+    .v2-nav a, .v2-nav .dropdown-trigger {
+      font-size: 0.85rem; letter-spacing: 0.05em;
+      color: var(--black); text-decoration: none; cursor: pointer;
+      background: none; border: none; padding: 0;
+      font-family: inherit;
+    }
+    .v2-nav a:hover, .v2-nav .dropdown-trigger:hover { color: var(--accent); }
+    .v2-dropdown { position: relative; }
+    .v2-dropdown-menu {
+      position: absolute; top: calc(100% + 0.4rem); left: 50%;
+      transform: translateX(-50%);
+      background: #fff; min-width: 480px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border-radius: 6px; padding: 1.5rem;
+      display: none;
+      grid-template-columns: 1fr 1fr; gap: 0.4rem 1.5rem;
+      z-index: 200;
+    }
+    .v2-dropdown:hover .v2-dropdown-menu,
+    .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+    .v2-dropdown::after {
+      content: ''; position: absolute;
+      top: 100%; left: 0; right: 0; height: 0.6rem;
+    }
+    .v2-dropdown-region {
+      grid-column: 1 / -1;
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      color: var(--accent); text-transform: uppercase;
+      margin-top: 0.5rem; margin-bottom: 0.3rem;
+      padding-bottom: 0.3rem; border-bottom: 1px solid var(--border);
+    }
+    .v2-dropdown-region:first-child { margin-top: 0; }
+    .v2-dropdown-menu a {
+      color: var(--black) !important;
+      font-size: 0.85rem; padding: 0.35rem 0.5rem;
+      border-radius: 3px;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .v2-dropdown-menu a:hover { background: var(--light-gray); }
+    .v2-flag {
+      display: inline-block;
+      width: 20px; height: 14px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .v2-flag-emoji {
+      display: inline-block; width: 20px;
+      text-align: center; font-size: 1rem;
+      vertical-align: middle;
+    }
+
+    /* ── ページヘッダー（コンパクト） ── */
+    .page-head {
+      max-width: 1200px; margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+    .page-head-sub {
+      font-size: 0.75rem; letter-spacing: 0.25em;
+      color: var(--accent); text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .page-head-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 0.8rem;
+    }
+    .page-head-title .title-period {
+      margin-right: -1em;
+    }
+    .page-head-desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* ── 連載シリーズ上書き ── */
+    .featured-strip { background: #f5f0e6; }
+    .featured-strip-label { color: var(--accent); font-size: 1rem; letter-spacing: 0.15em; }
+    .strip-card { border-top-color: rgba(0,0,0,0.12); }
+    .strip-card:hover { border-top-color: var(--accent); }
+    .strip-card-num { color: rgba(180,140,80,0.45); }
+    .strip-card-tag { color: var(--accent); font-size: 0.82rem; letter-spacing: 0.06em; }
+    .strip-card-title { font-size: 1rem; color: var(--black); }
+
+    /* ── カテゴリ別記事カード ── */
+    .recent-card {
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+    .recent-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .recent-card-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    .recent-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .recent-card-body { padding: 1rem; }
+    .recent-card-tag {
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+    }
+    .recent-card-series {
+      font-size: 0.7rem;
+      color: var(--gray);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+    .recent-card-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      line-height: 1.55;
+      color: var(--black);
+      margin: 0;
+    }
+    .recent-card-desc {
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: var(--gray);
+      margin: 0.5rem 0 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .recent-card-date {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--gray);
+      margin-top: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .cat-section { margin-bottom: 3rem; }
+    .cat-section-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cat-section-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--black);
+    }
+    .cat-section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .cat-section-more-wrap { text-align: right; }
+    .cat-section-more-btn {
+      font-size: 0.8rem;
+      padding: 0.4rem 1rem;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .cat-grid { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 480px) {
+      .cat-grid { grid-template-columns: 1fr !important; }
+    }
     [data-theme="dark"] .page-head-title { color: var(--text); }
+    [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
+    [data-theme="dark"] .v2-logo, [data-theme="dark"] .v2-nav a, [data-theme="dark"] .v2-nav .dropdown-trigger { color: var(--text); }
+    [data-theme="dark"] .recent-card-title { color: var(--text); }
+    [data-theme="dark"] .cat-section-label { color: var(--text); }
+    [data-theme="dark"] .recent-card-desc { color: rgba(255,255,255,0.7); }
+    [data-theme="dark"] .recent-card-date { color: rgba(255,255,255,0.55); }
+
+    /* ── ハンバーガーボタン（モバイル時のみ） ── */
+    .v2-hamburger {
+      display: none;
+      background: none; border: none; padding: 0.5rem;
+      cursor: pointer; width: 36px; height: 36px;
+      flex-direction: column; justify-content: center; gap: 5px;
+    }
+    .v2-hamburger span {
+      display: block; height: 2px; width: 22px;
+      background: var(--black); transition: all 0.3s;
+    }
+    .v2-header.menu-open .v2-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .v2-header.menu-open .v2-hamburger span:nth-child(2) { opacity: 0; }
+    .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) {
+      .v2-hamburger { display: flex; }
+      .v2-nav {
+        position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
+        background: #fff;
+        flex-direction: column; align-items: stretch;
+        gap: 0; padding: 1rem 0;
+        overflow-y: auto;
+        transform: translateY(-100vh);
+        transition: transform 0.3s ease;
+        z-index: 99;
+      }
+      .v2-header.menu-open .v2-nav { transform: translateY(0); }
+      .v2-nav > a, .v2-nav .dropdown-trigger {
+        color: var(--black) !important;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+        width: 100%;
+      }
+      .v2-dropdown { width: 100%; }
+      .v2-dropdown-menu {
+        position: static; transform: none;
+        display: none; min-width: 0;
+        grid-template-columns: 1fr; gap: 0;
+        box-shadow: none; padding: 0;
+        background: var(--light-gray); border-radius: 0;
+      }
+      .v2-dropdown:hover .v2-dropdown-menu { display: none; }
+      .v2-dropdown.open .v2-dropdown-menu { display: grid; }
+      .v2-dropdown-menu a {
+        padding: 0.8rem 2.5rem !important;
+        border-bottom: 1px solid var(--border);
+      }
+      .v2-dropdown-region {
+        padding: 0.6rem 2rem 0.4rem;
+        margin: 0; border-bottom: none;
+      }
+    }
+    [data-theme="dark"] .strip-card-title { color: rgba(255,255,255,0.85); }
+    [data-theme="dark"] .recent-card { background: var(--light-gray); border-color: var(--border); }
   </style>
 </head>
 <body>
 
-<header class="v2-header">
+<div class="scroll-line" id="scrollLine"></div>
+
+<!-- v2 header -->
+<header class="v2-header" id="v2Header">
   <div class="v2-header-inner">
-    <a href="./" class="v2-logo">Camino<span>Libre</span></a>
+    <a href="index.html" class="v2-logo">Camino<span>Libre</span></a>
+    <button class="v2-hamburger" id="v2Hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="v2-nav">
-      <a href="./">Inicio</a>
+      <a href="index.html">Inicio</a>
+      <div class="v2-dropdown">
+        <button class="dropdown-trigger">Destinos ▾</button>
+        <div class="v2-dropdown-menu">
+          <div class="v2-dropdown-region">América Latina</div>
+          <a href="?cat=costa-rica"><img class="v2-flag" src="../images/flags/cr.svg" alt=""> Costa Rica</a>
+          <a href="?cat=nicaragua"><img class="v2-flag" src="../images/flags/ni.svg" alt=""> Nicaragua</a>
+          <a href="?cat=mexico"><img class="v2-flag" src="../images/flags/mx.svg" alt=""> México</a>
+          <a href="?cat=panama"><img class="v2-flag" src="../images/flags/pa.svg" alt=""> Panamá</a>
+          <a href="?cat=el-salvador"><img class="v2-flag" src="../images/flags/sv.svg" alt=""> El Salvador</a>
+          <a href="?cat=belize"><img class="v2-flag" src="../images/flags/bz.svg" alt=""> Belice</a>
+          <a href="?cat=chile"><img class="v2-flag" src="../images/flags/cl.svg" alt=""> Chile</a>
+          <div class="v2-dropdown-region">Asia</div>
+          <a href="?cat=taiwan"><img class="v2-flag" src="../images/flags/tw.svg" alt=""> Taiwán</a>
+          <div class="v2-dropdown-region">Japón</div>
+          <a href="?cat=hokkaido"><img class="v2-flag" src="../images/flags/jp.svg" alt=""> Hokkaido</a>
+          <a href="?cat=bike"><span class="v2-flag-emoji">🏍️</span> Moto</a>
+          <a href="?cat=camp"><span class="v2-flag-emoji">⛺</span> Camping</a>
+        </div>
+      </div>
       <a href="stories.html">Artículos</a>
       <a href="profile/">Perfil</a>
-</nav>
+    </nav>
     <div class="v2-lang-switcher" data-current-lang="es">
         <button type="button" class="lang-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Language" title="Change language / 言語 / Idioma"><span class="lang-icon" aria-hidden="true">🌐</span><span class="lang-code">ES</span></button>
         <div class="lang-menu" role="menu">
@@ -76,142 +360,633 @@
           <a href="#" hreflang="es" lang="es" aria-current="page">Español</a>
         </div>
       </div>
-    
   </div>
 </header>
 
+<!-- Page head -->
 <div class="page-head">
   <div class="page-head-sub">Todos los artículos</div>
-  <h1 class="page-head-title">Artículos</h1>
-  <p class="page-head-desc">Crónicas de viaje por Latinoamérica, Hokkaidō y rutas en moto por Japón. Los artículos traducidos aparecerán aquí a medida que se vayan completando. <a href="../stories.html" style="color:var(--accent)">Ver todos los artículos originales en japonés →</a></p>
+  <h1 class="page-head-title">Todo el registro del viaje<span class="title-period">.</span></h1>
+  <p class="page-head-desc">Desde las series por entregas hasta los ensayos sueltos. Filtra por país, región o tema.</p>
 </div>
 
-<div id="storiesGrid" class="stories-grid"></div>
+<!-- Series -->
+<div class="featured-strip">
+  <div class="featured-strip-inner">
+    <div class="featured-strip-label">Series</div>
+    <div class="featured-strip-grid">
+      <a class="strip-card" href="../articles/es/costa-rica-intro.html">
+        <div class="strip-card-num">01</div>
+        <div class="strip-card-tag">Crónicas de Costa Rica</div>
+        <div class="strip-card-title">Todo el registro del tiempo que viví en Costa Rica (9 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/nicaragua-ometepe-1.html">
+        <div class="strip-card-num">02</div>
+        <div class="strip-card-tag">Crónicas de Nicaragua</div>
+        <div class="strip-card-title">Un país de volcanes y revoluciones — de Granada a León (6 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/mexico-zocalo.html">
+        <div class="strip-card-num">03</div>
+        <div class="strip-card-tag">Crónicas de México</div>
+        <div class="strip-card-title">A la capital azteca — caminando por Ciudad de México (4 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/mexico-anthropology.html">
+        <div class="strip-card-num">04</div>
+        <div class="strip-card-tag">Recorrido por México</div>
+        <div class="strip-card-title">Antropología, Guanajuato, Teotihuacán, Palenque — un recorrido por el México antiguo (4 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/chile-1.html">
+        <div class="strip-card-num">05</div>
+        <div class="strip-card-tag">Crónicas de Chile</div>
+        <div class="strip-card-title">Caminando Santiago — mercado artesanal e iglesia colonial blanca (3 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/belize-1.html">
+        <div class="strip-card-num">06</div>
+        <div class="strip-card-tag">Crónicas de Belice</div>
+        <div class="strip-card-title">Al rincón anglófono del Caribe — Cayo Caulker y el Gran Agujero Azul (3 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/el-salvador-ruins.html">
+        <div class="strip-card-num">07</div>
+        <div class="strip-card-tag">Crónicas de El Salvador</div>
+        <div class="strip-card-title">Ruinas, volcanes y escolta policial — dos días en El Salvador (2 partes)</div>
+      </a>
+      <a class="strip-card" href="../articles/es/panama-1.html">
+        <div class="strip-card-num">08</div>
+        <div class="strip-card-tag">Crónicas de Panamá</div>
+        <div class="strip-card-title">El Canal y el casco viejo — caminando por Ciudad de Panamá (3 partes)</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Stories -->
+<div class="section-divider" id="articles">
+  <span class="section-label">Artículos</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-cat="all">Todos</button>
+  <button class="filter-btn" data-cat="costa-rica">Costa Rica</button>
+  <button class="filter-btn" data-cat="nicaragua">Nicaragua</button>
+  <button class="filter-btn" data-cat="mexico">México</button>
+  <button class="filter-btn" data-cat="chile">Chile</button>
+  <button class="filter-btn" data-cat="belize">Belice</button>
+  <button class="filter-btn" data-cat="panama">Panamá</button>
+  <button class="filter-btn" data-cat="el-salvador">El Salvador</button>
+  <button class="filter-btn" data-cat="taiwan">Taiwán</button>
+  <button class="filter-btn" data-cat="bike">Moto</button>
+  <button class="filter-btn" data-cat="hokkaido">Hokkaido</button>
+  <button class="filter-btn" data-cat="camp">Camping</button>
+  <button class="filter-btn" data-cat="other">Otros</button>
+</div>
+
+<div id="category-sections" style="max-width:1200px;margin:0 auto;padding:2rem 2rem 4rem;">
+<!-- BEGIN: category-sections (auto-generated by scripts/build-stories.py) -->
+  <section class="cat-section" data-cat="costa-rica">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Costa Rica</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/costa-rica-intro.html">
+        <div class="recent-card-img"><img src="../images/costa-rica-2025/cr-1.jpg" alt="¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #1</div>
+          <h3 class="recent-card-title">¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente</h3>
+          <p class="recent-card-desc">Costa Rica, un pequeño país de Centroamérica. A pesar de tener una superficie equivalente a las islas japonesas de Kyūshū y Shikoku juntas (51.100 km²), alberga aproximadamente el 5% de las especies del mundo.</p>
+          <time class="recent-card-date" datetime="2018-01-30">Enero de 2018</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/costa-rica-irazu.html">
+        <div class="recent-card-img"><img src="../images/costa-rica-irazu/irazu-crater-view.jpg" alt="Cómo visitar el Volcán Irazú: el día en que no pude ver la laguna del cráter" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #2</div>
+          <h3 class="recent-card-title">Cómo visitar el Volcán Irazú: el día en que no pude ver la laguna del cráter</h3>
+          <p class="recent-card-desc">Un viaje al volcán que aparece en el escudo de Costa Rica. Tras un viaje en bus de dos horas para ver la famosa laguna verde esmeralda, no había nada.</p>
+          <time class="recent-card-date" datetime="2013-11-07">Noviembre de 2013</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/costa-rica-christmas.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_bd4831b3aa4f4502a43029245d5fddc4~mv2_d_2800_2800_s_4_2.jpg" alt="Navidad y Año Nuevo en Costa Rica: tamales, pólvora y el Festival de la Luz" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #3</div>
+          <h3 class="recent-card-title">Navidad y Año Nuevo en Costa Rica: tamales, pólvora y el Festival de la Luz</h3>
+          <p class="recent-card-desc">La temporada navideña en Costa Rica — el desfile del Festival de la Luz, los tamales hechos en familia, las corridas de toros y la pólvora interminable para recibir el año.</p>
+          <time class="recent-card-date" datetime="2018-02-02">Febrero de 2018</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-color-run.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_6a5dbafe9b2a402589c1c87b64e296ba~mv2.png" alt="La Escuela Japonesa de Costa Rica y The Color Run: niños y fiesta en San José" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #4</div>
+          <h3 class="recent-card-title">La Escuela Japonesa de Costa Rica y The Color Run: niños y fiesta en San José</h3>
+          <p class="recent-card-desc">Una visita al día deportivo de la Escuela Japonesa de San José y el Color Run que llenó de color las calles de la capital.</p>
+          <time class="recent-card-date" datetime="2019-02-12">Febrero de 2019</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-semana-santa.html">
+        <div class="recent-card-img"><img src="../images/costa-rica/manuel-antonio-animals.avif" alt="Parque Nacional Manuel Antonio: Costa Rica en Semana Santa" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #5</div>
+          <h3 class="recent-card-title">Parque Nacional Manuel Antonio: Costa Rica en Semana Santa</h3>
+          <p class="recent-card-desc">Un viaje en Semana Santa desde San José al Parque Nacional Manuel Antonio: perezosos, monos y playas llenas de turistas en vacaciones.</p>
+          <time class="recent-card-date" datetime="2019-02-05">Febrero de 2019</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-food.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_ba55d298fd444594b32692749af90ed2~mv2.png" alt="Comida costarricense y centroamericana: gallo pinto, ceviche, rice and beans" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #6</div>
+          <h3 class="recent-card-title">Comida costarricense y centroamericana: gallo pinto, ceviche, rice and beans</h3>
+          <p class="recent-card-desc">Una guía de los platos que probé por Centroamérica — ceviche, gallo pinto, rice and beans — con receta para preparar gallo pinto en casa.</p>
+          <time class="recent-card-date" datetime="2019-02-12">Febrero de 2019</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-work.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_3ddc83f695764babb8d3abf036ffa77e~mv2.jpg" alt="Trabajando como fisioterapeuta en Costa Rica: un paciente que volvió a caminar con una férula casera" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #7</div>
+          <h3 class="recent-card-title">Trabajando como fisioterapeuta en Costa Rica: un paciente que volvió a caminar con una férula casera</h3>
+          <p class="recent-card-desc">Trabajando en una clínica en el sur de Costa Rica, armé una órtesis tobillo-pie con sandalias, almohadillas de béisbol y un poste metálico por unos 8.000 yenes — y un paciente con ictus volvió a caminar con ella.</p>
+          <time class="recent-card-date" datetime="2018-08-09">Agosto de 2018</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-cano-negro.html">
+        <div class="recent-card-img"><img src="../images/costa-rica-cano-negro/monteverde-motmot.jpg" alt="Caño Negro y Monteverde: un viaje de fin de año tras la fauna silvestre" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #8</div>
+          <h3 class="recent-card-title">Caño Negro y Monteverde: un viaje de fin de año tras la fauna silvestre</h3>
+          <p class="recent-card-desc">Un viaje de fin de año del Refugio de Vida Silvestre Caño Negro al Bosque Nuboso de Monteverde — tour en bote, perezosos, momotos, monos cariblancos y un tour nocturno con ranas y serpientes.</p>
+          <time class="recent-card-date" datetime="2014-12-25">Diciembre de 2014</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-aribada.html">
+        <div class="recent-card-img"><img src="../images/costa-rica-aribada/aribada-beach.jpg" alt="A Ostional por la Arribada: el día en que llegué tarde al desove masivo de las loras" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <div class="recent-card-series">Crónicas de Costa Rica #9</div>
+          <h3 class="recent-card-title">A Ostional por la Arribada: el día en que llegué tarde al desove masivo de las loras</h3>
+          <p class="recent-card-desc">Un viaje en bus de 14 horas por Costa Rica para ver miles de tortugas loras desovando — y llegar una semana tarde.</p>
+          <time class="recent-card-date" datetime="2015-09-01">Septiembre de 2015</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/costa-rica-2025.html">
+        <div class="recent-card-img"><img src="../images/costa-rica-2025/cr-5.jpg" alt="Volviendo a Costa Rica después de 10 años: una San José cambiada y la misma Pilsen" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Costa Rica</div>
+          <h3 class="recent-card-title">Volviendo a Costa Rica después de 10 años: una San José cambiada y la misma Pilsen</h3>
+          <p class="recent-card-desc">Un viaje a Costa Rica en 2025, diez años después de haber vivido allá como voluntario JICA. San José había cambiado; la Pilsen y la Imperial, no.</p>
+          <time class="recent-card-date" datetime="2025-01-15">Enero de 2025</time>
+        </div>
+      </a>
+    </div>
+    <div class="cat-section-more-wrap" data-extra="7"><button class="filter-btn cat-section-more-btn">Ver más (7)</button></div>
+  </section>
+  <section class="cat-section" data-cat="nicaragua">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Nicaragua</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/nicaragua-ometepe-1.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_019bd4603cf949559dd74edbb0af66f0~mv2.jpg" alt="Cruzando la frontera de Costa Rica a Nicaragua: en TICA BUS a la Isla de Ometepe" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #1</div>
+          <h3 class="recent-card-title">Cruzando la frontera de Costa Rica a Nicaragua: en TICA BUS a la Isla de Ometepe</h3>
+          <p class="recent-card-desc">Mi primer paso por una frontera centroamericana: TICA BUS de Costa Rica a Nicaragua y, desde San Jorge, ferry a la volcánica Isla de Ometepe.</p>
+          <time class="recent-card-date" datetime="2016-11-06">Noviembre de 2016</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/nicaragua-ometepe-2.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_ef3f551a51dd4c5aa071e586251d053c~mv2.jpg" alt="Un día por la Isla de Ometepe: Ojo de Agua y los lugares de la isla volcánica" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #2</div>
+          <h3 class="recent-card-title">Un día por la Isla de Ometepe: Ojo de Agua y los lugares de la isla volcánica</h3>
+          <p class="recent-card-desc">Llegué a la Isla de Ometepe la tarde del sábado. Como el domingo no hay buses, contraté un guía por unos US$40 — caro a primera vista, pero mucho más eficiente que cruzar la isla solo en mototaxi.</p>
+          <time class="recent-card-date" datetime="2016-11-08">Noviembre de 2016</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/nicaragua-granada.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_fb403e7af29a471c8b1254216f87e047~mv2_d_2048_1366_s_2.jpg" alt="Caminando por Granada: la Nicaragua colonial y la tienda de cuero Soy Nica" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #3</div>
+          <h3 class="recent-card-title">Caminando por Granada: la Nicaragua colonial y la tienda de cuero Soy Nica</h3>
+          <p class="recent-card-desc">Salgo de la Isla de Ometepe en el ferry de las 6 a.m. y voy hacia Granada, una de las ciudades coloniales más antiguas de Centroamérica. Catedrales, el Convento San Francisco, vigorón, Toña, y la tienda de cuero que por sí sola justifica el viaje a Nicaragua.</p>
+          <time class="recent-card-date" datetime="2016-11-16">Noviembre de 2016</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/nicaragua-managua.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_f1a030e4b47244219104f6bf529c572b~mv2.jpg" alt="Managua y Masaya: mercado de artesanías y reencuentro con amigos en la capital de Nicaragua" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #4</div>
+          <h3 class="recent-card-title">Managua y Masaya: mercado de artesanías y reencuentro con amigos en la capital de Nicaragua</h3>
+          <p class="recent-card-desc">Dejé Granada y, camino a la capital Managua, paré en el pueblo artesanal de Masaya. Hamacas y cerámica en el mercado — y una cena japonesa con viejos amigos.</p>
+          <time class="recent-card-date" datetime="2018-06-13">Junio de 2018</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/nicaragua-leon.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_8875da9d3c0a4cf5a82475a6fc11b57a~mv2.jpg" alt="Caminando por León: la memoria sandinista y la ciudad de Rubén Darío" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #5</div>
+          <h3 class="recent-card-title">Caminando por León: la memoria sandinista y la ciudad de Rubén Darío</h3>
+          <p class="recent-card-desc">Un bus de larga distancia desde Managua hasta León, en el norte de Nicaragua. León significa, claro, lo que significa, y un león de piedra está frente a la catedral. Memoria sandinista, la casa de Rubén Darío, la Galería de Héroes y Mártires, y un almuerzo de langosta.</p>
+          <time class="recent-card-date" datetime="2018-06-17">Junio de 2018</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/nicaragua-flor-de-cana.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_2abdad5c98df48c09ea644159fd8cd96~mv2_d_4608_3072_s_4_2.jpg" alt="Visita a la destilería Flor de Caña: probando el ron de Nicaragua" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Nicaragua</div>
+          <div class="recent-card-series">Crónicas de Nicaragua #6</div>
+          <h3 class="recent-card-title">Visita a la destilería Flor de Caña: probando el ron de Nicaragua</h3>
+          <p class="recent-card-desc">El día antes de salir de León, tomé un bus solo hasta Chichigalpa — el pueblo donde está Flor de Caña, uno de los rones emblemáticos de Centroamérica. Una destilería fundada en 1890, barricas de roble, y una cata de 20 años que me hizo cambiar de opinión sobre el ron.</p>
+          <time class="recent-card-date" datetime="2016-09-07">Septiembre de 2016</time>
+        </div>
+      </a>
+    </div>
+    <div class="cat-section-more-wrap" data-extra="3"><button class="filter-btn cat-section-more-btn">Ver más (3)</button></div>
+  </section>
+  <section class="cat-section" data-cat="mexico">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">México</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/mexico-zocalo.html">
+        <div class="recent-card-img"><img src="../images/mexico/zocalo-catedral.jpg" alt="Centro Histórico de Ciudad de México: caminando por el Zócalo, el Templo Mayor y la Catedral" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Crónicas de México #1</div>
+          <h3 class="recent-card-title">Centro Histórico de Ciudad de México: caminando por el Zócalo, el Templo Mayor y la Catedral</h3>
+          <p class="recent-card-desc">Un recorrido por el Centro Histórico de Ciudad de México: el Zócalo, la Catedral Metropolitana sobre cimientos aztecas, las ruinas del Templo Mayor y el art nouveau del Palacio Postal.</p>
+          <time class="recent-card-date" datetime="2026-02-22">Febrero de 2026</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/mexico-guadalupe.html">
+        <div class="recent-card-img"><img src="../images/mexico/guadalupe-aerial.jpg" alt="La Basílica de Guadalupe: el Cerro del Tepeyac y el milagro de la tilma" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Crónicas de México #2</div>
+          <h3 class="recent-card-title">La Basílica de Guadalupe: el Cerro del Tepeyac y el milagro de la tilma</h3>
+          <p class="recent-card-desc">La Basílica de Nuestra Señora de Guadalupe recibe a decenas de millones de peregrinos al año y es uno de los santuarios católicos más visitados del mundo. Después de dos años en Costa Rica me había quedado con curiosidad por la mezcla de fe católica e indígena en Latinoamérica — este lugar tenía que verlo.</p>
+          <time class="recent-card-date" datetime="2026-02-21">Febrero de 2026</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/mexico-walk.html">
+        <div class="recent-card-img"><img src="../images/mexico/revolucion-monument.jpg" alt="Caminando por Ciudad de México: Monumento a la Revolución, desayuno local y arte callejero" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Crónicas de México #3</div>
+          <h3 class="recent-card-title">Caminando por Ciudad de México: Monumento a la Revolución, desayuno local y arte callejero</h3>
+          <p class="recent-card-desc">Ciudad de México es demasiado grande para vivirla solo saltando de un atractivo turístico a otro. En las calles laterales hay puestos de desayuno, muros cubiertos de grafiti y vendedores bajo lonas — una cara de la ciudad que las guías no muestran.</p>
+          <time class="recent-card-date" datetime="2026-02-21">Febrero de 2026</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/mexico-walmart.html">
+        <div class="recent-card-img"><img src="../images/mexico/walmart-salsa.jpg" alt="Souvenirs de México: Walmart, el lugar inesperado" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Crónicas de México #4</div>
+          <h3 class="recent-card-title">Souvenirs de México: Walmart, el lugar inesperado</h3>
+          <p class="recent-card-desc">Las tiendas de souvenirs son caras y de calidad irregular. La opción que sorprende es el supermercado local. En la Ciudad de México hay Walmart por todas partes — perfecto para una compra final de regalos antes de volar.</p>
+          <time class="recent-card-date" datetime="2026-02-22">Febrero de 2026</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/mexico-anthropology.html">
+        <div class="recent-card-img"><img src="../images/mexico/anthropology-aztec-hall.jpg" alt="El México Antiguo en el Museo Nacional de Antropología: Piedra del Sol, Coatlicue y Cabezas Olmecas" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Recorrido por México #1</div>
+          <h3 class="recent-card-title">El México Antiguo en el Museo Nacional de Antropología: Piedra del Sol, Coatlicue y Cabezas Olmecas</h3>
+          <p class="recent-card-desc">Mi primer viaje a México. En la capital, a 2.240 m de altitud, lo primero que visité fue el Museo Nacional de Antropología: la Piedra del Sol, Coatlicue y las cabezas colosales olmecas, todo a un cristal de distancia.</p>
+          <time class="recent-card-date" datetime="2015-06-20">Junio de 2015</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/mexico-guanajuato.html">
+        <div class="recent-card-img"><img src="../images/mexico/guanajuato-night.jpg" alt="Guanajuato, &amp;quot;la Ciudad Joyero&amp;quot;: el Pípila de Noche, el Callejón del Beso y el Museo de las Momias" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Recorrido por México #2</div>
+          <h3 class="recent-card-title">Guanajuato, &amp;quot;la Ciudad Joyero&amp;quot;: el Pípila de Noche, el Callejón del Beso y el Museo de las Momias</h3>
+          <p class="recent-card-desc">Guanajuato, ciudad Patrimonio de la Humanidad a 2.000 m, donde casas multicolores trepan por las laderas como un joyero. La vista nocturna desde el Pípila, la leyenda del Callejón del Beso y la sorprendente historia detrás del Museo de las Momias.</p>
+          <time class="recent-card-date" datetime="2015-06-21">Junio de 2015</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/mexico-teotihuacan.html">
+        <div class="recent-card-img"><img src="../images/mexico/teotihuacan-sun-pyramid.jpg" alt="Caminando por las Ruinas de Teotihuacán: Pirámide del Sol, Pirámide de la Luna y Templo de Quetzalcóatl" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Recorrido por México #3</div>
+          <h3 class="recent-card-title">Caminando por las Ruinas de Teotihuacán: Pirámide del Sol, Pirámide de la Luna y Templo de Quetzalcóatl</h3>
+          <p class="recent-card-desc">A unos 50 km al noreste de la Ciudad de México, la antigua ciudad de Teotihuacán floreció desde antes de nuestra era. La Pirámide del Sol, la Pirámide de la Luna, la Calzada de los Muertos y el Templo de Quetzalcóatl — un día caminando una de las ciudades ceremoniales más grandes de Mesoamérica.</p>
+          <time class="recent-card-date" datetime="2015-06-22">Junio de 2015</time>
+        </div>
+      </a>
+      <a class="recent-card recent-card--collapsed" href="../articles/es/mexico-palenque.html">
+        <div class="recent-card-img"><img src="../images/mexico/palenque-inscriptions-front.jpg" alt="Palenque, la ciudad maya en la selva: Templo de las Inscripciones, tumba de Pakal y el Grupo de las Cruces" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">México</div>
+          <div class="recent-card-series">Recorrido por México #4</div>
+          <h3 class="recent-card-title">Palenque, la ciudad maya en la selva: Templo de las Inscripciones, tumba de Pakal y el Grupo de las Cruces</h3>
+          <p class="recent-card-desc">Vuelo nacional de la Ciudad de México a Villahermosa, y de ahí por carretera a Palenque. El Templo de las Inscripciones — que guarda una de las tumbas reales mayas más grandes —, El Palacio con su torre de observación y el Grupo de las Cruces. Caminando por Palenque, donde la selva está a medio comerse las ruinas.</p>
+          <time class="recent-card-date" datetime="2015-06-25">Junio de 2015</time>
+        </div>
+      </a>
+    </div>
+    <div class="cat-section-more-wrap" data-extra="5"><button class="filter-btn cat-section-more-btn">Ver más (5)</button></div>
+  </section>
+  <section class="cat-section" data-cat="chile">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Chile</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/chile-1.html">
+        <div class="recent-card-img"><img src="../images/chile/20251012_143804099_iOS.jpg" alt="Caminando por Santiago: la Corte Suprema, museos y Centro Histórico de Chile" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Chile</div>
+          <div class="recent-card-series">Crónicas de Chile #1</div>
+          <h3 class="recent-card-title">Caminando por Santiago: la Corte Suprema, museos y Centro Histórico de Chile</h3>
+          <p class="recent-card-desc">Mi primera vez en Sudamérica. Caminando por Santiago: el Palacio de los Tribunales, arquitectura neoclásica y arte contemporáneo bajo ese cielo andino increíblemente azul.</p>
+          <time class="recent-card-date" datetime="2025-10-12">Octubre de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/chile-2.html">
+        <div class="recent-card-img"><img src="../images/chile/20251014_205137977_iOS.jpg" alt="Mercado Artesanal Los Dominicos: artesanías y la iglesia blanca de Santiago" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Chile</div>
+          <div class="recent-card-series">Crónicas de Chile #2</div>
+          <h3 class="recent-card-title">Mercado Artesanal Los Dominicos: artesanías y la iglesia blanca de Santiago</h3>
+          <p class="recent-card-desc">Visita al Centro Artesanal Los Dominicos, en el barrio de Las Condes en Santiago. La obra de los artesanos locales y la iglesia colonial blanca al lado hicieron una tarde hermosa.</p>
+          <time class="recent-card-date" datetime="2025-10-14">Octubre de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/chile-3.html">
+        <div class="recent-card-img"><img src="../images/chile/20251016_170946020_iOS.jpg" alt="Último día en Santiago: Palta Reina y caminatas pre-navideñas" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Chile</div>
+          <div class="recent-card-series">Crónicas de Chile #3</div>
+          <h3 class="recent-card-title">Último día en Santiago: Palta Reina y caminatas pre-navideñas</h3>
+          <p class="recent-card-desc">Último día en Chile. Un almuerzo de Palta Reina — palta rellena de pollo — y un paseo por un mall ya decorado para Navidad.</p>
+          <time class="recent-card-date" datetime="2025-10-16">Octubre de 2025</time>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="cat-section" data-cat="belize">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Belice</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/belize-1.html">
+        <div class="recent-card-img"><img src="../images/belize/20251018_213429265_iOS.jpg" alt="Llegando a Belize City: amanecer caribeño y un paseo por supermercados asiáticos" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Belice</div>
+          <div class="recent-card-series">Crónicas de Belice #1</div>
+          <h3 class="recent-card-title">Llegando a Belize City: amanecer caribeño y un paseo por supermercados asiáticos</h3>
+          <p class="recent-card-desc">Tras el cielo seco de Chile, aterrizar en Belice: el Caribe al amanecer, inglés como idioma oficial y comida japonesa en supermercados chinos.</p>
+          <time class="recent-card-date" datetime="2025-10-18">Octubre de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/belize-2.html">
+        <div class="recent-card-img"><img src="../images/belize/20251019_213939041_iOS.jpg" alt="Cayo Caulker y vuelo panorámico al Gran Agujero Azul: Belice desde el aire" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Belice</div>
+          <div class="recent-card-series">Crónicas de Belice #2</div>
+          <h3 class="recent-card-title">Cayo Caulker y vuelo panorámico al Gran Agujero Azul: Belice desde el aire</h3>
+          <p class="recent-card-desc">Un día en Cayo Caulker, la isla </p>
+          <time class="recent-card-date" datetime="2025-10-19">Octubre de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/belize-3.html">
+        <div class="recent-card-img"><img src="../images/belize/20251020_144751630_iOS.jpg" alt="Caminando por Belize City: el Swing Bridge y un último día" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Belice</div>
+          <div class="recent-card-series">Crónicas de Belice #3</div>
+          <h3 class="recent-card-title">Caminando por Belize City: el Swing Bridge y un último día</h3>
+          <p class="recent-card-desc">Un último día en Belize City, frente al histórico Swing Bridge y reflexionando sobre un país que mezcla el Caribe con Centroamérica.</p>
+          <time class="recent-card-date" datetime="2025-10-20">Octubre de 2025</time>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="cat-section" data-cat="panama">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Panamá</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/panama-1.html">
+        <div class="recent-card-img"><img src="../images/panama/pv-1.jpg" alt="Visitando Panamá Viejo: ruinas de 500 años e historia colonial española" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Panamá</div>
+          <div class="recent-card-series">Crónicas de Panamá #1</div>
+          <h3 class="recent-card-title">Visitando Panamá Viejo: ruinas de 500 años e historia colonial española</h3>
+          <p class="recent-card-desc">Panamá Viejo, la primera Ciudad de Panamá, fundada en 1519 por colonos españoles y quemada en 1671. Sus ruinas de piedra hoy se alzan frente al horizonte moderno de la ciudad.</p>
+          <time class="recent-card-date" datetime="2025-01-10">Enero de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/panama.html">
+        <div class="recent-card-img"><img src="../images/panama/panama-1.jpg" alt="Caminando por el Casco Viejo y el Mercado de Mariscos: el casco antiguo Patrimonio de la Humanidad y el mercado de pescado" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Panamá</div>
+          <div class="recent-card-series">Crónicas de Panamá #2</div>
+          <h3 class="recent-card-title">Caminando por el Casco Viejo y el Mercado de Mariscos: el casco antiguo Patrimonio de la Humanidad y el mercado de pescado</h3>
+          <p class="recent-card-desc">Ciudad de Panamá tras Panamá Viejo: el Mercado de Mariscos (construido con ayuda japonesa), el Casco Viejo (UNESCO) y el Museo del Canal.</p>
+          <time class="recent-card-date" datetime="2025-01-11">Enero de 2025</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/panama-3.html">
+        <div class="recent-card-img"><img src="../images/panama/canal-1.jpg" alt="Visitando las esclusas de Miraflores: el momento en que un barco enorme atraviesa el Canal de Panamá" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Panamá</div>
+          <div class="recent-card-series">Crónicas de Panamá #3</div>
+          <h3 class="recent-card-title">Visitando las esclusas de Miraflores: el momento en que un barco enorme atraviesa el Canal de Panamá</h3>
+          <p class="recent-card-desc">Una visita a las esclusas de Miraflores, en el lado pacífico del Canal de Panamá, viendo cómo el carguero JIUYANG BLOSSOM se ajusta entre los muros.</p>
+          <time class="recent-card-date" datetime="2025-01-12">Enero de 2025</time>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="cat-section" data-cat="el-salvador">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">El Salvador</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/el-salvador-ruins.html">
+        <div class="recent-card-img"><img src="../images/el-salvador-ruins/ruins-1.jpg" alt="Joya de Cerén y Tazumal: el Patrimonio de la Humanidad y las ruinas mayas de El Salvador" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">El Salvador</div>
+          <div class="recent-card-series">Crónicas de El Salvador #1</div>
+          <h3 class="recent-card-title">Joya de Cerén y Tazumal: el Patrimonio de la Humanidad y las ruinas mayas de El Salvador</h3>
+          <p class="recent-card-desc">Visita a un amigo voluntario JICA en El Salvador: el sitio UNESCO de Joya de Cerén (la </p>
+          <time class="recent-card-date" datetime="2014-08-31">Agosto de 2014</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/el-salvador-volcan.html">
+        <div class="recent-card-img"><img src="../images/el-salvador-volcan/volcan-1.jpg" alt="Subiendo al Volcán Santa Ana: una caminata a la laguna del cráter con escolta policial" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">El Salvador</div>
+          <div class="recent-card-series">Crónicas de El Salvador #2</div>
+          <h3 class="recent-card-title">Subiendo al Volcán Santa Ana: una caminata a la laguna del cráter con escolta policial</h3>
+          <p class="recent-card-desc">Subir el Volcán Santa Ana — la montaña más alta de El Salvador — para ver su laguna verde esmeralda, con escolta policial en el sendero y el Volcán Izalco al fondo.</p>
+          <time class="recent-card-date" datetime="2014-09-02">Septiembre de 2014</time>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="cat-section" data-cat="taiwan">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Taiwán</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/taiwan.html">
+        <div class="recent-card-img"><img src="../images/taiwan/z50_0939_dxo.jpg" alt="Crónicas de Taiwán: el atardecer en Keelung y soltar farolillos en Shifen, mejor de lo que esperaba" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Taiwán</div>
+          <h3 class="recent-card-title">Crónicas de Taiwán: el atardecer en Keelung y soltar farolillos en Shifen, mejor de lo que esperaba</h3>
+          <p class="recent-card-desc">Subestimaba un poco a Taiwán — cerca, fácil, esa actitud. Llegué y me ganó por completo. La comida es buena, la gente es amable. No solo mejor de lo esperado: el viaje quedó fuera de lo que había imaginado.</p>
+          <time class="recent-card-date" datetime="2025-09-01">Septiembre de 2025</time>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="cat-section" data-cat="other">
+    <div class="cat-section-heading">
+      <span class="cat-section-label">Otros</span>
+      <div class="cat-section-rule"></div>
+    </div>
+    <div class="cat-grid">
+      <a class="recent-card" href="../articles/es/long-haul-flight-tips.html">
+        <div class="recent-card-img"><img src="../images/flight/jal-gate.jpg" alt="Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Viajes internacionales</div>
+          <div class="recent-card-series">Notas de Equipo #2</div>
+          <h3 class="recent-card-title">Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda</h3>
+          <p class="recent-card-desc">Cosas pequeñas para llevar a bordo que hacen un vuelo de larga distancia en económica notablemente menos pesado. Almohada cervical inflable (Tabine), audífonos con cable (final E3000) con adaptador de 2 pines, AirFly Pro, toallitas con alcohol para los lentes de contacto, zapatos 2 en 1 con talón pisable (KEEN HOODMOC HS), y un set de dos maletas Samsonite + LOJEL — basado en experiencia real.</p>
+          <time class="recent-card-date" datetime="2026-04-29">Abril de 2026</time>
+        </div>
+      </a>
+      <a class="recent-card" href="../articles/es/spanish-dictionary.html">
+        <div class="recent-card-img"><img src="https://static.wixstatic.com/media/949ec9_316ae78b6611491fad1cb3d780461968~mv2.jpg" alt="Cómo elegir un diccionario de español: papel, electrónico o app, visto desde Centroamérica" loading="lazy"></div>
+        <div class="recent-card-body">
+          <div class="recent-card-tag">Español</div>
+          <h3 class="recent-card-title">Cómo elegir un diccionario de español: papel, electrónico o app, visto desde Centroamérica</h3>
+          <p class="recent-card-desc">Cuando se aprende español, elegir bien el diccionario importa más de lo que parece. Después de usarlos a diario viviendo en Centroamérica, estos son los tres puntos a sopesar.</p>
+          <time class="recent-card-date" datetime="2016-10-12">Octubre de 2016</time>
+        </div>
+      </a>
+    </div>
+  </section>
+<!-- END: category-sections -->
+</div>
 
 <footer>
-  <div class="footer-nav" style="margin-bottom:1rem;">
-    <a href="./">Inicio</a>
-    <a href="stories.html">Artículos</a>
-    <a href="profile/">Perfil</a>
-    <a href="privacy.html">Política de privacidad</a>
+  <div class="footer-inner">
+    <div class="footer-logo">Camino<span>Libre</span></div>
+    <div class="footer-nav">
+      <a href="index.html">Inicio</a>
+      <a href="stories.html">Artículos</a>
+      <a href="profile/">Perfil</a>
+      <a href="privacy.html">Política de privacidad</a>
+    </div>
+    <div class="footer-copy">© 2026 Camino Libre. Todos los derechos reservados.</div>
   </div>
-  © 2026 Camino Libre. All rights reserved.
 </footer>
 
 <script src="../js/article.js?v=20260430c"></script>
 <script>
-  var TRANSLATED_ES = [
-    'costa-rica-intro',
-    'costa-rica-irazu',
-    'costa-rica-christmas',
-    'costa-rica-color-run',
-    'costa-rica-semana-santa',
-    'costa-rica-food',
-    'costa-rica-work',
-    'costa-rica-cano-negro',
-    'costa-rica-aribada',
-    'costa-rica-2025',
-    'mexico-zocalo',
-    'mexico-anthropology',
-    'mexico-guanajuato',
-    'mexico-teotihuacan',
-    'mexico-walk',
-    'mexico-walmart',
-    'mexico-guadalupe',
-    'mexico-palenque',
-    'panama-1',
-    'panama',
-    'panama-3',
-    'belize-1',
-    'belize-2',
-    'belize-3',
-    'nicaragua-ometepe-1',
-    'nicaragua-ometepe-2',
-    'nicaragua-granada',
-    'nicaragua-managua',
-    'nicaragua-leon',
-    'nicaragua-flor-de-cana',
-    'chile-1',
-    'chile-2',
-    'chile-3',
-    'el-salvador-ruins',
-    'el-salvador-volcan',
-    'taiwan',
-    'long-haul-flight-tips',
-    'spanish-dictionary'
-  ];
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const max = document.body.scrollHeight - window.innerHeight;
+    document.getElementById('scrollLine').style.width = (scrolled / max * 100) + '%';
+  });
 
-  var TITLE_OVERRIDES_ES = {
-    'costa-rica-intro': '¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente — Crónicas de Costa Rica #1',
-    'costa-rica-irazu': 'Cómo visitar el Volcán Irazú: el día en que no pude ver la laguna del cráter — Crónicas de Costa Rica #2',
-    'costa-rica-christmas': 'Navidad y Año Nuevo en Costa Rica: tamales, pólvora y el Festival de la Luz — Crónicas de Costa Rica #3',
-    'costa-rica-color-run': 'La Escuela Japonesa de Costa Rica y The Color Run — Crónicas de Costa Rica #4',
-    'costa-rica-semana-santa': 'Parque Nacional Manuel Antonio: Costa Rica en Semana Santa — Crónicas de Costa Rica #5',
-    'costa-rica-food': 'Comida costarricense y centroamericana: gallo pinto, ceviche, rice and beans — Crónicas de Costa Rica #6',
-    'costa-rica-work': 'Trabajando como fisioterapeuta en Costa Rica: un paciente que volvió a caminar con una férula casera — Crónicas de Costa Rica #7',
-    'costa-rica-cano-negro': 'Caño Negro y Monteverde: un viaje de fin de año tras la fauna silvestre — Crónicas de Costa Rica #8',
-    'costa-rica-aribada': 'A Ostional por la Arribada: el día en que llegué tarde al desove masivo de las loras — Crónicas de Costa Rica #9',
-    'costa-rica-2025': 'Volviendo a Costa Rica después de 10 años: una San José cambiada y la misma Pilsen',
-    'mexico-zocalo': 'Centro Histórico de Ciudad de México: caminando por el Zócalo, el Templo Mayor y la Catedral — Crónicas de México #1',
-    'mexico-anthropology': 'El México Antiguo en el Museo Nacional de Antropología: Piedra del Sol, Coatlicue y Cabezas Olmecas — Recorrido por México #1',
-    'mexico-guanajuato': 'Guanajuato, "la Ciudad Joyero": el Pípila de Noche, el Callejón del Beso y el Museo de las Momias — Recorrido por México #2',
-    'mexico-teotihuacan': 'Caminando por las Ruinas de Teotihuacán: Pirámide del Sol, Pirámide de la Luna y Templo de Quetzalcóatl — Recorrido por México #3',
-    'mexico-walk': 'Caminando por Ciudad de México: Monumento a la Revolución, desayuno local y arte callejero — Crónicas de México #3',
-    'mexico-walmart': 'Souvenirs de México: Walmart, el lugar inesperado — Salsas, café y chocolate — Crónicas de México #4',
-    'mexico-guadalupe': 'La Basílica de Guadalupe: el Cerro del Tepeyac y el milagro de la tilma — Crónicas de México #2',
-    'mexico-palenque': 'Palenque, la ciudad maya en la selva: Templo de las Inscripciones, tumba de Pakal y el Grupo de las Cruces — Recorrido por México #4',
-    'panama-1': 'Visitando Panamá Viejo: ruinas de 500 años e historia colonial española — Crónicas de Panamá #1',
-    'panama': 'Caminando por el Casco Viejo y el Mercado de Mariscos — Crónicas de Panamá #2',
-    'panama-3': 'Visitando las esclusas de Miraflores: el momento en que un barco enorme atraviesa el Canal de Panamá — Crónicas de Panamá #3',
-    'belize-1': 'Llegando a Belize City: amanecer caribeño y un paseo por supermercados asiáticos — Crónicas de Belice #1',
-    'belize-2': 'Cayo Caulker y vuelo panorámico al Gran Agujero Azul: Belice desde el aire — Crónicas de Belice #2',
-    'belize-3': 'Caminando por Belize City: el Swing Bridge y un último día — Crónicas de Belice #3',
-    'nicaragua-ometepe-1': 'Cruzando la frontera de Costa Rica a Nicaragua: en TICA BUS a la Isla de Ometepe — Crónicas de Nicaragua #1',
-    'nicaragua-ometepe-2': 'Un día por la Isla de Ometepe: Ojo de Agua y los lugares de la isla volcánica — Crónicas de Nicaragua #2',
-    'nicaragua-granada': 'Caminando por Granada: la Nicaragua colonial y la tienda de cuero Soy Nica — Crónicas de Nicaragua #3',
-    'nicaragua-managua': 'Managua y Masaya: mercado de artesanías y reencuentro con amigos en la capital de Nicaragua — Crónicas de Nicaragua #4',
-    'nicaragua-leon': 'Caminando por León: la memoria sandinista y la ciudad de Rubén Darío — Crónicas de Nicaragua #5',
-    'nicaragua-flor-de-cana': 'Visita a la destilería Flor de Caña: probando el ron de Nicaragua — Crónicas de Nicaragua #6',
-    'chile-1': 'Caminando por Santiago: la Corte Suprema, museos y Centro Histórico de Chile — Crónicas de Chile #1',
-    'chile-2': 'Mercado Artesanal Los Dominicos: artesanías y la iglesia blanca de Santiago — Crónicas de Chile #2',
-    'chile-3': 'Último día en Santiago: Palta Reina y caminatas pre-navideñas — Crónicas de Chile #3',
-    'el-salvador-ruins': 'Joya de Cerén y Tazumal: el Patrimonio de la Humanidad y las ruinas mayas de El Salvador — Crónicas de El Salvador #1',
-    'el-salvador-volcan': 'Subiendo al Volcán Santa Ana: una caminata a la laguna del cráter con escolta policial — Crónicas de El Salvador #2',
-    'taiwan': 'Crónicas de Taiwán: el atardecer en Keelung y soltar farolillos en Shifen, mejor de lo que esperaba',
-    'long-haul-flight-tips': 'Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda — Notas de Equipo #2',
-    'spanish-dictionary': 'Cómo elegir un diccionario de español: papel, electrónico o app, visto desde Centroamérica'
-  };
+  // ハンバーガー・ドロップダウンは js/article.js の initV2Header() が処理
+</script>
+<script>
+// 静的レンダリング済みカードに対するフィルタ＋「もっと見る」制御。
+// JS無効でも全カードはHTMLとして出力済み（recent-card--collapsed クラス付きのカードも含む）。
+(function () {
+  var sections = {};
+  document.querySelectorAll('.cat-section').forEach(function (sec) {
+    var key = sec.dataset.cat;
+    var collapsedCards = sec.querySelectorAll('.recent-card--collapsed');
+    var moreWrap = sec.querySelector('.cat-section-more-wrap');
+    var moreBtn = sec.querySelector('.cat-section-more-btn');
 
-  if (typeof ARTICLES !== 'undefined') {
-    var grid = document.getElementById('storiesGrid');
-    var available = ARTICLES.filter(function(a){
-      var slug = a.file.replace('.html', '');
-      return TRANSLATED_ES.indexOf(slug) !== -1;
-    });
-    if (available.length === 0) {
-      grid.outerHTML = '<div class="stories-empty">Las traducciones al español se están agregando poco a poco. <a href="../stories.html">Ver artículos originales en japonés →</a></div>';
-    } else {
-      available.forEach(function(a){
-        var slug = a.file.replace('.html', '');
-        var title = TITLE_OVERRIDES_ES[slug] || a.title;
-        var img = a.img;
-        if (img.indexOf('http') !== 0 && img.indexOf('../') !== 0) img = '../' + img;
-        if (img.indexOf('../images/') === 0) img = '../' + img.substring(3);
-        var card = document.createElement('a');
-        card.className = 'story-card';
-        card.href = '../articles/es/' + a.file;
-        card.innerHTML =
-          '<div class="story-card-img" style="background-image:url(\'' + img + '\')"></div>' +
-          '<div class="story-card-body">' +
-            '<div class="story-card-tag">' + (a.tag || '') + '</div>' +
-            '<h3 class="story-card-title">' + title + '</h3>' +
-            '<div class="story-card-date">' + (a.date || '') + '</div>' +
-          '</div>';
-        grid.appendChild(card);
+    // JS有効時のみ4件目以降を初期非表示にする
+    collapsedCards.forEach(function (c) { c.style.display = 'none'; });
+
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function () {
+        collapsedCards.forEach(function (c) { c.style.display = ''; });
+        if (moreWrap) moreWrap.style.display = 'none';
       });
     }
-  }
-</script>
 
+    sections[key] = {
+      sec: sec,
+      collapsed: collapsedCards,
+      moreWrap: moreWrap,
+      total: sec.querySelectorAll('.recent-card').length
+    };
+  });
+
+  var filterBtns = document.querySelectorAll('.filter-btn[data-cat]');
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var selected = btn.dataset.cat;
+
+      Object.keys(sections).forEach(function (key) {
+        var s = sections[key];
+        if (selected === 'all') {
+          // 全カテゴリ表示・各セクション3件まで
+          s.sec.style.display = '';
+          s.collapsed.forEach(function (c) { c.style.display = 'none'; });
+          if (s.moreWrap && s.total > 3) s.moreWrap.style.display = '';
+        } else if (selected === key) {
+          // 選択カテゴリのみ全件展開
+          s.sec.style.display = '';
+          s.collapsed.forEach(function (c) { c.style.display = ''; });
+          if (s.moreWrap) s.moreWrap.style.display = 'none';
+        } else {
+          s.sec.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // URLパラメータ ?cat= でフィルターを初期化
+  var initCat = new URLSearchParams(location.search).get('cat');
+  if (initCat) {
+    var initBtn = document.querySelector('.filter-btn[data-cat="' + initCat + '"]');
+    if (initBtn) {
+      initBtn.click();
+      var articlesSection = document.getElementById('articles');
+      if (articlesSection) articlesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+})();
+</script>
 </body>
 </html>
