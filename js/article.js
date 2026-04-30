@@ -112,6 +112,7 @@
         "mexico-guanajuato.html": "Guanajuato, the &quot;Jewel Box City&quot;: Pípila at Night, the Alley of the Kiss, and the Mummy Museum",
         "mexico-teotihuacan.html": "Walking the Teotihuacán Ruins: Pyramid of the Sun, Pyramid of the Moon, and Temple of Quetzalcóatl",
         "mexico-palenque.html": "Palenque, the Maya City in the Jungle: Temple of the Inscriptions, Pakal's Tomb, and the Cross Group",
+        "camp-mori-makiba.html": "Mori-no-Makiba Auto Campground Review: A Winter Solo Camp, Pricing, and Atmosphere",
         "atsukan.html": "Hot Sake at Home: Manjukagami F60 and Hakkaisan Yukimuro 3-Year",
         "power-beam.html": "Fitting a Power Beam to the SR400: Vibration Reduction on Long-Distance Touring",
         "spanish-dictionary.html": "Choosing a Spanish Dictionary: Paper, Electronic, and App, Picked by Someone Who Lived in Central America",
@@ -132,6 +133,8 @@
         "noto-touring.html": "Touring the Noto Peninsula: Sōji-ji Soin Temple and Sashimi with Gold Leaf",
         "irako.html": "Cape Irago, Solo: A Year-End Coast Walk and a Lot of Wind in Aichi",
         "chiba-chibanians.html": "Visiting the Chibanian Stratotype: A Chiba Touring Day with a Wild Boar and a Bike Warning Light",
+        "toro-daishi.html": "The Tōrōzaka Daishi Cut-Through Tunnel: Returning to Chiba's Photogenic Spot on the XSR900",
+        "motorcycle-show-2026.html": "Tokyo Motorcycle Show 2026: Bikes and Side Bags That Caught My Eye",
         "long-haul-flight-tips.html": "Surviving Long-Haul Flights: Small Tweaks to Make Economy a Little More Comfortable"
       },
       "tags": {
@@ -161,6 +164,7 @@
         "mexico-guanajuato.html": "Mexico",
         "mexico-teotihuacan.html": "Mexico",
         "mexico-palenque.html": "Mexico",
+        "camp-mori-makiba.html": "Camping",
         "atsukan.html": "酒・グルメ",
         "power-beam.html": "バイク・ギア",
         "spanish-dictionary.html": "Spanish",
@@ -181,6 +185,8 @@
         "noto-touring.html": "Touring",
         "irako.html": "Touring",
         "chiba-chibanians.html": "Touring",
+        "toro-daishi.html": "Touring",
+        "motorcycle-show-2026.html": "バイク",
         "long-haul-flight-tips.html": "International Travel"
       },
       "seriesLabels": {
@@ -226,6 +232,7 @@
         "mexico-guanajuato.html": "Guanajuato, &quot;la Ciudad Joyero&quot;: el Pípila de Noche, el Callejón del Beso y el Museo de las Momias",
         "mexico-teotihuacan.html": "Caminando por las Ruinas de Teotihuacán: Pirámide del Sol, Pirámide de la Luna y Templo de Quetzalcóatl",
         "mexico-palenque.html": "Palenque, la ciudad maya en la selva: Templo de las Inscripciones, tumba de Pakal y el Grupo de las Cruces",
+        "camp-mori-makiba.html": "Reseña del Mori-no-Makiba Auto Campground: camping solo en invierno, precios y ambiente",
         "atsukan.html": "Sake caliente en casa: Manjukagami F60 y Hakkaisan Yukimuro 3 años",
         "power-beam.html": "Instalando un Power Beam en la SR400: reducción de vibraciones en ruta larga",
         "spanish-dictionary.html": "Cómo elegir un diccionario de español: papel, electrónico o app, visto desde Centroamérica",
@@ -246,6 +253,8 @@
         "noto-touring.html": "En moto por la península de Noto: el templo Sōji-ji Soin y el sashimi con pan de oro",
         "irako.html": "Cabo Irago en solitario: caminata costera de fin de año y mucho viento en Aichi",
         "chiba-chibanians.html": "Visitando el estratotipo del Chibaniense: un día en moto por Chiba con un jabalí y la luz de motor encendida",
+        "toro-daishi.html": "El túnel cortado en la roca de Tōrōzaka Daishi: regreso al spot fotogénico de Chiba en la XSR900",
+        "motorcycle-show-2026.html": "Tokyo Motorcycle Show 2026: motos y alforjas que me llamaron la atención",
         "long-haul-flight-tips.html": "Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda"
       },
       "tags": {
@@ -275,6 +284,7 @@
         "mexico-guanajuato.html": "México",
         "mexico-teotihuacan.html": "México",
         "mexico-palenque.html": "México",
+        "camp-mori-makiba.html": "Camping",
         "atsukan.html": "酒・グルメ",
         "power-beam.html": "バイク・ギア",
         "spanish-dictionary.html": "Español",
@@ -295,6 +305,8 @@
         "noto-touring.html": "Moto",
         "irako.html": "Moto",
         "chiba-chibanians.html": "Moto",
+        "toro-daishi.html": "Moto",
+        "motorcycle-show-2026.html": "バイク",
         "long-haul-flight-tips.html": "Viajes internacionales"
       },
       "seriesLabels": {
