@@ -536,6 +536,12 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
   .v2-header .v2-lang-switcher { margin-right: 0.5rem !important; }
   .v2-header .dark-toggle { margin-left: 1.1rem !important; }
   .v2-header .search-trigger { margin-left: 0.9rem !important; }
+  /* On article pages there is no lang switcher, so the icon cluster has
+     no anchor pushing it to the right and space-between makes the nav
+     drift toward the middle. When .dark-toggle sits directly after .v2-nav
+     (i.e. no lang switcher between them), give it margin-left: auto so
+     the icon cluster docks at the right edge. */
+  .v2-header .v2-header-inner > .v2-nav + .dark-toggle { margin-left: auto !important; }
 }
 
 [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
