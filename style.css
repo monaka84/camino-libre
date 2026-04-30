@@ -529,7 +529,14 @@ footer { background: var(--black); color: rgba(255,255,255,0.5); padding: 3rem 2
 .v2-header.menu-open .v2-hamburger span:nth-child(2) { opacity: 0; }
 .v2-header.menu-open .v2-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.v2-header .dark-toggle { margin-left: 1rem; }
+/* Spacing for the right-side cluster on desktop. !important is needed
+   because some top pages (index/privacy/profile/stories) carry an inline
+   `<style>` that sets a tighter margin and would otherwise win the cascade. */
+@media (min-width: 769px) {
+  .v2-header .v2-lang-switcher { margin-right: 0.5rem !important; }
+  .v2-header .dark-toggle { margin-left: 1.1rem !important; }
+  .v2-header .search-trigger { margin-left: 0.9rem !important; }
+}
 
 [data-theme="dark"] .v2-header { background: rgba(20,20,20,0.96); }
 [data-theme="dark"] .v2-logo,
