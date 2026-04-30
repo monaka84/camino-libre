@@ -881,17 +881,18 @@ body.v2-page .v2-header[style*="rgba(255,255,255,0.96)"] .v2-lang-switcher .lang
   background: rgba(255,255,255,0.06);
 }
 
-/* Mobile: switcher sits next to the dark-mode / search buttons in the
-   header (outside .v2-nav). Stay as a compact pill, dropdown floats. */
+/* Mobile: switcher sits next to the dark-mode button. The 2-letter lang
+   code is hidden to save space — the globe icon alone signals language
+   selection — and the search-trigger button is hidden entirely. */
 @media (max-width: 768px) {
-  .v2-lang-switcher {
-    margin-left: 0.3rem;
-  }
   .v2-lang-switcher .lang-trigger {
-    padding: 0.3rem 0.55rem 0.3rem 0.65rem;
-    font-size: 0.72rem;
+    padding: 0.32rem 0.5rem;
+    font-size: 0.85rem;
+    gap: 0.2rem;
   }
+  .v2-lang-switcher .lang-trigger .lang-code { display: none; }
   .v2-lang-switcher .lang-menu {
     min-width: 130px;
   }
+  .search-trigger { display: none !important; }
 }

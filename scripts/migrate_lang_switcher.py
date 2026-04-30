@@ -17,9 +17,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 
 LANG_LABELS = {
-    'ja': '🌐 JA',
-    'en': '🌐 EN',
-    'es': '🌐 ES',
+    'ja': '<span class="lang-icon" aria-hidden="true">🌐</span><span class="lang-code">JA</span>',
+    'en': '<span class="lang-icon" aria-hidden="true">🌐</span><span class="lang-code">EN</span>',
+    'es': '<span class="lang-icon" aria-hidden="true">🌐</span><span class="lang-code">ES</span>',
 }
 # Full language names for the dropdown menu items.
 LANG_NAMES = {
