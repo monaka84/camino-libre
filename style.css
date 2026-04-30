@@ -890,8 +890,13 @@ body.v2-page .v2-header[style*="rgba(255,255,255,0.96)"] .v2-lang-switcher .lang
 
 /* Mobile: switcher sits next to the dark-mode button. The 2-letter lang
    code is hidden to save space — the globe icon alone signals language
-   selection — and the search-trigger button is hidden entirely. */
+   selection — and the search-trigger button is hidden entirely. The
+   hamburger is pulled over to the right cluster so the logo can sit
+   alone on the left. */
 @media (max-width: 768px) {
+  .v2-hamburger { margin-left: auto !important; }
+  .v2-lang-switcher { margin-left: 0.55rem !important; }
+  .v2-header .dark-toggle { margin-left: 0.5rem !important; }
   .v2-lang-switcher .lang-trigger {
     padding: 0.32rem 0.5rem;
     font-size: 0.85rem;
