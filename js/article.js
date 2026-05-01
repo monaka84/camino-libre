@@ -86,6 +86,11 @@
   var I18N_TRANSLATIONS =   {
     "en": {
       "titles": {
+        "hokkaido-sr400-day1.html": "Ōarai → Tomakomai by Sunflower Ferry: First Day in Sapporo [SR400 Hokkaido Tour ①]",
+        "hokkaido-sr400-day2.html": "Sapporo to Wakkanai via Ishikari and the Ororon Line [SR400 Hokkaido Tour ②]",
+        "hokkaido-sr400-day3.html": "Cape Sōya, the White Road, the Esanuka Line",
+        "hokkaido-sr400-day4.html": "Monbetsu to Biei: Blue Pond and the Patchwork Road [SR400 Hokkaido Tour ④]",
+        "hokkaido-sr400-day5.html": "Furano's Farm Tomita to Tomakomai: Sunflower Ferry Back to Ōarai [SR400 Hokkaido Tour ⑤]",
         "hokkaido-routes.html": "Three Hokkaido Trips: Routes and Lodging from My SR400, Car, and XSR900 Tours",
         "taiwan.html": "Taiwan Travel Notes: Sunset at Keelung and the Lantern Release at Shifen Were Better Than I Expected",
         "costa-rica-intro.html": "What is Costa Rica Like? Nature, Safety, and Daily Life from a Former Resident",
@@ -141,6 +146,11 @@
         "long-haul-flight-tips.html": "Surviving Long-Haul Flights: Small Tweaks to Make Economy a Little More Comfortable"
       },
       "tags": {
+        "hokkaido-sr400-day1.html": "Hokkaido",
+        "hokkaido-sr400-day2.html": "Hokkaido",
+        "hokkaido-sr400-day3.html": "Hokkaido",
+        "hokkaido-sr400-day4.html": "Hokkaido",
+        "hokkaido-sr400-day5.html": "Hokkaido",
         "hokkaido-routes.html": "Hokkaido",
         "taiwan.html": "Taiwan",
         "costa-rica-intro.html": "Costa Rica",
@@ -212,6 +222,11 @@
     },
     "es": {
       "titles": {
+        "hokkaido-sr400-day1.html": "De Ōarai a Tomakomai en el ferry Sunflower: primer día en Sapporo [SR400 Hokkaidō ①]",
+        "hokkaido-sr400-day2.html": "De Sapporo a Wakkanai por Ishikari y la línea Ororon [SR400 Hokkaidō ②]",
+        "hokkaido-sr400-day3.html": "Cabo Sōya, camino blanco, línea Esanuka",
+        "hokkaido-sr400-day4.html": "De Monbetsu a Biei: Estanque Azul y la ruta Patchwork [SR400 Hokkaidō ④]",
+        "hokkaido-sr400-day5.html": "Farm Tomita (Furano) a Tomakomai: ferry Sunflower de vuelta a Ōarai [SR400 Hokkaidō ⑤]",
         "hokkaido-routes.html": "Tres viajes a Hokkaidō: rutas y alojamientos en SR400, coche y XSR900",
         "taiwan.html": "Crónicas de Taiwán: el atardecer en Keelung y soltar farolillos en Shifen, mejor de lo que esperaba",
         "costa-rica-intro.html": "¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente",
@@ -267,6 +282,11 @@
         "long-haul-flight-tips.html": "Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda"
       },
       "tags": {
+        "hokkaido-sr400-day1.html": "Hokkaido",
+        "hokkaido-sr400-day2.html": "Hokkaido",
+        "hokkaido-sr400-day3.html": "Hokkaido",
+        "hokkaido-sr400-day4.html": "Hokkaido",
+        "hokkaido-sr400-day5.html": "Hokkaido",
         "hokkaido-routes.html": "Hokkaido",
         "taiwan.html": "Taiwán",
         "costa-rica-intro.html": "Costa Rica",
