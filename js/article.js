@@ -86,6 +86,7 @@
   var I18N_TRANSLATIONS =   {
     "en": {
       "titles": {
+        "hokkaido-routes.html": "Three Hokkaido Trips: Routes and Lodging from My SR400, Car, and XSR900 Tours",
         "taiwan.html": "Taiwan Travel Notes: Sunset at Keelung and the Lantern Release at Shifen Were Better Than I Expected",
         "costa-rica-intro.html": "What is Costa Rica Like? Nature, Safety, and Daily Life from a Former Resident",
         "costa-rica-irazu.html": "How to Visit Volcán Irazú: The Day I Couldn't See the Crater Lake",
@@ -118,6 +119,7 @@
         "spanish-dictionary.html": "Choosing a Spanish Dictionary: Paper, Electronic, and App, Picked by Someone Who Lived in Central America",
         "bandai-azuma.html": "Riding the Bandai-Azuma Skyline: Volcanic Country in Fukushima",
         "five-color-lake.html": "Walking the Goshikinuma 'Five-Color Ponds' of Urabandai, Fukushima",
+        "touring-chiba-xsr900.html": "XSR900 Solo Tour in Chiba: Kasamori Kannon and the Bōsō Mountain Roads",
         "chile-1.html": "Walking Through Santiago: Chile's Supreme Court, Museums, and Historic Center",
         "chile-2.html": "Los Dominicos Crafts Market: Folk Crafts and a White Colonial Church in Santiago",
         "chile-3.html": "Last Day in Santiago: Palta Reina and Pre-Christmas City Walks",
@@ -134,10 +136,12 @@
         "irako.html": "Cape Irago, Solo: A Year-End Coast Walk and a Lot of Wind in Aichi",
         "chiba-chibanians.html": "Visiting the Chibanian Stratotype: A Chiba Touring Day with a Wild Boar and a Bike Warning Light",
         "toro-daishi.html": "The Tōrōzaka Daishi Cut-Through Tunnel: Returning to Chiba's Photogenic Spot on the XSR900",
+        "izu-touring.html": "Izu Peninsula Two-Day Tour: Ashinoko Skyline and the West Izu Route",
         "motorcycle-show-2026.html": "Tokyo Motorcycle Show 2026: Bikes and Side Bags That Caught My Eye",
         "long-haul-flight-tips.html": "Surviving Long-Haul Flights: Small Tweaks to Make Economy a Little More Comfortable"
       },
       "tags": {
+        "hokkaido-routes.html": "Hokkaido",
         "taiwan.html": "Taiwan",
         "costa-rica-intro.html": "Costa Rica",
         "costa-rica-irazu.html": "Costa Rica",
@@ -170,6 +174,7 @@
         "spanish-dictionary.html": "Spanish",
         "bandai-azuma.html": "Touring",
         "five-color-lake.html": "旅",
+        "touring-chiba-xsr900.html": "Touring",
         "chile-1.html": "Chile",
         "chile-2.html": "Chile",
         "chile-3.html": "Chile",
@@ -186,6 +191,7 @@
         "irako.html": "Touring",
         "chiba-chibanians.html": "Touring",
         "toro-daishi.html": "Touring",
+        "izu-touring.html": "Touring",
         "motorcycle-show-2026.html": "バイク",
         "long-haul-flight-tips.html": "International Travel"
       },
@@ -206,6 +212,7 @@
     },
     "es": {
       "titles": {
+        "hokkaido-routes.html": "Tres viajes a Hokkaidō: rutas y alojamientos en SR400, coche y XSR900",
         "taiwan.html": "Crónicas de Taiwán: el atardecer en Keelung y soltar farolillos en Shifen, mejor de lo que esperaba",
         "costa-rica-intro.html": "¿Cómo es Costa Rica? Naturaleza, seguridad y vida cotidiana contadas por un exresidente",
         "costa-rica-irazu.html": "Cómo visitar el Volcán Irazú: el día en que no pude ver la laguna del cráter",
@@ -238,6 +245,7 @@
         "spanish-dictionary.html": "Cómo elegir un diccionario de español: papel, electrónico o app, visto desde Centroamérica",
         "bandai-azuma.html": "En moto por la Bandai-Azuma Skyline: zona volcánica en Fukushima",
         "five-color-lake.html": "Caminando por las 'lagunas de cinco colores' Goshikinuma, en Urabandai (Fukushima)",
+        "touring-chiba-xsr900.html": "Ruta solitaria por Chiba en XSR900: Kasamori Kannon y los caminos de montaña de Bōsō",
         "chile-1.html": "Caminando por Santiago: la Corte Suprema, museos y Centro Histórico de Chile",
         "chile-2.html": "Mercado Artesanal Los Dominicos: artesanías y la iglesia blanca de Santiago",
         "chile-3.html": "Último día en Santiago: Palta Reina y caminatas pre-navideñas",
@@ -254,10 +262,12 @@
         "irako.html": "Cabo Irago en solitario: caminata costera de fin de año y mucho viento en Aichi",
         "chiba-chibanians.html": "Visitando el estratotipo del Chibaniense: un día en moto por Chiba con un jabalí y la luz de motor encendida",
         "toro-daishi.html": "El túnel cortado en la roca de Tōrōzaka Daishi: regreso al spot fotogénico de Chiba en la XSR900",
+        "izu-touring.html": "Ruta de dos días por la península de Izu: Ashinoko Skyline y la ruta del oeste",
         "motorcycle-show-2026.html": "Tokyo Motorcycle Show 2026: motos y alforjas que me llamaron la atención",
         "long-haul-flight-tips.html": "Sobrevivir a un vuelo de larga distancia: pequeños trucos para hacer la clase económica algo más cómoda"
       },
       "tags": {
+        "hokkaido-routes.html": "Hokkaido",
         "taiwan.html": "Taiwán",
         "costa-rica-intro.html": "Costa Rica",
         "costa-rica-irazu.html": "Costa Rica",
@@ -290,6 +300,7 @@
         "spanish-dictionary.html": "Español",
         "bandai-azuma.html": "Moto",
         "five-color-lake.html": "旅",
+        "touring-chiba-xsr900.html": "Moto",
         "chile-1.html": "Chile",
         "chile-2.html": "Chile",
         "chile-3.html": "Chile",
@@ -306,6 +317,7 @@
         "irako.html": "Moto",
         "chiba-chibanians.html": "Moto",
         "toro-daishi.html": "Moto",
+        "izu-touring.html": "Moto",
         "motorcycle-show-2026.html": "バイク",
         "long-haul-flight-tips.html": "Viajes internacionales"
       },
