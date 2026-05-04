@@ -1142,7 +1142,13 @@
 
       var img = document.createElement('div');
       img.className = 'related-img';
-      img.style.backgroundImage = 'url("' + a.img + '")';
+      // EN/ES の記事は articles/<lang>/foo.html にあり、ARTICLES の '../images/...' は
+      // 1階層分足りないため '../' を1つ足す（http(s) 始まりの絶対 URL は触らない）
+      var imgUrl = a.img;
+      if (LANG !== 'ja' && imgUrl.indexOf('http') !== 0 && imgUrl.indexOf('../') === 0) {
+        imgUrl = '../' + imgUrl;
+      }
+      img.style.backgroundImage = 'url("' + imgUrl + '")';
 
       var tag = document.createElement('div');
       tag.className = 'related-tag';
